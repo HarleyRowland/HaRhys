@@ -6,47 +6,25 @@
     <style>
 
     body{
-        background-color: #f1f1f1;
+      background-color: #f1f1f1;
     }
 
-    #inner{
-      padding: 10px;
-      border:solid #FEE411 4px;
-      padding-bottom: 45px;
-    }
-
-    #middle{
-      border:solid #FFFB9B 4px;
-      margin: -20px;
-    }
-
-    #outer{
-      border:solid #FFFEE3 4px;
-      /*box-shadow: 10px 10px 5px #000000;*/
-      margin-top:  -15px;
-    }
     .nameField {
       color: #f1f1f1;
       font-family: "Trebuchet MS", Helvetica, sans-serif;
-      padding-top: 37px;
       text-align: center;
     }
 
+    #topPadding {
+      height:25px;
+    }
 
-    .main-div {
+    #outer {
+      border: 2px solid #2F75D5;
       background-color: #2F75D5;
-/*      border-radius: 0px 0px 25px 25px;
-*/    border:solid  #1FDA9A 4px;
-      position: fixed;
-      /*min-height: 600px;
-      height: auto !important;
-      height: 600px;*/
-      right: 0;
-      left: 0;
-      margin-right: auto;
-      margin-left: auto;
-      min-width: 371px;
+      margin: 0 auto;
       width: 371px;
+      min-height: 100vh;
     }
 
     .image {
@@ -102,24 +80,21 @@
 
   <body>
    <div class="row wrapper">
-
-      <div class="large-6 columns">
+      <div class="small-centered columns">
         <div class="panel main-div" id="outer">
-          <div id="middle">
-            <div id="inner">
-              <h4 class="nameField">Harley Rowland</h4>
-              <div class="image">
-                 <img src="../assets/harley.jpg"/>
-              </div>
-              <hr/>
-              <p>
-              I am a 21 year old Computer Science student based at the University of Kent living in Canterbury. Currently on the placement year of my sandwich degree (which started in July), I work at Holiday Extras near Hythe as an Industrial Placement Web Developer.
-              </p>
-              <p>
-              I enjoy keeping fit and eating (fairly) healthily, reading, slowly learning Spanish and socialising with my friends and family.
-              </p>
-            </div>
+          <div class="show-for-small-only" id="topPadding"></div>
+          <h2 class="nameField show-for-medium-up">Harley Rowland</h2>
+          <h1 class="nameField show-for-small-only">Harley Rowland</h1>
+          <div class="image">
+             <img src="../assets/harley.jpg"/>
           </div>
+          <hr/>
+          <p>
+          I am a 21 year old Computer Science student based at the University of Kent living in Canterbury. Currently on the placement year of my sandwich degree (which started in July), I work at Holiday Extras near Hythe as an Industrial Placement Web Developer.
+          </p>
+          <p>
+          I enjoy keeping fit and eating (fairly) healthily, reading, slowly learning Spanish and socialising with my friends and family.
+          </p>
         </div>
 
       </div>
