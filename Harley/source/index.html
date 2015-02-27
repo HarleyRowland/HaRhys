@@ -3,6 +3,7 @@
   <head>
     <title>Home</title>
     <link rel="stylesheet" href="../css/foundation.css">
+	<link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
     <style>
 
     body{
@@ -19,7 +20,7 @@
       height:25px;
     }
 
-    .interestsInfo {
+    .exerciseContent {
       display: none;
     }
 
@@ -70,7 +71,7 @@
     .icons {
       position: fixed;
       top: 0px;
-      right: 0px; 
+      right: 0px;
       background-color: #FFFFFF;
       border: solid #000000 3px;
       border-radius: 0px 0px 0px 10px;
@@ -86,7 +87,7 @@
     #modal {
       position: fixed;
       top: 0px;
-      left: 0px; 
+      left: 0px;
     }
 
     </style>
@@ -115,12 +116,13 @@
             I am a 21 year old Computer Science student based at the University of Kent living in Canterbury. Currently on the placement year of my sandwich degree (which started in July), I work at Holiday Extras near Hythe as an Industrial Placement Web Developer.
             </p>
           </div>
-          <div class="interests">
-            <div class="interestsTitle"> Interests <span>&#9658</span></div>
-            <div class="interestsInfo">
+          <div class="Exercise">
+            <div class="exerciseTitle"> Exercise <span>&#9658</span></div>
+            <div class="exerciseContent">
               <p>
-              I enjoy keeping fit and eating (fairly) healthily, reading, slowly learning Spanish and socialising with my friends and family.
+              <i class="fa fa-spinner fa-spin"></i>
               </p>
+              <hr>
             </div>
           </div>
           </div>
@@ -141,21 +143,29 @@
     <script src="../libraries/underscore/underscore.js"></script>
     <script src="../libraries/backbone/backbone.js"></script>
     <script src="javascript/main-view.js"></script>
-    <script src="../js/foundation.min.js"></script>
+    <!-- <script src="../js/foundation.min.js"></script>
     <script>
       $(document).foundation();
-    </script>
-    <script> 
+    </script> -->
+    <script>
       $(document).ready(function(){
-        $(".interestsTitle").click(function(){
-          $.ajax(
-          {
-            url: "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=HarleyRowland&count=3", 
-            success: function(result){
-              console.log(result);
-            },
-          });
-         });
+        $.ajax({
+          url: "https://api.nike.com/v1/me/sport/activities/3591000000012388229400011322062502888484?access_token=O3B5ucpAw4v08Cu9oz2cWQdGSTAz",
+          type: "GET",
+          dataType: 'text',
+          success: function(result){
+            var jsonResult = JSON.parse(result)
+            var text = "For his most recent workout, Harley went for a " + jsonResult.activityType.toLowerCase() + '. The ' + jsonResult.activityType.toLowerCase() + ' lasted ' + jsonResult.metricSummary.duration.substring(2,4) + ' minutes and ' + jsonResult.metricSummary.duration.substring(5,7) + ' seconds and he travelled ' + jsonResult.metricSummary.distance.substring(0,4) + ' kilometers. He burnt ' + jsonResult.metricSummary.calories + ' calories and felt ' + jsonResult.tags[1].tagValue.toLowerCase() + ' after it.';
+            $('.exerciseContent > p').text(text);
+          },
+          error: function (xhr, ajaxOptions, thrownError) {
+          	$('.exerciseContent > p').text('Error loading workout from Nike+');
+	      }
+        });
+
+        $('.exerciseTitle').click(function () {
+        	$( ".exerciseContent" ).slideToggle(500)
+		});
       });
     </script>
   </body>
