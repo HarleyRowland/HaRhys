@@ -76,8 +76,12 @@
        float: right;
     }
 
-    .spacing {
-      height: 70px
+    .spacingSmall{
+      height: 10px
+    }
+
+    .spacingBigger{
+      height: 150px
     }
 
     hr {
@@ -96,6 +100,16 @@
       text-decoration: underline;
     }
 
+    .icons {
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      background-color: #FFFFFF;
+      border: solid #000000 3px;
+      border-radius: 0px 0px 0px 10px;
+      margin-top: -3px !important;
+      margin-right: -3px;
+    }
 
     </style>
   </head>
@@ -112,7 +126,8 @@
               </div>
             </div>
           </div>
-          <div class="spacing"></div>
+          <div class="spacingSmall show-for-small-up"></div>
+          <div class="spacingBigger show-for-xlarge-up"></div>
           <h4 class="nameField show-for-medium-up">Harley Rowland</h4>
           <h3 class="nameField show-for-small-only">Harley Rowland</h3>
           <div class="image">
@@ -124,8 +139,6 @@
               I am a 22 year old Computer Science student based at the University of Kent living in Canterbury. Currently on the placement year of my sandwich degree (which started in July), I work at Holiday Extras near Hythe as an Industrial Placement Web Developer.
             </p>
           </div>
-          <div class="spacing"></div>
-
         </div>
       </div>
     </div>
