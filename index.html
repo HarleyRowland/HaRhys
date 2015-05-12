@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width" />
     <title>Home</title>
     <link rel="stylesheet" href="./foundation.css">
     <style>
@@ -19,8 +20,24 @@
       border: 2px solid #2F75D5;
       background-color: #2F75D5;
       margin: 0 auto;
-      width: 371px;
+      width:371px;
       min-height: 100vh;
+    }
+
+    #outer {
+        border: 2px solid #2F75D5;
+        background-color: #2F75D5;
+        margin: 0 auto;
+        min-height: 100vh;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 300px;
+      }
+
+    @media screen and (min-width: 500px){
+      #outer {
+        width:371px;
+      }
     }
 
     .image {
@@ -50,7 +67,7 @@
       background-color: #FFFFFF;
       border: solid #000000 3px;
       border-radius: 0px 0px 0px 10px;
-      margin-top: -3px;
+      margin-top: -3px !important;
       margin-right: -3px;
     }
 
@@ -60,7 +77,7 @@
     }
 
     .spacing {
-      height: 100px
+      height: 70px
     }
 
     hr {
@@ -90,8 +107,6 @@
           <div class="icons">
             <div>
               <div>
-                <a href="http://www.gmail.com"><img class="imageIcons" src="./assets/email.jpg"/></a>
-                <a href="https://www.facebook.com/HarleyRowland"><img class="imageIcons" src="./assets/facebook.jpg"/></a>
                 <a href="https://uk.linkedin.com/pub/harley-rowland/71/365/799"><img class="imageIcons" src="./assets/linkedin.jpg"/></a>
                 <a href="https://twitter.com/HarleyRowland"><img class="imageIcons" src="./assets/twitter.jpg"/></a>
               </div>
@@ -114,6 +129,5 @@
         </div>
       </div>
     </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   </body>
 </html>
