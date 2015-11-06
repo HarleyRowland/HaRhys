@@ -5,127 +5,330 @@
     <title>Harley Rowland</title>
     <link rel="stylesheet" href="./foundation.css">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="foundation/css/foundation.css">
     <style type="text/css">
       body {
-        background-color: #FFFFFF;
+
       }
 
-      h2, h4 {
-        font-family: "Georgia", Helvetica, sans-serif;
-         /*color: ;*/
+      p, h1, h2, h3, h4, h5, h6 {
+        font-family: "Arial", Helvetica, sans-serif;
+        color: #A8A8A8;
+      }
+
+      h6 {
+        color: #a39c8f;
       }
 
       .top-strip {
-        background-color: #f5f5f5;
-        min-height: 150px;
-        width: 100vw;
-        border-bottom: solid 1px #e5e5e5;
-        display: flex;
-        align-items: stretch;
-      }
-
-      .name-role {
-        padding-left : 15vw;
-        padding-top: 30px;
+        text-align: center;
+        margin-bottom: 5px;
       }
 
       .nav {
-        float: right;
+        padding-top: 0.5%;
+        color: #A8A8A8;
       }
 
-      .center {
-        display: flex;
-        align-items: stretch;
-        height: calc(100% - 150px);
-        padding-top: 5vh;
-        padding-bottom: 5vh;
+      .nav-link{
+        color: #A8A8A8
       }
 
-      .center > .content-left {
-        display: flex;
-        align-items: stretch;
-        flex: 0 0 50vw;
+      .text {
+        color: #A8A8A8;
+        padding: 15px;
       }
 
-      .content-left{
-        width: 30vw;
-        padding-left: 5vw;
+      span {
+        color: #0099CC;
       }
 
-      .content-right{
-        width: 70vw;
-        padding-left: 5vw;
-        padding-right: 5vw;
-        overflow-y: auto;
+      .nav > .active {
+        border-top: 5px solid #0099CC;
+      }
+
+      .nav > a:hover {
+        color: #585858;
+        border-top: 5px solid #0099CC;
+      }
+
+
+      .center{
+        /*border-top: 1px solid #0099CC;*/
+        border-bottom: 1px solid #0099CC;
+      }
+      .center > .innerContent{
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+      }
+
+      .pageTitle {
+        text-align: center;
       }
 
       .image {
-        margin: 0 auto;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .image > img {
-        text-align: center;
-        border-radius: 1000px 1000px 1000px 1000px;
-        border:solid #e5e5e5;
-        min-height: 100%;
-        min-width: 100%;
+        padding: 10px;
+        float: left;
       }
 
       .footer {
-        background-color: #2980b9;
-        padding: 2rem 4rem;
+        padding: 2%;
+      }
+
+      .rights{
         text-align: center;
-        color: #fff;
-        i {
-          font-size: 100px;
-        }
       }
 
-      .footer {
-
+      .icon-block{
+        text-align: center;
       }
 
-    </style>
+      .image-mobile {
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+
+      img#linkedin:hover{
+        content:url("./assets/linkedinHover.png");
+      }
+
+      img#twitter:hover{
+        content:url("./assets/twitterHover.png");
+      }
+
+      img#github:hover{
+        content:url("./assets/githubHover.png");
+      }
+
+      img#instagram:hover{
+        content:url("./assets/instagramHover.png");
+      }
+
+      .email-form{
+        margin: auto;
+        width: 50%;
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+        color: #A8A8A8; 
+      }
+
+      input[type=text], .form-object {
+        border-radius: 5px;
+      }
+
+      input[type=submit] {
+        width: 100%;
+        font-family: "Arial", Helvetica, sans-serif;
+        padding:5px 15px; 
+        border:0 none;
+        color: #ffffff;
+        background-color: #0099CC;
+        cursor:pointer;
+        -webkit-border-radius: 5px;
+        border-radius: 5px; 
+        height: 4vh;
+      }
+
+      .email-button:hover {
+        color: #E69E1A;
+      }
+
+      .form-object:-moz-placeholder {
+        color: #A8A8A8;
+      }
+
+      .progress-border {
+        background-color: #FFFFFF;
+        border-radius: 12px;
+        height: 30px;
+        width: 100%; 
+        border: 3px solid #0099CC;
+      }
+
+      .progress-bar {
+        height: 100%;
+        border-radius: 8px;
+        background-color: #0099CC;
+      }
+
+      .progress-bars {
+        width: 60%;
+      }
+
+  </style>
   </head>
   <body>
-    <div class="top-strip">
-      <div class="name-role">
-        <h2>Harley Rowland</h2>
-        <h4>CompSci Student/Web Developer</h2>
-      </div>
-      <div class="nav">
-        <a href="#" class="button round">Round Button</a>
-        <a href="#" class="button round">Round Button</a>
-        <a href="#" class="button round">Round Button</a>
-      </div>
-    </div>
-    <div class="center">
-      <div class="content-left">
-        <div class="image">
-           <img src="./assets/harley.jpg"/>
-        </div>
-      </div>
-      <div class="content-right">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-      </p>
-      </div>
-    </div>
-    <footer class="footer">
-
-    </footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="foundation/js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/highcharts-more.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="moment.js"></script>
+    <script>// on page load...
+
+      $( document ).ready(function() {
+        $.get('templates/header.html', function (data) {
+          $('body').append(data);       
+        }, 'html');
+        $.get('templates/aboutMe.html', function (data) {
+          $('.center').append(data);       
+        }, 'html');
+        $.get('templates/footer.html', function (data) {
+          $('body').append(data);       
+        }, 'html');
+
+        $('body').on('click', '.about-me', function() {
+          if (!($('.about-me').hasClass("active"))) {
+            $('.my-experience').removeClass('active')
+            $('.my-activity').removeClass('active')
+            $('.contact-me').removeClass('active')
+            $(".about-me").addClass("active");
+            $.get('templates/aboutMe.html', function (data) {
+              $('.center').html(data);       
+            }, 'html');
+          }
+        });
+
+        $('body').on('click', '.my-experience', function() {
+          if (!($('.my-experience').hasClass("active"))) {
+            $(".about-me").removeClass('active')
+            $('.my-activity').removeClass('active')
+            $('.contact-me').removeClass('active')
+            $('.my-experience').addClass("active");
+            $.get('templates/myExperience.html', function (data) {
+              $('.center').html(data);
+              webHighCharts();      
+            }, 'html');
+          }
+        });
+
+        $('body').on('click', '.my-activity', function() {
+          if (!($('.my-activity').hasClass("active"))) {
+            $('.about-me').removeClass('active')
+            $('.my-experience').removeClass('active')
+            $('.contact-me').removeClass('active')
+            $('.my-activity').addClass("active");
+            $.get('templates/myActivity.html', function (data) {
+              $('.center').html(data);   
+              getNikeDetails();    
+            }, 'html');
+          }
+        });
+        
+        $('body').on('click', '.contact-me', function() {
+          if (!($('.contact-me').hasClass("active"))) {
+            $('.about-me').removeClass('active')
+            $('.my-experience').removeClass('active')
+            $('.my-activity').removeClass('active')
+            $('.contact-me').addClass("active");
+            $.get('templates/contactMe.html', function (data) {
+              $('.center').html(data);       
+            }, 'html');
+          }
+        });
+
+        function getNikeDetails(){
+          var x = null;
+          $.ajax({
+            dataType: "json",
+            url: "https://api.nike.com/me/sport/activities?access_token=8HZL1AwugXQAlObvx7aW6KUMwTsx&count=1",
+            success: function(data){
+              var nikeData = data.data[0];
+              console.log(nikeData);
+              var activity = nikeData.activityID;
+              var year = nikeData.startTime.substring(0,4);
+              var month = nikeData.startTime.substring(5,7)-1; 
+              var day = nikeData.startTime.substring(8,10);
+              var timeSinceRun = moment([year, month, day]).fromNow();
+              var calories = nikeData.metricSummary.calories;
+              var distance = (nikeData.metricSummary.distance+"").substring(0,3);
+              var hours = nikeData.metricSummary.duration.substring(0,1);
+              var minutes = nikeData.metricSummary.duration.substring(2,4);
+              var weather = nikeData.tags[3].tagValue;
+              var emotion = nikeData.tags[2].tagValue;
+
+              var returnString  = "I went for a run " + timeSinceRun + ". On this run, I burnt " + calories + " calories and I travelled " + distance + " kilometers in " + runDuration(hours, minutes) + ".";
+              
+              $('.runText').html(returnString);   
+
+            }
+          });          
+        }
+
+        function runDuration(hours, minutes){
+          var timeString = minutes + " minutes";
+          if(hours > 0){
+            timeString = hours + " hours and " + timeString;
+          }
+          return timeString;
+        }
+
+        function webHighCharts(){
+          $('.progress-bars').highcharts({
+              chart: {
+                polar: true,
+                type: 'line'
+              },
+              title: {
+                text: 'Web Development',
+                enabled: false,
+                style: {
+                  color: '#0099CC'
+                }
+              },
+              pane: {
+                size: '75%'
+              },
+              legend: {
+                enabled: false
+              },
+              exporting: { 
+                enabled: false 
+              },
+              xAxis: {
+                categories: ['JavaScript', 'HTML', 'CSS', 'PHP', 'Ruby', 'MySQL'],
+                tickmarkPlacement: 'on',
+                lineWidth: 0
+              },
+              yAxis: {
+                gridLineInterpolation: 'polygon',
+                lineWidth: 0,
+                min: 0,
+                labels: {
+                  enabled: false
+                }
+              },
+              credits: {
+                enabled: false
+              },
+              tooltip: {
+                  formatter: function () {
+                      return this.point.description;
+                  }
+              },
+              series: [{
+                name: 'Foo',
+                data: [{
+                    y: 7,
+                    description: 'Whilst on placement I spent a lot of<br>time using JavaScript.I have had a<br>lot of exposure to various frameworks<br>such as ExpressJS and BackboneJS<br>and have also used the Node.js platform<br>quite a lot. I have written a blog-post<br>about ExpressJS here.'
+                }, {
+                    y: 8,
+                    description: 'I wanted to learn how to use HTML to<br>a high level because it is the basic<br>building blocks which website are made<br>on. Doing this has given me a strong<br>foundation when learning other web<br>languages and technologies. I also have<br>a good understanding of templating<br>lanaguages and have used HAML and<br>Handlebars frequently.'
+                }, {
+                    y: 6,
+                    description: 'CSS is the language which I enjoy<br>using the most and was another one<br>that I had regular exposure to on my<br>placement. I enjoy the creative<br>aspect of CSS and like playing around<br>with different styling. I have used<br>foundation to style this website<br>and have also used Bootstrap.'
+                  },{
+                    y: 5,
+                    description: 'I have learnt how to use PHP at university and have completed<br>to sucessful assignments using it - one using the<br>CodeIgniter framework and another which involved creating an<br>adminstration system for a mock business which involed<br>user-type permissions, sessions, database interaction for<br>user authentication.' 
+                }, {
+                    y: 3,
+                    description: 'I briefly used Ruby whilst on placement and it is the<br>next programming language that I am going to teach<br>myself.'
+                }, {
+                    y: 6,
+                    description: 'I have used MySQL both in university assignments and on my own<br>personal projects. I have a good understand of<br>the complex queries that need to be written in certain cases and<br>am confident in my own knowledge of MySQL.'
+                  }]
+              }]
+          });
+        }
+      });
     </script>
   </body>
 </html>
