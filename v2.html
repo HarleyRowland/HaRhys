@@ -6,19 +6,36 @@
     <link rel="stylesheet" href="./foundation.css">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
     <style type="text/css">
-      body {
-
-      }
-
+      /*General CSS*/
       p, h1, h2, h3, h4, h5, h6 {
         font-family: "Arial", Helvetica, sans-serif;
         color: #A8A8A8;
       }
 
-      h6 {
-        color: #a39c8f;
+      .center > .innerContent{
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
       }
 
+      .pageTitle {
+        text-align: center;
+      }
+
+      .text {
+        color: #A8A8A8;
+        padding: 15px;
+      }
+
+      span {
+        color: #0099CC;
+      }
+
+      .center{
+        border-top: 1px solid #0099CC;
+        border-bottom: 1px solid #0099CC;
+      }
+
+      /* Navagation CSS*/
       .top-strip {
         text-align: center;
         margin-bottom: 5px;
@@ -33,14 +50,6 @@
         color: #A8A8A8
       }
 
-      .text {
-        color: #A8A8A8;
-        padding: 15px;
-      }
-
-      span {
-        color: #0099CC;
-      }
 
       .nav > .active {
         border-top: 5px solid #0099CC;
@@ -51,27 +60,21 @@
         border-top: 5px solid #0099CC;
       }
 
+      /*About Me CSS*/
 
-      .center{
-        /*border-top: 1px solid #0099CC;*/
-        border-bottom: 1px solid #0099CC;
-      }
-      .center > .innerContent{
-        display: -webkit-flex;
-        -webkit-flex-wrap: wrap;
-      }
-
-      .pageTitle {
-        text-align: center;
-      }
-
-      .image {
+      .aboutMeImage {
         padding: 10px;
         float: left;
       }
 
-      .footer {
-        padding: 2%;
+      .aboutMeImage-mobile {
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+
+      /* Footer CSS */
+      .footer{
+        padding: 30px;
       }
 
       .rights{
@@ -82,10 +85,6 @@
         text-align: center;
       }
 
-      .image-mobile {
-        padding-left: 100px;
-        padding-right: 100px;
-      }
 
       img#linkedin:hover{
         content:url("./assets/linkedinHover.png");
@@ -103,6 +102,8 @@
         content:url("./assets/instagramHover.png");
       }
 
+
+      /* Contact Me CSS*/
       .email-form{
         margin: auto;
         width: 50%;
@@ -134,24 +135,6 @@
 
       .form-object:-moz-placeholder {
         color: #A8A8A8;
-      }
-
-      .progress-border {
-        background-color: #FFFFFF;
-        border-radius: 12px;
-        height: 30px;
-        width: 100%; 
-        border: 3px solid #0099CC;
-      }
-
-      .progress-bar {
-        height: 100%;
-        border-radius: 8px;
-        background-color: #0099CC;
-      }
-
-      .progress-bars {
-        width: 60%;
       }
 
   </style>
@@ -242,10 +225,10 @@
               var distance = (nikeData.metricSummary.distance+"").substring(0,3);
               var hours = nikeData.metricSummary.duration.substring(0,1);
               var minutes = nikeData.metricSummary.duration.substring(2,4);
-              var weather = nikeData.tags[3].tagValue;
-              var emotion = nikeData.tags[2].tagValue;
+              var weather = nikeData.tags[3].tagValue.toLowerCase();
+              var emotion = nikeData.tags[2].tagValue.toLowerCase();
 
-              var returnString  = "I went for a run " + timeSinceRun + ". On this run, I burnt " + calories + " calories and I travelled " + distance + " kilometers in " + runDuration(hours, minutes) + ".";
+              var returnString  = "I last went for a run " + timeSinceRun + " - it was a " + weather + " day. On this run, I burnt " + calories + " calories and travelled " + distance + "km in " + runDuration(hours, minutes) + ".";
               
               $('.runText').html(returnString);   
 
@@ -317,13 +300,13 @@
                     description: 'CSS is the language which I enjoy<br>using the most and was another one<br>that I had regular exposure to on my<br>placement. I enjoy the creative<br>aspect of CSS and like playing around<br>with different styling. I have used<br>foundation to style this website<br>and have also used Bootstrap.'
                   },{
                     y: 5,
-                    description: 'I have learnt how to use PHP at university and have completed<br>to sucessful assignments using it - one using the<br>CodeIgniter framework and another which involved creating an<br>adminstration system for a mock business which involed<br>user-type permissions, sessions, database interaction for<br>user authentication.' 
+                    description: 'I have learnt how to use PHP at<br>university and have completed to sucessful<br>assignments using it - one using<br>the CodeIgniter framework and another which<br>involved creating an adminstration<br>system for a mock business which<br>involed user-type permissions, sessions,<br>database interaction for user authentication.' 
                 }, {
                     y: 3,
-                    description: 'I briefly used Ruby whilst on placement and it is the<br>next programming language that I am going to teach<br>myself.'
+                    description: 'I briefly used Ruby whilst on<br>placement and it is the next programming<br>language that I am going to teach<br>myself.'
                 }, {
                     y: 6,
-                    description: 'I have used MySQL both in university assignments and on my own<br>personal projects. I have a good understand of<br>the complex queries that need to be written in certain cases and<br>am confident in my own knowledge of MySQL.'
+                    description: 'I have used MySQL both in university<br>assignments and on my own personal<br>projects. I have a good understand of<br>the complex queries that need to be written in<br>certain cases and am confident in my<br>own knowledge of MySQL.'
                   }]
               }]
           });
