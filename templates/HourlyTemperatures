@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Harley Rowland</title>
+    <link rel="stylesheet" href="./foundation.css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+    <style type="text/css">
+      /*General CSS*/
+      p, h1, h2, h3, h4, h5, h6 {
+        font-family: "Arial", Helvetica, sans-serif;
+        color: #A8A8A8;
+      }
+
+      .center > .innerContent{
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+      }
+
+      .pageTitle {
+        text-align: center;
+      }
+
+      .text {
+        color: #A8A8A8;
+        padding: 15px;
+      }
+
+      span {
+        color: #0099CC;
+      }
+
+      .center{
+        border-top: 1px solid #0099CC;
+        border-bottom: 1px solid #0099CC;
+      }
+
+      /* Navagation CSS*/
+      .top-strip {
+        text-align: center;
+        margin-bottom: 5px;
+      }
+
+      .nav {
+        padding-top: 0.5%;
+        color: #A8A8A8;
+      }
+
+      .nav-link{
+        color: #A8A8A8
+      }
+
+
+      .nav > .active {
+        border-top: 5px solid #0099CC;
+      }
+
+      .nav > a:hover {
+        color: #585858;
+        border-top: 5px solid #0099CC;
+      }
+
+      /*About Me CSS*/
+
+      .aboutMeImage {
+        padding: 10px;
+        float: left;
+      }
+
+      .aboutMeImage-mobile {
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+
+      /* Footer CSS */
+      .footer{
+        padding: 30px;
+      }
+
+      .rights{
+        text-align: center;
+      }
+
+      .icon-block{
+        text-align: center;
+      }
+
+
+      img#linkedin:hover{
+        content:url("./assets/linkedinHover.png");
+      }
+
+      img#twitter:hover{
+        content:url("./assets/twitterHover.png");
+      }
+
+      img#github:hover{
+        content:url("./assets/githubHover.png");
+      }
+
+      img#instagram:hover{
+        content:url("./assets/instagramHover.png");
+      }
+
+
+      /* Contact Me CSS*/
+      .email-form{
+        margin: auto;
+        width: 50%;
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+        color: #A8A8A8; 
+      }
+
+      input[type=text], .form-object {
+        border-radius: 5px;
+      }
+
+      input[type=submit] {
+        width: 100%;
+        font-family: "Arial", Helvetica, sans-serif;
+        padding:5px 15px; 
+        border:0 none;
+        color: #ffffff;
+        background-color: #0099CC;
+        cursor:pointer;
+        -webkit-border-radius: 5px;
+        border-radius: 5px; 
+        height: 4vh;
+      }
+
+      .email-button:hover {
+        color: #E69E1A;
+      }
+
+      .form-object:-moz-placeholder {
+        color: #A8A8A8;
+      }
+
+  </style>
+  </head>
+  <body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/highcharts-more.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="moment.js"></script>
+    <script>// on page load...
+
+      $( document ).ready(function() {
+        $.get('templates/header.html', function (data) {
+          $('body').append(data);       
+        }, 'html');
+        $.get('templates/aboutMe.html', function (data) {
+          $('.center').append(data);       
+        }, 'html');
+        $.get('templates/footer.html', function (data) {
+          $('body').append(data);       
+        }, 'html');
+
+        $('body').on('click', '.about-me', function() {
+          if (!($('.about-me').hasClass("active"))) {
+            $('.my-experience').removeClass('active')
+            $('.my-activity').removeClass('active')
+            $('.contact-me').removeClass('active')
+            $(".about-me").addClass("active");
+            $.get('templates/aboutMe.html', function (data) {
+              $('.center').html(data);       
+            }, 'html');
+          }
+        });
+
+        $('body').on('click', '.my-experience', function() {
+          if (!($('.my-experience').hasClass("active"))) {
+            $(".about-me").removeClass('active')
+            $('.my-activity').removeClass('active')
+            $('.contact-me').removeClass('active')
+            $('.my-experience').addClass("active");
+            $.get('templates/myExperience.html', function (data) {
+              $('.center').html(data);
+              webHighCharts();      
+            }, 'html');
+          }
+        });
+
+        $('body').on('click', '.my-activity', function() {
+          if (!($('.my-activity').hasClass("active"))) {
+            $('.about-me').removeClass('active')
+            $('.my-experience').removeClass('active')
+            $('.contact-me').removeClass('active')
+            $('.my-activity').addClass("active");
+            $.get('templates/myActivity.html', function (data) {
+              $('.center').html(data);   
+              getNikeDetails();    
+            }, 'html');
+          }
+        });
+        
+        $('body').on('click', '.contact-me', function() {
+          if (!($('.contact-me').hasClass("active"))) {
+            $('.about-me').removeClass('active')
+            $('.my-experience').removeClass('active')
+            $('.my-activity').removeClass('active')
+            $('.contact-me').addClass("active");
+            $.get('templates/contactMe.html', function (data) {
+              $('.center').html(data);       
+            }, 'html');
+          }
+        });
+
+        function getNikeDetails(){
+          var x = null;
+          $.ajax({
+            dataType: "json",
+            url: "https://api.nike.com/me/sport/activities?access_token=8HZL1AwugXQAlObvx7aW6KUMwTsx&count=1",
+            success: function(data){
+              var nikeData = data.data[0];
+              console.log(nikeData);
+              var activity = nikeData.activityID;
+              var year = nikeData.startTime.substring(0,4);
+              var month = nikeData.startTime.substring(5,7)-1; 
+              var day = nikeData.startTime.substring(8,10);
+              var timeSinceRun = moment([year, month, day]).fromNow();
+              var calories = nikeData.metricSummary.calories;
+              var distance = (nikeData.metricSummary.distance+"").substring(0,3);
+              var hours = nikeData.metricSummary.duration.substring(0,1);
+              var minutes = nikeData.metricSummary.duration.substring(2,4);
+              var weather = nikeData.tags[3].tagValue.toLowerCase();
+              var emotion = nikeData.tags[2].tagValue.toLowerCase();
+
+              var returnString  = "I last went for a run " + timeSinceRun + " - it was a " + weather + " day. On this run, I burnt " + calories + " calories and travelled " + distance + "km in " + runDuration(hours, minutes) + ".";
+              
+              $('.runText').html(returnString);   
+
+            }
+          });          
+        }
+
+        function runDuration(hours, minutes){
+          var timeString = minutes + " minutes";
+          if(hours > 0){
+            timeString = hours + " hours and " + timeString;
+          }
+          return timeString;
+        }
+
+        function webHighCharts(){
+          $('.progress-bars').highcharts({
+              chart: {
+                polar: true,
+                type: 'line'
+              },
+              title: {
+                text: 'Web Development',
+                enabled: false,
+                style: {
+                  color: '#0099CC'
+                }
+              },
+              pane: {
+                size: '75%'
+              },
+              legend: {
+                enabled: false
+              },
+              exporting: { 
+                enabled: false 
+              },
+              xAxis: {
+                categories: ['JavaScript', 'HTML', 'CSS', 'PHP', 'Ruby', 'MySQL'],
+                tickmarkPlacement: 'on',
+                lineWidth: 0
+              },
+              yAxis: {
+                gridLineInterpolation: 'polygon',
+                lineWidth: 0,
+                min: 0,
+                labels: {
+                  enabled: false
+                }
+              },
+              credits: {
+                enabled: false
+              },
+              tooltip: {
+                  formatter: function () {
+                      return this.point.description;
+                  }
+              },
+              series: [{
+                name: 'Foo',
+                data: [{
+                    y: 7,
+                    description: 'Whilst on placement I spent a lot of<br>time using JavaScript.I have had a<br>lot of exposure to various frameworks<br>such as ExpressJS and BackboneJS<br>and have also used the Node.js platform<br>quite a lot. I have written a blog-post<br>about ExpressJS here.'
+                }, {
+                    y: 8,
+                    description: 'I wanted to learn how to use HTML to<br>a high level because it is the basic<br>building blocks which website are made<br>on. Doing this has given me a strong<br>foundation when learning other web<br>languages and technologies. I also have<br>a good understanding of templating<br>lanaguages and have used HAML and<br>Handlebars frequently.'
+                }, {
+                    y: 6,
+                    description: 'CSS is the language which I enjoy<br>using the most and was another one<br>that I had regular exposure to on my<br>placement. I enjoy the creative<br>aspect of CSS and like playing around<br>with different styling. I have used<br>foundation to style this website<br>and have also used Bootstrap.'
+                  },{
+                    y: 5,
+                    description: 'I have learnt how to use PHP at<br>university and have completed to sucessful<br>assignments using it - one using<br>the CodeIgniter framework and another which<br>involved creating an adminstration<br>system for a mock business which<br>involed user-type permissions, sessions,<br>database interaction for user authentication.' 
+                }, {
+                    y: 3,
+                    description: 'I briefly used Ruby whilst on<br>placement and it is the next programming<br>language that I am going to teach<br>myself.'
+                }, {
+                    y: 6,
+                    description: 'I have used MySQL both in university<br>assignments and on my own personal<br>projects. I have a good understand of<br>the complex queries that need to be written in<br>certain cases and am confident in my<br>own knowledge of MySQL.'
+                  }]
+              }]
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
