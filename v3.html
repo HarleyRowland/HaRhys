@@ -7,16 +7,20 @@
     <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
     <style type="text/css">
 
-      body, h1, h2, h3 {
+    /*  body, h1, h2, h3 {
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       }
-
+*/
       /*Landing Page CSS*/
       .landing-image {
         left: 0;
         top: 0;
         width:100vw;
         height: 100%;
+      }
+
+      .landing-image img {
+        filter: grayscale(100%);
       }
 
       .landing-links {
@@ -82,6 +86,7 @@
         padding-right: 20%;
       }
 
+      /*About me page CSS*/
       .about-me{
         background-color: #f1f1f1;
         border-top: 3px solid #545454;
@@ -108,6 +113,10 @@
         color: #ffffff;
       }
 
+      .about-me  > .content-links > a:hover {
+        color: #000000;
+      }
+
       .about-me-image > img {
         border-radius: 1000px 1000px 1000px 1000px;
         border:solid #545454;
@@ -126,7 +135,7 @@
 
       .my-experience{
         background-color: #69D2E7;
-        border-top: 3px solid #6699CC;
+        border-top: 3px solid #369FB4;
         color: #FF8929;
       }
 
@@ -135,12 +144,15 @@
       }
 
       .my-experience > .content-links > span {
-        background-color: #6699CC;
+        background-color: #369FB4;
         border-radius: 0px 0px 2000px 2000px;
         padding: 4px;
         padding-top: 3px;
         padding-bottom: 30px;
-        color: #69D2E7;
+      }
+
+      .my-experience  > .content-links > a:hover {
+        color: #369FB4;
       }
 
       /* Contact Me CSS*/
@@ -155,8 +167,21 @@
         color: #FFFFFF;
       }
 
-      .contact-me * {
+      .contact-me *:not(.form-object) {
         color: #FFFFFF; 
+      }
+
+      .contact-me > .content-links > span {
+        background-color: #7088B2;
+        border-radius: 0px 0px 2000px 2000px;
+        padding: 4px;
+        padding-top: 3px;
+        padding-bottom: 25px;
+        color: #ffffff;
+      }
+
+      .contact-me > .content-links > a:hover {
+        color: #7088B2;
       }
 
       .email-form{
@@ -195,33 +220,37 @@
 
       /*Footer CSS*/
 
-      .footer{
-        padding: 30px;
+      .footer {
+        background-color: #3b444c;
+        border-top: 3px solid #818181;
+        padding: 60px;
       }
 
-      .rights{
+      .social-media {
         text-align: center;
       }
 
-      .icon-block{
+      .get-in-touch, .name{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
         text-align: center;
       }
 
-
-      img#linkedin:hover{
-        content:url("./assets/linkedinHover.png");
+      .name *{
+        color: #818181;
       }
 
-      img#twitter:hover{
-        content:url("./assets/twitterHover.png");
+      .social-media a {
+        padding: 10px;
       }
 
-      img#github:hover{
-        content:url("./assets/githubHover.png");
+      .social-media a:hover {
+        color: #818181;
       }
 
-      img#instagram:hover{
-        content:url("./assets/instagramHover.png");
+      .social-media * {
+        color: #f1f1f1;
       }
 
 
@@ -232,7 +261,6 @@
     <div class="landing">
       <img class="landing-image" src="./assets/landing.jpg"/>
       <div class="landing-links">
-        <span class="home-link">Home</span>
         <a class="about-me-link">About Me</a>
         <a class="my-experience-link">My Experience</a>
         <a class="contact-me-link">Contact Me</a>
@@ -288,7 +316,7 @@
         <a class="home-link">Home</a>
         <a class="about-me-link">About Me</a>
         <a class="my-experience-link">My Experience</a>
-        <a class="contact-me-link">Contact Me</a>
+        <span class="contact-me-link">Contact Me</span>
       </div>
       <div class="content">
         <h1 class="page-title-text">
@@ -304,48 +332,20 @@
       </div>
     </div>
 
-    <footer>
-      <div class="social columns medium-6">
-        <div class="instagram"> 
-          <div class="instagram-icon columns medium-3">
-            <a href="https://instagram.com/harleyrowland/"><img class="icon" id="instagram" src="./assets/instagram.png"/></a>
-          </div>
-          <div class="instagram-text columns medium-9">
-            HarleyRowland
-          </div>
-        </div>
-
-        <div class="linkedin"> 
-          <div class="linkedin-icon columns medium-3">
-            <a href="https://uk.linkedin.com/pub/harley-rowland/71/365/799"><img class="icon" id="linkedin" src="./assets/linkedin.png"/></a>
-          </div>
-          <div class="linkedin-text columns medium-9">
-            Harley Rowland
-          </div>
-        </div>
-
-        <div class="twitter"> 
-          <div class="twitter-icon columns medium-3">
-            <a href="https://twitter.com/HarleyRowland"><img class="icon" id="twitter" src="./assets/twitterHover.png"/></a>
-          </div>
-          <div class="twitter-text columns medium-9">
-            @HarleyRowland
-          </div>
-        </div>
-
-        <div class="github"> 
-          <div class="github-icon columns medium-3">
-            <a href="https://github.com/HarleyRowland"><img class="icon" id="github" src="./assets/github.png"/></a>
-          </div>
-          <div class="github-text columns medium-9">
-            HarleyRowland
-          </div>
-        </div>
+    <footer class="footer">
+      <div class="get-in-touch">
+        <span class="footerText">Get in Touch!</span>
+      </div>
+      <div class="social-media">
+        <a class="linkedin" href="https://uk.linkedin.com/pub/harley-rowland/71/365/799">LinkedIn </a><span>|</span>
+        <a class="twitter" href="https://twitter.com/HarleyRowland"> Twitter </a><span>|</span>
+        <a class="instagram" href="https://instagram.com/harleyrowland/"> Instagram </a><span>|</span>
+        <a class="github" href="https://github.com/HarleyRowland"> GitHub </a>
+      </div>
+      <div class="name">
+        <span class="footerText">Harley Rowland 2015 - Made using Foundation</span>
       </div>
 
-      <div class="columns medium-6">
-        
-      </div>
     </footer>
 
   </body>
@@ -353,6 +353,8 @@
   <script src="http://code.highcharts.com/highcharts.js"></script>
   <script src="http://code.highcharts.com/highcharts-more.js"></script>
   <script src="http://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://use.typekit.net/lhr4rxd.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <script>
       $(document).ready(function (){
         $(".home-link").click(function (){
@@ -384,7 +386,7 @@
               chart: {
                 polar: true,
                 type: 'line',
-                backgroundColor: "#FFFFFF",
+                backgroundColor: "#f1f1f1",
                 borderWidth: 1,
                 borderRadius: 30,
                 borderColor: "#A8A8A8",
@@ -407,7 +409,7 @@
               plotOptions: {
                 line: {
                   slicedOffset: 0,
-                  color: "#6699CC",
+                  color: "#369FB4",
                   size:'100%',
                   dataLabels: {
                       enabled: false
