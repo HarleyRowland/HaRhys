@@ -18,9 +18,6 @@
         left: 0;
         top: 0;
         width:100vw;
-            background:linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
-
-
       }
 
 
@@ -29,6 +26,10 @@
         position: absolute;
         right: 0px;
         top: 0px;
+      }
+
+      .landing-links *:hover {
+        color: #f1f1f1;
       }
 
       .landing-text {
@@ -42,19 +43,6 @@
 
         width: 600px;
         margin-left: -300px;
-      }
-
-      .more {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        z-index: 100;
-
-        height: 200px;
-        margin-top: 300px;
-
-        width: 600px;
-        margin-left: -700px;
       }
 
       .landing-text *, .more * {
@@ -250,6 +238,10 @@
         text-align: center;
       }
 
+      .get-in-touch * {
+        color: #f1f1f1;
+      }
+
       .name *{
         color: #818181;
         font-size: 12px;
@@ -284,12 +276,9 @@
         <a class="contact-me-link">Contact Me</a>
       </div>
       <div class="landing-text">
-        <h3> Harley Rowland</h1>
-        <h2> Computer Science Student and</h2>
-        <h2> Aspiring Developer.</h2>
-      </div>
-      <div class="more">
-        <h4>&#x2193 More</h4>
+        <h2> Harley Rowland</h2>
+        <h3> Computer Science Student and</h3>
+        <h3> Aspiring Developer.</h3>
       </div>
     </div>
 
@@ -325,7 +314,7 @@
           What I Have Done
         </h1>
         <p>
-          My University course has taught (and is still teaching me) a wide range of skills. I have learnt Object-Oriented programming to a good level and reinforce this regularly when I help in a weekly Java class for first-year students. Also, the Placement I undertook at Holiday Extras taught me a wide range of Web-based technologies such as Node.js, Express (<a href="http://hungrygeek.holidayextras.co.uk/expressjs/2015/04/20/learning-the-basics-of-expressjs/">which I have written an article about</a>) and Backbone.js. 
+          My University course has taught (and is still teaching me) a great array of skills. I have learnt Object-Oriented programming to a good level and reinforce this regularly when I help in a weekly Java class for first-year students. Also, the Placement I undertook at Holiday Extras taught me a wide range of Web-based technologies such as Node.js, Express (<a href="http://hungrygeek.holidayextras.co.uk/expressjs/2015/04/20/learning-the-basics-of-expressjs/">which I have written an article about</a>) and Backbone.js. 
         </p> 
         <div class="my-experience-graph">
            <div class="skills-graph" style="width:50%; height: 40vh; margin: 0 auto"></div>
@@ -443,7 +432,7 @@
                 enabled: false 
               },
               xAxis: {
-                categories: ['JavaScript', 'HTML', 'CSS', 'PHP', 'Ruby', 'MySQL'],
+                categories: ['JavaScript', 'HTML', 'CSS', 'PHP', 'Ruby', 'MySQL/PostgresSQL'],
                 tickmarkPlacement: 'on',
                 lineWidth: 0,
                 lineColor: "#FFFFFF",
@@ -467,25 +456,25 @@
                   }
               },
               series: [{
-                name: 'Foo',
+                name: 'Web Technologies',
                 data: [{
                     y: 7,
-                    description: 'Whilst on placement I spent a lot of<br>time using JavaScript.I have had a<br>lot of exposure to various frameworks<br>such as ExpressJS and BackboneJS<br>and have also used the Node.js platform<br>quite a lot. I have written a blog-post<br>about ExpressJS here.'
+                    description: 'Whilst on placement I spent a lot of<br>time using JavaScript.I have had a<br>lot of exposure to various frameworks<br>such as Express and Backbone.js<br>and have also used the Node.js platform<br>quite a lot. I also practice JavaScript<br>regularly in my spare time.'
                 }, {
                     y: 8,
-                    description: 'I wanted to learn how to use HTML to<br>a high level because it is the basic<br>building blocks which website are made<br>on. Doing this has given me a strong<br>foundation when learning other web<br>languages and technologies. I also have<br>a good understanding of templating<br>lanaguages and have used HAML and<br>Handlebars frequently.'
+                    description: 'I wanted to learn how to use HTML at a<br>highlevel because it is the basic<br>building blocks which website are<br>made from. Doing this has given<br>me a strong foundation when learning<br>other web languages and<br>technologies. On my placement I gained<br>a good understanding of templating<br>lanaguages and used HAML and<br>Handlebars frequently.'
                 }, {
                     y: 6,
-                    description: 'CSS is the language which I enjoy<br>using the most and was another one<br>that I had regular exposure to on my<br>placement. I enjoy the creative<br>aspect of CSS and like playing around<br>with different styling. I have used<br>foundation to style this website<br>and have also used Bootstrap.'
+                    description: 'CSS is the language which I enjoy<br>using the most and was another one<br>that I had regular exposure to on my<br>placement. I enjoy the creative<br>aspect of CSS and like playing around<br>with different styling. I have used<br>foundation to style this website.<br>I also have Bootstrap experience.'
                   },{
                     y: 5,
-                    description: 'I have learnt how to use PHP at<br>university and have completed to sucessful<br>assignments using it - one using<br>the CodeIgniter framework and another which<br>involved creating an adminstration<br>system for a mock business which<br>involed user-type permissions, sessions,<br>database interaction for user authentication.' 
+                    description: 'I have learnt how to use PHP at<br>university and have completed two sucessful<br>assignments using it. The first using<br>the CodeIgniter framework and another which<br>involved creating an adminstration<br>system for a mock business which<br>involved user-type permissions, sessions<br> and database interaction for user authentication.' 
                 }, {
                     y: 3,
-                    description: 'I briefly used Ruby whilst on<br>placement and it is the next programming<br>language that I am going to teach<br>myself.'
+                    description: 'I briefly used Ruby whilst on my<br>placement and it is the next programming<br>language that I am going to teach<br>myself.'
                 }, {
                     y: 6,
-                    description: 'I have used MySQL both in university<br>assignments and on my own personal<br>projects. I have a good understand of<br>the complex queries that need to be written in<br>certain cases and am confident in my<br>own knowledge of MySQL.'
+                    description: 'I have used MySQL both in university<br>assignments and on my own personal<br>projects. I have had to use PostgresSQL<br>for on assignment recently which had me inputing<br>to a Postgres Database from a Java program<br>and then reading from this database in a web application.'
                   }]
               }]
           });
