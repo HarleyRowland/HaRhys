@@ -4,106 +4,187 @@
     <meta name="viewport" content="width=device-width" />
     <title>Harley Rowland</title>
     <link rel="stylesheet" href="./foundation.css">
+    <script src="https://use.typekit.net/lhr4rxd.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
     <style type="text/css">
-      /*General CSS*/
-      p, h1, h2, h3, h4, h5, h6 {
-        font-family: "Arial", Helvetica, sans-serif;
-        color: #A8A8A8;
+
+      body, h1, h2, h3, h4, h5, h6 {
+        font-family: "alwyn-new-rounded-web",sans-serif;
       }
 
-      .center > .innerContent{
-        display: -webkit-flex;
-        -webkit-flex-wrap: wrap;
+      /*Landing Page CSS*/
+      .landing-image {
+        left: 0;
+        top: 0;
+        width:100vw;
       }
 
-      .pageTitle {
+
+      .landing-links {
+        z-index: 100;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+
+      .landing-links *:hover {
+        color: #f1f1f1;
+      }
+
+      .landing-text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 100;
+
+        height: 200px;
+        margin-top: -200px;
+
+        width: 600px;
+        margin-left: -300px;
+      }
+
+      .landing-text *, .more * {
+        color: #f1f1f1;
+        margin-left: 0 auto;
+        margin-right: 0 auto;
+        text-align: center;
+        margin: -10px;
+      }
+
+      .landing-links > a, span {
+        color: #545454;
+        font-size: 15px;
+        margin-left: 10px;  
+        margin-right: 10px;
+      }
+
+
+      /*Content Page CCS (general)*/
+      .content-links {
+        float: right;
+        position: relative;
+      }
+
+      .content-links > a, span {
+        font-size: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .content-page{
+        height: 100vh;
+      }
+
+      .page-title-text {
         text-align: center;
       }
-
-      .text {
-        color: #A8A8A8;
-        padding: 15px;
+      
+      .content{
+        padding: 50px;
+        padding-left: 20%;
+        padding-right: 20%;
       }
 
-      span {
-        color: #0099CC;
+      /*About me page CSS*/
+      .about-me{
+        background-color: #f1f1f1;
+        border-top: 3px solid #545454;
+        color: #545454;
       }
 
-      .center{
-        border-top: 1px solid #0099CC;
-        border-bottom: 1px solid #0099CC;
+      .about-me * {
+        color: #545454; 
       }
 
-      /* Navagation CSS*/
-      .top-strip {
+      .about-me-image {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+      
+      .about-me > .content-links > span {
+        background-color: #545454;
+        border-radius: 0px 0px 1000px 1000px;
+        padding: 4px;
+        padding-top: 3px;
+        padding-bottom: 20px;
+        color: #f1f1f1;
+      }
+
+      .about-me  > .content-links > a:hover {
+        color: #000000;
+      }
+
+      .about-me-image > img {
+        border-radius: 1000px 1000px 1000px 1000px;
+        border:solid #545454;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+
+      .content > p{
         text-align: center;
-        margin-bottom: 5px;
+        font-size: 20px;
       }
 
-      .nav {
-        padding-top: 0.5%;
-        color: #A8A8A8;
+      /*My Experience Page CSS*/
+
+      .my-experience{
+        background-color: #449fbf;
+        border-top: 3px solid #2B86A6;
+        color: #FF8929;
       }
 
-      .nav-link{
-        color: #A8A8A8
+      .my-experience * {
+        color: #f1f1f1; 
       }
 
-
-      .nav > .active {
-        border-top: 5px solid #0099CC;
+      .my-experience > .content-links > span {
+        background-color: #2B86A6;
+        border-radius: 0px 0px 2000px 2000px;
+        padding: 4px;
+        padding-top: 3px;
+        padding-bottom: 30px;
       }
 
-      .nav > a:hover {
-        color: #585858;
-        border-top: 5px solid #0099CC;
+      .my-experience  > .content-links > a:hover {
+        color: #2B86A6;
       }
-
-      /*About Me CSS*/
-
-      .aboutMeImage {
-        padding: 10px;
-        float: left;
-      }
-
-      .aboutMeImage-mobile {
-        padding-left: 100px;
-        padding-right: 100px;
-      }
-
-      /* Footer CSS */
-      .footer{
-        padding: 30px;
-      }
-
-      .rights{
-        text-align: center;
-      }
-
-      .icon-block{
-        text-align: center;
-      }
-
-
-      img#linkedin:hover{
-        content:url("./assets/linkedinHover.png");
-      }
-
-      img#twitter:hover{
-        content:url("./assets/twitterHover.png");
-      }
-
-      img#github:hover{
-        content:url("./assets/githubHover.png");
-      }
-
-      img#instagram:hover{
-        content:url("./assets/instagramHover.png");
-      }
-
 
       /* Contact Me CSS*/
+
+      .contact-me{
+        background-color: #89A1CB;
+        border-top: 3px solid #7088B2;
+        color: #f1f1f1;
+      }
+
+      .contact-me a {
+        color: #f1f1f1;
+      }
+
+      .contact-me *:not(.form-object) {
+        color: #f1f1f1; 
+      }
+
+      .contact-me > .content-links > span {
+        background-color: #7088B2;
+        border-radius: 0px 0px 2000px 2000px;
+        padding: 4px;
+        padding-top: 3px;
+        padding-bottom: 25px;
+        color: #f1f1f1;
+      }
+
+      .contact-me > .content-links > a:hover {
+        color: #7088B2;
+      }
+
       .email-form{
         margin: auto;
         width: 50%;
@@ -122,7 +203,7 @@
         padding:5px 15px; 
         border:0 none;
         color: #ffffff;
-        background-color: #0099CC;
+        background-color: #D6ABBC;
         cursor:pointer;
         -webkit-border-radius: 5px;
         border-radius: 5px; 
@@ -130,128 +211,202 @@
       }
 
       .email-button:hover {
-        color: #E69E1A;
+        color: #F0C5D6;
+        background-color: #BD92A3;
       }
 
       .form-object:-moz-placeholder {
         color: #A8A8A8;
       }
 
-  </style>
+      /*Footer CSS*/
+
+      .footer {
+        background-color: #3b444c;
+        border-top: 3px solid #818181;
+        padding: 60px;
+      }
+
+      .social-media {
+        text-align: center;
+      }
+
+      .get-in-touch, .name{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        text-align: center;
+      }
+
+      .get-in-touch * {
+        color: #f1f1f1;
+      }
+
+      .name *{
+        color: #818181;
+        font-size: 12px;
+      }
+
+      .name a:hover {
+        color: #f1f1f1;
+      } 
+
+      .social-media a {
+        padding: 10px;
+      }
+
+      .social-media a:hover {
+        color: #818181;
+      }
+
+      .social-media * {
+        color: #f1f1f1;
+      }
+
+
+    </style>
   </head>
+ 
   <body>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="http://code.highcharts.com/highcharts.js"></script>
-    <script src="http://code.highcharts.com/highcharts-more.js"></script>
-    <script src="http://code.highcharts.com/modules/exporting.js"></script>
-    <script src="moment.js"></script>
-    <script>// on page load...
+    <div class="landing">
+      <img class="landing-image" src="./assets/landing.jpg"/>
+      <div class="landing-links">
+        <a class="about-me-link">About Me</a>
+        <a class="my-experience-link">My Experience</a>
+        <a class="contact-me-link">Contact Me</a>
+      </div>
+      <div class="landing-text">
+        <h2> Harley Rowland</h2>
+        <h3> Computer Science Student and</h3>
+        <h3> Aspiring Developer.</h3>
+      </div>
+    </div>
 
-      $( document ).ready(function() {
-        $.get('templates/header.html', function (data) {
-          $('body').append(data);       
-        }, 'html');
-        $.get('templates/aboutMe.html', function (data) {
-          $('.center').append(data);       
-        }, 'html');
-        $.get('templates/footer.html', function (data) {
-          $('body').append(data);       
-        }, 'html');
+    <div class="about-me content-page">
+      <div class="content-links">
+        <a class="home-link">Home</a>
+        <span class="about-me-link">About Me</span>
+        <a class="my-experience-link">My Experience</a>
+        <a class="contact-me-link">Contact Me</a>
+      </div>
+      <div class="content">
+        <h1 class="page-title-text">
+          A Little About Myself
+        </h1>
+        <p>
+          Hello! My name is Harley and I am a Computer Science Student at the University of Kent. Currently, I am based in Canterbury but I am <i>likely</i> to reside on the outskirts of London when my final year is completed in July. Persuing a career within technology is a dream of mine and one I fully intend to achieve. I enjoy to keep fit and love to exercise this passion regularly - next year, I am participating in a marathon.
+        </p> 
+        <div class="about-me-image">
+           <img src="./assets/harley-small.jpg"/>
+        </div>
+      </div>
+    </div>
 
-        $('body').on('click', '.about-me', function() {
-          if (!($('.about-me').hasClass("active"))) {
-            $('.my-experience').removeClass('active')
-            $('.my-activity').removeClass('active')
-            $('.contact-me').removeClass('active')
-            $(".about-me").addClass("active");
-            $.get('templates/aboutMe.html', function (data) {
-              $('.center').html(data);       
-            }, 'html');
-          }
+    <div class="my-experience content-page">
+      <div class="content-links">
+        <a class="home-link">Home</a>
+        <a class="about-me-link">About Me</a>
+        <span class="my-experience-link">My Experience</span>
+        <a class="contact-me-link">Contact Me</a>
+      </div>
+      <div class="content">
+        <h1 class="page-title-text">
+          What I Have Done
+        </h1>
+        <p>
+          My University course has taught (and is still teaching me) a great array of skills. I have learnt Object-Oriented programming to a good level and reinforce this regularly when I help in a weekly Java class for first-year students. Also, the Placement I undertook at Holiday Extras taught me a wide range of Web-based technologies such as Node.js, Express (<a href="http://hungrygeek.holidayextras.co.uk/expressjs/2015/04/20/learning-the-basics-of-expressjs/">which I have written an article about</a>) and Backbone.js. 
+        </p> 
+        <div class="my-experience-graph">
+           <div class="skills-graph" style="width:50%; height: 40vh; margin: 0 auto"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-me content-page">
+      <div class="content-links">
+        <a class="home-link">Home</a>
+        <a class="about-me-link">About Me</a>
+        <a class="my-experience-link">My Experience</a>
+        <span class="contact-me-link">Contact Me</span>
+      </div>
+      <div class="content">
+        <h1 class="page-title-text">
+          Please Contact Me
+        </h1>
+        <form class='email-form' action="MAILTO:harleyrowland17@gmail.com" method="post" enctype="text/plain">
+          <input class='form-object' type="text" name="name" placeholder="What is your name?">
+          <input class='form-object' type="text" name="mail" placeholder="What is your E-mail?">
+          <input class='form-object' type="text" name="subject" placeholder="What is the subject?">
+          <textarea class='form-object' cols="40" rows="5" placeholder="Ask me anything."></textarea>
+          <input class='form-object email-button' type="submit" value="Send">
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="get-in-touch">
+        <span class="footerText">Get in Touch!</span>
+      </div>
+      <div class="social-media">
+        <a class="linkedin" href="https://uk.linkedin.com/pub/harley-rowland/71/365/799">LinkedIn </a><span>|</span>
+        <a class="twitter" href="https://twitter.com/HarleyRowland"> Twitter </a><span>|</span>
+        <a class="instagram" href="https://instagram.com/harleyrowland/"> Instagram </a><span>|</span>
+        <a class="github" href="https://github.com/HarleyRowland"> GitHub </a>
+      </div>
+      <div class="name">
+        <span class="footerText">Harley Rowland 2015 - Made using <a href="https://uk.linkedin.com/pub/harley-rowland/71/365/799">Foundation</a> and <a href="https://uk.linkedin.com/pub/harley-rowland/71/365/799">Typekit</a></span>
+      </div>
+
+    </footer>
+
+  </body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/highcharts-more.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
+  <script>
+      $(document).ready(function (){
+        $(".home-link").click(function (){
+          $('html, body').animate({
+            scrollTop: $(".landing").offset().top
+         }, 1000);
         });
 
-        $('body').on('click', '.my-experience', function() {
-          if (!($('.my-experience').hasClass("active"))) {
-            $(".about-me").removeClass('active')
-            $('.my-activity').removeClass('active')
-            $('.contact-me').removeClass('active')
-            $('.my-experience').addClass("active");
-            $.get('templates/myExperience.html', function (data) {
-              $('.center').html(data);
-              webHighCharts();      
-            }, 'html');
-          }
+        $(".about-me-link").click(function (){
+          $('html, body').animate({
+            scrollTop: $(".about-me > .content-links").offset().top
+         }, 1000);
         });
 
-        $('body').on('click', '.my-activity', function() {
-          if (!($('.my-activity').hasClass("active"))) {
-            $('.about-me').removeClass('active')
-            $('.my-experience').removeClass('active')
-            $('.contact-me').removeClass('active')
-            $('.my-activity').addClass("active");
-            $.get('templates/myActivity.html', function (data) {
-              $('.center').html(data);   
-              getNikeDetails();    
-            }, 'html');
-          }
-        });
-        
-        $('body').on('click', '.contact-me', function() {
-          if (!($('.contact-me').hasClass("active"))) {
-            $('.about-me').removeClass('active')
-            $('.my-experience').removeClass('active')
-            $('.my-activity').removeClass('active')
-            $('.contact-me').addClass("active");
-            $.get('templates/contactMe.html', function (data) {
-              $('.center').html(data);       
-            }, 'html');
-          }
+        $(".my-experience-link").click(function (){
+          $('html, body').animate({
+            scrollTop: $(".my-experience > .content-links").offset().top
+         }, 1000);
         });
 
-        function getNikeDetails(){
-          var x = null;
-          $.ajax({
-            dataType: "json",
-            url: "https://api.nike.com/me/sport/activities?access_token=8HZL1AwugXQAlObvx7aW6KUMwTsx&count=1",
-            success: function(data){
-              var nikeData = data.data[0];
-              console.log(nikeData);
-              var activity = nikeData.activityID;
-              var year = nikeData.startTime.substring(0,4);
-              var month = nikeData.startTime.substring(5,7)-1; 
-              var day = nikeData.startTime.substring(8,10);
-              var timeSinceRun = moment([year, month, day]).fromNow();
-              var calories = nikeData.metricSummary.calories;
-              var distance = (nikeData.metricSummary.distance+"").substring(0,3);
-              var hours = nikeData.metricSummary.duration.substring(0,1);
-              var minutes = nikeData.metricSummary.duration.substring(2,4);
-              var weather = nikeData.tags[3].tagValue.toLowerCase();
-              var emotion = nikeData.tags[2].tagValue.toLowerCase();
-
-              var returnString  = "I last went for a run " + timeSinceRun + " - it was a " + weather + " day. On this run, I burnt " + calories + " calories and travelled " + distance + "km in " + runDuration(hours, minutes) + ".";
-              
-              $('.runText').html(returnString);   
-
-            }
-          });          
-        }
-
-        function runDuration(hours, minutes){
-          var timeString = minutes + " minutes";
-          if(hours > 0){
-            timeString = hours + " hours and " + timeString;
-          }
-          return timeString;
-        }
+        $(".contact-me-link").click(function (){
+          $('html, body').animate({
+            scrollTop: $(".contact-me > .content-links").offset().top
+         }, 1000);
+        });
 
         function webHighCharts(){
-          $('.progress-bars').highcharts({
+          $('.skills-graph').highcharts({
               chart: {
                 polar: true,
-                type: 'line'
+                type: 'line',
+                backgroundColor: "#f1f1f1",
+                borderWidth: 1,
+                borderRadius: 30,
+                borderColor: "#A8A8A8",
+                margin: 0,
+                spacingRight: 0,
+                style: {
+                  fontFamily: 'alwyn-new-rounded-web'
+                }
               },
               title: {
-                text: 'Web Development',
+                text: undefined,
                 enabled: false,
                 style: {
                   color: '#0099CC'
@@ -263,13 +418,26 @@
               legend: {
                 enabled: false
               },
+              plotOptions: {
+                line: {
+                  slicedOffset: 0,
+                  color: "#2B86A6",
+                  size:'100%',
+                  dataLabels: {
+                      enabled: false
+                  },
+                }
+              },
               exporting: { 
                 enabled: false 
               },
               xAxis: {
-                categories: ['JavaScript', 'HTML', 'CSS', 'PHP', 'Ruby', 'MySQL'],
+                categories: ['JavaScript', 'HTML', 'CSS', 'PHP', 'Ruby', 'MySQL/PostgresSQL'],
                 tickmarkPlacement: 'on',
-                lineWidth: 0
+                lineWidth: 0,
+                lineColor: "#FFFFFF",
+                minPadding: 0,
+                maxPadding: 0
               },
               yAxis: {
                 gridLineInterpolation: 'polygon',
@@ -288,30 +456,33 @@
                   }
               },
               series: [{
-                name: 'Foo',
+                name: 'Web Technologies',
                 data: [{
                     y: 7,
-                    description: 'Whilst on placement I spent a lot of<br>time using JavaScript.I have had a<br>lot of exposure to various frameworks<br>such as ExpressJS and BackboneJS<br>and have also used the Node.js platform<br>quite a lot. I have written a blog-post<br>about ExpressJS here.'
+                    description: 'Whilst on placement I spent a lot of<br>time using JavaScript.I have had a<br>lot of exposure to various frameworks<br>such as Express and Backbone.js<br>and have also used the Node.js platform<br>quite a lot. I also practice JavaScript<br>regularly in my spare time.'
                 }, {
                     y: 8,
-                    description: 'I wanted to learn how to use HTML to<br>a high level because it is the basic<br>building blocks which website are made<br>on. Doing this has given me a strong<br>foundation when learning other web<br>languages and technologies. I also have<br>a good understanding of templating<br>lanaguages and have used HAML and<br>Handlebars frequently.'
+                    description: 'I wanted to learn how to use HTML at a<br>highlevel because it is the basic<br>building blocks which website are<br>made from. Doing this has given<br>me a strong foundation when learning<br>other web languages and<br>technologies. On my placement I gained<br>a good understanding of templating<br>lanaguages and used HAML and<br>Handlebars frequently.'
                 }, {
                     y: 6,
-                    description: 'CSS is the language which I enjoy<br>using the most and was another one<br>that I had regular exposure to on my<br>placement. I enjoy the creative<br>aspect of CSS and like playing around<br>with different styling. I have used<br>foundation to style this website<br>and have also used Bootstrap.'
+                    description: 'CSS is the language which I enjoy<br>using the most and was another one<br>that I had regular exposure to on my<br>placement. I enjoy the creative<br>aspect of CSS and like playing around<br>with different styling. I have used<br>foundation to style this website.<br>I also have Bootstrap experience.'
                   },{
                     y: 5,
-                    description: 'I have learnt how to use PHP at<br>university and have completed to sucessful<br>assignments using it - one using<br>the CodeIgniter framework and another which<br>involved creating an adminstration<br>system for a mock business which<br>involed user-type permissions, sessions,<br>database interaction for user authentication.' 
+                    description: 'I have learnt how to use PHP at<br>university and have completed two sucessful<br>assignments using it. The first using<br>the CodeIgniter framework and another which<br>involved creating an adminstration<br>system for a mock business which<br>involved user-type permissions, sessions<br> and database interaction for user authentication.' 
                 }, {
                     y: 3,
-                    description: 'I briefly used Ruby whilst on<br>placement and it is the next programming<br>language that I am going to teach<br>myself.'
+                    description: 'I briefly used Ruby whilst on my<br>placement and it is the next programming<br>language that I am going to teach<br>myself.'
                 }, {
                     y: 6,
-                    description: 'I have used MySQL both in university<br>assignments and on my own personal<br>projects. I have a good understand of<br>the complex queries that need to be written in<br>certain cases and am confident in my<br>own knowledge of MySQL.'
+                    description: 'I have used MySQL both in university<br>assignments and on my own personal<br>projects. I have had to use PostgresSQL<br>for on assignment recently which had me inputing<br>to a Postgres Database from a Java program<br>and then reading from this database in a web application.'
                   }]
               }]
           });
-        }
+};
+
+        webHighCharts();
       });
-    </script>
-  </body>
+
+
+  </script>
 </html>
