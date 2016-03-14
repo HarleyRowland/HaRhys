@@ -2,9 +2,19 @@
 <html>
 <head>
   <style type="text/css">
+
+    html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
     @media (max-width: 380px) {
       h1.title {
         font-size: 8em;
+
       }
       .price {
         background-color: black;
@@ -12,18 +22,19 @@
       }
     }
     .titleImg {
-        width: 80px;
+        width: 20%;
         margin: auto;
         display: block;
+        padding: 50px;
     }
   
     h1 {
-      font-size: 72px;
+      font-size: 12vw;
       font-family: 'Poiret One', cursive;
     }
   
     h2 {
-      font-size: 40px;
+      font-size: 8vw;
       font-family: 'Poiret One', cursive;
     }
   
@@ -34,13 +45,13 @@
     }
   
     .download {
-        border-radius: 20px;
-        background-color: #3D5EBC;
-        max-width: 170px;
-        min-height: 50px;
-        margin: auto;
-        position: relative;
-        margin-bottom: 50px;
+      border-radius: 20px;
+      background-color: #3D5EBC;
+      max-width: 510px;
+      min-height: 150px;
+      margin: auto;
+      position: relative;
+      margin-bottom: 50px;
     }
   
     .download a {
@@ -51,23 +62,33 @@
       color: white;
       font-family: 'Poiret One', cursive;
       text-decoration: none;
-      
+      font-size: 5vw;
     }
     
     .top_panel {
       background-color: #3D5EBC;
-      height: 50%;
+      height: 35%;
       width: 100%;
       position: absolute;
+      width: 100vw;
       top:0;
-      left:0;
-      width: 100%
+      left: 0;
+      margin: 0px;
     }
     
     .main_panel {
       position: absolute;
-      top: 50%;
+      top: 40%;
       width: 100%;
+    }
+    .note {
+      padding: 20px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    .note * {
+      font-size: 4vw;
     }
 
   </style>
@@ -80,7 +101,7 @@
   </div>
   <div class="top_panel">
     <h1 class="title" style="color: #ffffff; font-weight: 100; position: relative; top: 10%">LookUp</h1>
-    <img class="titleImg" border="0" src="../assets/logo.png" width="20px">
+    <img class="titleImg" border="0" src="logo.png" width="20px">
   </div>
   <div class="main_panel" style="text-align: center">
     <h2 style="color: #3D5EBC;">Helping you escape the digital bubble.</h2>
@@ -91,7 +112,7 @@
       </a>
     </div>
     
-    <p><b>Note:</b> This download is only for use on Android.</p>
+    <div class="note"><p><b>Note:</b> This download is only for use on Android and whilst connected to the University of Kent Eduroam Wi-Fi.</p></div>
   </div>
   
 </body>
