@@ -3,117 +3,90 @@
 <head>
   <style type="text/css">
 
-    html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
-}
-    @media (max-width: 380px) {
-      h1.title {
-        font-size: 8em;
+    html,body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      overflow-x: hidden; 
+      background-color: white;
+    }
 
-      }
-      .price {
-        background-color: black;
-        
-      }
+    body * {
+      font-family: 'Poiret One', cursive;
+      text-align: center;
     }
-    .titleImg {
-        width: 20%;
-        margin: auto;
-        display: block;
-        padding: 50px;
-    }
-  
+
     h1 {
       font-size: 12vw;
-      font-family: 'Poiret One', cursive;
+      color: white;
+      text-align: center;
     }
   
     h2 {
       font-size: 8vw;
-      font-family: 'Poiret One', cursive;
+      color: #3D5EBC;
     }
   
-    h1, h2, h5, p {
-      text-align: center;
+    h5, p {
+      font-size: 4vw;
       color: grey;
-      font-family: 'Poiret One', cursive;
-    }
-  
-    .download {
-      border-radius: 20px;
-      background-color: #3D5EBC;
-      max-width: 510px;
-      min-height: 150px;
-      margin: auto;
-      position: relative;
-      margin-bottom: 50px;
-    }
-  
-    .download a {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-family: 'Poiret One', cursive;
-      text-decoration: none;
-      font-size: 5vw;
-    }
-    
-    .top_panel {
-      background-color: #3D5EBC;
-      height: 35%;
-      width: 100%;
-      position: absolute;
-      width: 100vw;
-      top:0;
-      left: 0;
-      margin: 0px;
-    }
-    
-    .main_panel {
-      position: absolute;
-      top: 40%;
-      width: 100%;
-    }
-    .note {
-      padding: 20px;
-      padding-left: 50px;
-      padding-right: 50px;
     }
 
-    .note * {
-      font-size: 4vw;
+    .top_panel {
+      background-color: #3D5EBC;
+      padding: 10%;
+      max-width: 800px;
+      margin: auto;
+      display: block;
+    }
+
+    .titleImg {
+      width: 100px;
+      margin: auto;
+      display: block;
+    }
+
+    .main_panel {
+      max-width: 800px;
+      margin: auto;
+      display: block;
+      padding: 10px;
+    }
+
+    .download {
+      background-color: #3D5EBC;
+      margin-left: 30%;
+      margin-right: 30%;
+      border-radius: 20px;
+      padding: 15px;
+    }
+
+    .download a {
+      text-decoration: none;
+      color: white;
+      font-size: 5vw;
     }
 
   </style>
   <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <div class="price" style="width: 10px; height: 10px; background-color: green; position: absolute; top: 100%;">
-  </div>
-    
-  </div>
-  <div class="top_panel">
-    <h1 class="title" style="color: #ffffff; font-weight: 100; position: relative; top: 10%">LookUp</h1>
-    <img class="titleImg" border="0" src="logo.png" width="20px">
-  </div>
-  <div class="main_panel" style="text-align: center">
-    <h2 style="color: #3D5EBC;">Helping you escape the digital bubble.</h2>
-    
-    <div class="download">
-      <a href="dat.txt" download>
-        Download LookUp!
-      </a>
+    <div class="top_panel">
+      <h1 class="title">LookUp</h1>
+      <img class="titleImg" border="0" src="logo.png" width="20px">
     </div>
-    
-    <div class="note"><p><b>Note:</b> This download is only for use on Android and whilst connected to the University of Kent Eduroam Wi-Fi.</p></div>
-  </div>
+    <div class="main_panel" style="text-align: center">
+      <h2>Helping you escape the digital bubble.</h2>
+      
+      <div class="download">
+        <a href="dat.txt" download>
+          Download LookUp!
+        </a>
+      </div>
+      
+      <div class="note"><p><b>Note:</b> This download is only for use on Android and whilst connected to the University of Kent Eduroam Wi-Fi.</p></div>
+    </div>
   
 </body>
 </html>
