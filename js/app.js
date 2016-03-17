@@ -300,7 +300,7 @@ function checkforCookies(){
 }
 
 function toggleInfo(){
-    var info = "<p id=\"infoText\" style='margin-top: 50px;'>LookUp is an application which encourages close-proximity interactions. It will send a text message to users of LookUp in close proximity and tell you to look up. We are want to use mobile phones to encourage real-word interactions.</p>";
+    var info = "<p id=\"infoText\" style='margin-top: 50px;'>LookUp is an application which encourages close-proximity interactions. It will send a text message to users of LookUp in close proximity and tell them to look up. We want to use mobile phones to encourage real-word interactions.</p>";
     if(document.getElementById("app").innerHTML.indexOf(info) > -1){
         document.getElementById("app").innerHTML = document.getElementById("app").innerHTML.replace(info, "");
     }
