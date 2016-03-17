@@ -221,7 +221,7 @@ function phoneNumberValidation(number){
 function endState(text){
     document.getElementById("app").innerHTML = "" +
     "<p style='margin-top: 50px;'>" + text + "</p>" +
-    "<input type=\"checkbox\" checked data-toggle=\"toggle\" id=\"togglePlayCheckbox\" data-on=\"ACTIVE\" data-off=\"INACTIVE\" onchange=\"togglePlay()\"> </input>" +
+    "<input type=\"checkbox\" checked data-toggle=\"toggle\" id=\"togglePlayCheckbox\" data-on=\"LookUp ON\" data-off=\"LookUp OFF\" onchange=\"togglePlay()\"> </input>" +
     "<button type=\"button\" id=\"infoButton\" onclick=\"toggleInfo()\">?</button>" +
     "<button type=\"button\" id=\"removeUserButton\" onclick=\"removeUser()\">Opt Out</button>";
 
@@ -300,7 +300,7 @@ function checkforCookies(){
 }
 
 function toggleInfo(){
-    var info = "<p id=\"infoText\" style='margin-top: 50px;'>LookUp is an application.</p>";
+    var info = "<p id=\"infoText\" style='margin-top: 50px;'>LookUp is an application which encourages close-proximity interactions. It will send a text message to users of LookUp in close proximity and tell you to look up. We are want to use mobile phones to encourage real-word interactions.</p>";
     if(document.getElementById("app").innerHTML.indexOf(info) > -1){
         document.getElementById("app").innerHTML = document.getElementById("app").innerHTML.replace(info, "");
     }
