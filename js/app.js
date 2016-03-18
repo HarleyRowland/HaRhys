@@ -36,7 +36,7 @@ function submitNumber() {
             document.getElementById("app").innerHTML = "" +
             "<p style='margin-top: 50px;'>Your number is already registered. Please enter the verification code we have sent you. (If you cannot find it, it is advised you remove your number and register again)</p>" +
             "<form style='text-align: center'>" +
-            "<input id=\"verificationCode\" required><br/><br/><br/>" +
+            "<input type=\"tel\" id=\"verificationCode\" required><br/><br/><br/>" +
             "<button type=\"button\" id=\"submitVerificationCodeButton\" onclick=\"submitVerificationCode()\">Send</button><br/><br/><br/>" +
             "</form>" +
             "<button type=\"button\" id=\"removeUserButton\" onclick=\"removeUser()\">Remove my number!</button>";
@@ -56,15 +56,15 @@ function submitNumber() {
                 document.getElementById("app").innerHTML = "" +
                 "<p style='margin-top: 50px;'>Please enter the verification code that we are sending you!</p>" +
                 "<form style='text-align: center'>" +
-                "<input id=\"verificationCode\" required><br/><br/><br/>" +
-                "<button type=\"submit\" id=\"submitVerificationCodeButton\" onclick=\"submitVerificationCode()\">Submit!</button>" +
+                "<input type=\"tel\" id=\"verificationCode\" required><br/><br/><br/>" +
+                "<button type=\"submit\" id=\"submitVerificationCodeButton\" onclick=\"submitVerificationCode(e)\">Submit!</button>" +
                 "</form>";
             }
             else{
                 document.getElementById("app").innerHTML = "" +
                 "<p style='margin-top: 50px;'>Something went wrong with our application... please try again another time.</p>" +
                 "<form style='text-align: center'>" +
-                "<input id=\"telephone\" required><br/><br/><br/>" +
+                "<input type=\"tel\" id=\"telephone\" required><br/><br/><br/>" +
                 "<button type=\"submit\" id=\"submitNumberButton\" onclick=\"submitNumber()\">Submit!</button>" +
                 "</form>";
             }
@@ -74,7 +74,7 @@ function submitNumber() {
         document.getElementById("app").innerHTML = "" +
         "<p style='margin-top: 50px;'>Please enter your mobile number so that we can send you a verification code!</p>" +
         "<form style='text-align: center'>" +
-        "<input id=\"telephone\" required><br/><br/><br/>" +
+        "<input type=\"tel\" id=\"telephone\" required><br/><br/><br/>" +
         "<button type=\"button\" id=\"submitNumberButton\" onclick=\"submitNumber()\">Submit!</button>" +
         "</form>" +
         "<p>This number format is not recognised! Try one of the below formats! (Spaces are optional)</p>" +
@@ -104,7 +104,7 @@ function submitVerificationCode(){
             document.getElementById("app").innerHTML = "" +
             "<p style='margin-top: 50px;'>Please enter the verification code that we are sending you!</p>" +
             "<form  style='text-align: center'>" +
-            "<input id=\"verificationCode\" required><br/><br/><br/>" +
+            "<input type=\"tel\" id=\"verificationCode\" required><br/><br/><br/>" +
             "<button type=\"button\" id=\"submitVerificationCodeButton\" onclick=\"submitVerificationCode()\">Submit!</button>" +
             "</form>" +
             "<p>The given verification code was incorrect. Make sure to take care when inputting it. If you believe you require a new verification code, remove your number and register again.</p>" +
@@ -114,7 +114,7 @@ function submitVerificationCode(){
             document.getElementById("app").innerHTML = "" +
             "<p style='margin-top: 50px;'>Something went wrong with our application... please try again another time.</p>" +
             "<form style='text-align: center'>" +
-            "<input id=\"telephone\" required><br/><br/><br/>" +
+            "<input type=\"tel\" id=\"telephone\" required><br/><br/><br/>" +
             "<button type=\"button\" id=\"submitNumberButton\" onclick=\"submitNumber()\">Submit!</button>" +
             "</form>";
         }
@@ -153,7 +153,7 @@ function removeUser(){
         document.getElementById("app").innerHTML = "" +
         "<p style='margin-top: 50px;'>Please enter your mobile number so that we can send you a verification code!</p>" +
         "<form style='text-align: center'>" +
-        "<input id=\"telephone\" required><br/><br/><br/>" +
+        "<input type=\"tel\" id=\"telephone\" required><br/><br/><br/>" +
         "<button type=\"button\" id=\"submitNumberButton\" onclick=\"submitNumber()\">Submit!</button>" +
         "</form>";
 
@@ -293,7 +293,7 @@ function checkforCookies(){
         document.getElementById("app").innerHTML = "" +
         "<p style='margin-top: 50px;'>Please enter your mobile number so that we can send you a verification code!</p>" +
         "<form style='text-align: center'>" +
-        "<input id=\"telephone\" required><br/><br/><br/>" +
+        "<input type=\"tel\" id=\"telephone\" required><br/><br/><br/>" +
         "<button type=\"button\" id=\"submitNumberButton\" onclick=\"submitNumber()\">Submit!</button>" +
         "</form>";
     }
