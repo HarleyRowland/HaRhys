@@ -57,7 +57,7 @@ function submitNumber() {
                 "<p style='margin-top: 50px;'>Please enter the verification code that we are sending you!</p>" +
                 "<form style='text-align: center'>" +
                 "<input type=\"tel\" id=\"verificationCode\" required><br/><br/><br/>" +
-                "<button type=\"submit\" id=\"submitVerificationCodeButton\" onclick=\"submitVerificationCode(e)\">Submit!</button>" +
+                "<button type=\"button\" id=\"submitVerificationCodeButton\" onclick=\"submitVerificationCode()\">Submit!</button>" +
                 "</form>";
             }
             else{
@@ -65,7 +65,7 @@ function submitNumber() {
                 "<p style='margin-top: 50px;'>Something went wrong with our application... please try again another time.</p>" +
                 "<form style='text-align: center'>" +
                 "<input type=\"tel\" id=\"telephone\" required><br/><br/><br/>" +
-                "<button type=\"submit\" id=\"submitNumberButton\" onclick=\"submitNumber()\">Submit!</button>" +
+                "<button type=\"button\" id=\"submitNumberButton\" onclick=\"submitNumber()\">Submit!</button>" +
                 "</form>";
             }
         }
