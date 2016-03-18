@@ -30,7 +30,7 @@ function submitNumber() {
         }
 
         if(RESTReturn == 1){
-            endState("Welcome back! ~(˘▾˘~)");
+            endState("Welcome back!");
         }
         else if(RESTReturn == 2){
             document.getElementById("app").innerHTML = "" +
@@ -98,7 +98,7 @@ function submitVerificationCode(){
         }
 
         if(RESTReturn == true){
-            endState("Account created! Good Job! ~(˘▾˘~)");
+            endState("Account created! Good Job!");
         }
         else if(RESTReturn == false){
             document.getElementById("app").innerHTML = "" +
@@ -287,7 +287,7 @@ function checkforCookies(){
             var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
             profile.name = getCookie(name);
         }
-        endState("Welcome back! ~(˘▾˘~)");
+        endState("Welcome back!");
     }
     else{
         document.getElementById("app").innerHTML = "" +
@@ -301,8 +301,8 @@ function checkforCookies(){
 
 function toggleInfo(){
     var info = "<p id=\"infoText\" style='margin-top: 50px;'>LookUp is an application which encourages close-proximity interactions. It will send a text message to users of LookUp in close proximity and tell them to look up. We want to use mobile phones to encourage real-word interactions.</p>";
-    if(document.getElementById("app").innerHTML.indexOf(info) > -1){
-        document.getElementById("app").innerHTML = document.getElementById("app").innerHTML.replace(info, "");
+    if(document.getElementById("infoText")){
+        $("#infoText").remove();
     }
     else{
         document.getElementById("app").innerHTML = document.getElementById("app").innerHTML + info;
