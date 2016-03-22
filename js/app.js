@@ -176,6 +176,7 @@ function removeUser(){
 function locationLive(){
     if(profile.hasOwnProperty("locationLive") && profile.hasOwnProperty("togglePlay")) {
         if (profile.togglePlay == "on") {
+            navigator.geolocation.getCurrentPosition(function () {}, function () {}, {});
             if (!navigator.geolocation) {
                 return;
             }
