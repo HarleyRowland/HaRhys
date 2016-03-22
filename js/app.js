@@ -256,7 +256,7 @@ function endState(text){
     console.log("geolocator", geolocator);
     worker = new Worker("js/worker.js");
     console.log("profile", profile);
-    profile.geolocator = geolocator;
+    profile.geolocator = JSON.stringify(geolocator);
     worker.postMessage([profile]);
 }
 

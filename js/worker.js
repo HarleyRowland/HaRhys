@@ -11,7 +11,9 @@ onmessage = function(e) {
   if(e.data[0].userNum) profile.userNum = e.data[0].userNum;
   if(e.data[0].togglePlay) profile.togglePlay = e.data[0].togglePlay;
   if(e.data[0].locationLive) profile.locationLive = e.data[0].locationLive;
-  if(e.data[0].geolocator) profile.geolocator = e.data[0].geolocator;
+  if(e.data[0].geolocator) {
+  	profile.geolocator = JSON.parse(e.data[0].geolocator);
+  }
   console.log("profile in message", profile);
 }
 
