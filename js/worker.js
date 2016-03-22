@@ -5,9 +5,11 @@ onmessage = function(e) {
   if(e.userNum) profile.userNum = e.userNum;
   if(e.togglePlay) profile.togglePlay = e.togglePlay;
   if(e.locationLive) profile.locationLive = e.locationLive;
+  console.log("profile in message", profile);
 }
 
 function locationLive(){
+	while(profile == null){}
 	    	console.log("in no if")
 	    	console.log(profile);
     if(profile && profile.hasOwnProperty("locationLive") && profile.hasOwnProperty("togglePlay")) {
