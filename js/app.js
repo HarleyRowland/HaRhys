@@ -253,6 +253,7 @@ function endState(text){
     }
 
     worker = new Worker("js/worker.js");
+    console.log("profile", profile);
     worker.postMessage([profile]);
 }
 
