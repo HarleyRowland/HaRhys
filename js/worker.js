@@ -32,7 +32,7 @@ function locationLive(){
 
 
             function success(position) {
-            	console.log("success");
+            	console.log(position);
                 var RESTReturn = "undefined";
 
                 function cb(data) {
@@ -55,7 +55,8 @@ function locationLive(){
             	console.log("error");
             }
 
-            profile.navigator.geolocation.getCurrentPosition(success, error);
+			var html5Options = { enableHighAccuracy: true, timeout: 6000, maximumAge: 0 };
+            geolocator.locate(successful, error, true, html5Options, null);
         }
     }
 }
