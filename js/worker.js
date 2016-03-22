@@ -2,7 +2,7 @@ var profile = {
 	userNum: null,
 	togglePlay: null,
 	locationLive: null
-	navigator: null;
+	navigator: null
 };
 
 onmessage = function(e) {
