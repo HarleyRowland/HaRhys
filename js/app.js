@@ -255,7 +255,7 @@ function endState(text){
     }
     worker = new Worker("js/worker.js");
 
-    myWorker.onmessage = function(e) {
+    worker.onmessage = function(e) {
       result.textContent = e.data;
       console.log('Message received from worker', e.data);
     }
