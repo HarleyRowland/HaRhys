@@ -256,7 +256,6 @@ function endState(text){
     worker = new Worker("js/worker.js");
 
     worker.onmessage = function(e) {
-      result.textContent = e.data;
       console.log('Message received from worker', e.data);
     }
     profile.geolocator = JSON.stringify(geolocator);
