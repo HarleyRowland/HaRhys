@@ -5,6 +5,9 @@ onmessage = function(e) {
   if(e.userNum) profile.userNum = e.userNum;
   if(e.togglePlay) profile.togglePlay = e.togglePlay;
   if(e.locationLive) profile.locationLive = e.locationLive;
+  console.log(e.userNum);
+  console.log(e.togglePlay);
+  console.log(e.locationLive);
   console.log("profile in message", profile);
 }
 
