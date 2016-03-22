@@ -25,11 +25,6 @@ function locationLive(){
 
         	    	console.log("in second if")
 
-            if (!profile.navigator.geolocation) {
-                return;
-            }
-                	console.log("past third if")
-
 
             function success(position) {
             	console.log(position);
