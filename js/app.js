@@ -253,9 +253,12 @@ function endState(text){
             }
         }
     }
-    console.log("geolocator", geolocator);
     worker = new Worker("js/worker.js");
-    console.log("profile", profile);
+
+    myWorker.onmessage = function(e) {
+      result.textContent = e.data;
+      console.log('Message received from worker', e.data);
+    }
     profile.geolocator = JSON.stringify(geolocator);
     worker.postMessage([profile]);
 }
