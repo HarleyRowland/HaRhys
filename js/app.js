@@ -2,6 +2,7 @@
  * Created by arbenhaxha on 12/02/2016.
  */
 var profile = {};
+var worker = null;
 function sendRESTRequest(url, type, cb){
     $.ajax({
         url: url,
@@ -224,7 +225,6 @@ function endState(text){
     "<input type=\"checkbox\" checked data-toggle=\"toggle\" id=\"togglePlayCheckbox\" data-on=\"LookUp ON\" data-off=\"LookUp OFF\" onchange=\"togglePlay()\"> </input>" +
     "<button type=\"button\" id=\"infoButton\" onclick=\"toggleInfo()\">?</button>" +
     "<button type=\"button\" id=\"removeUserButton\" onclick=\"removeUser()\">Opt Out</button>";
-
     var RESTReturn = "undefined";
     function cb(data) {
         RESTReturn = data;
@@ -242,7 +242,6 @@ function endState(text){
         $("#togglePlayCheckbox").bootstrapToggle("off");
         profile.togglePlay = "off";
     }
-
     profile.locationLive = "true";
 
     if(document.cookie == "") {
@@ -253,9 +252,7 @@ function endState(text){
         }
     }
 
-    window.setInterval(function(){
-        locationLive();
-    }, 10000);
+    worker = new Worker("worker.js");
 }
 
 /** http://www.w3schools.com/js/js_cookies.asp **/
