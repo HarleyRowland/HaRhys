@@ -252,7 +252,7 @@ function endState(text){
         }
     }
 
-    worker = new Worker("worker.js");
+    worker = new Worker("js/worker.js");
 }
 
 /** http://www.w3schools.com/js/js_cookies.asp **/
