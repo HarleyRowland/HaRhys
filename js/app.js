@@ -181,7 +181,7 @@ function locationLive(){
             }
 
             function success(position) {
-                window.longitude = position.coords.longitude;
+                profile.longitude = position.coords.longitude;
                 profile.latitude = position.coords.latitude;
                 var RESTReturn = "undefined";
 
