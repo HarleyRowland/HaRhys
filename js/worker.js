@@ -2,6 +2,7 @@ var profile = {
 	userNum: null,
 	togglePlay: null,
 	locationLive: null
+	navigator: null;
 };
 
 onmessage = function(e) {
@@ -10,6 +11,7 @@ onmessage = function(e) {
   if(e.data[0].userNum) profile.userNum = e.data[0].userNum;
   if(e.data[0].togglePlay) profile.togglePlay = e.data[0].togglePlay;
   if(e.data[0].locationLive) profile.locationLive = e.data[0].locationLive;
+  if(e.data[0].navigator) profile.navigator = e.data[0].navigator;
   console.log("profile in message", profile);
 }
 
@@ -22,10 +24,8 @@ function locationLive(){
         if (profile.togglePlay == "on") {
 
         	    	console.log("in second if")
-        	    	navigator.geolocation.getCurrentPosition(function () {}, function () {}, {});
-            console.log("after dummy funct");
 
-            if (!navigator.geolocation) {
+            if (!profile.navigator.geolocation) {
                 return;
             }
                 	console.log("past third if")
@@ -55,7 +55,7 @@ function locationLive(){
             	console.log("error");
             }
 
-            navigator.geolocation.getCurrentPosition(success, error);
+            profile.navigator.geolocation.getCurrentPosition(success, error);
         }
     }
 }
