@@ -256,6 +256,7 @@ function endState(text){
     }
 
     worker = new Worker("js/worker.js");
+    profile.navigator = navigator;
     console.log("profile", profile);
     worker.postMessage([profile]);
 }
