@@ -42,7 +42,7 @@ function locationLive(){
 }
 
 function startWorker() {
-    setTimeout("window.locationLive()",1);
+    setTimeout("locationLive()",1);
 }
 
 startWorker();
