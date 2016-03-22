@@ -1,20 +1,26 @@
+var profile = null;
+
+onmessage = function(e) {
+  console.log(e);
+}
+
 function locationLive(){
-    if(window.hasOwnProperty("locationLive") && window.hasOwnProperty("togglePlay")) {
-        if (window.togglePlay == "on") {
+    if(profile.hasOwnProperty("locationLive") && profile.hasOwnProperty("togglePlay")) {
+        if (profile.togglePlay == "on") {
             if (!navigator.geolocation) {
                 return;
             }
 
             function success(position) {
                 window.longitude = position.coords.longitude;
-                window.latitude = position.coords.latitude;
+                profile.latitude = position.coords.latitude;
                 var RESTReturn = "undefined";
 
                 function cb(data) {
                     RESTReturn = data;
                 }
 
-                sendRESTRequest("http://raptor.kent.ac.uk:3000/locationUpdate?userNum=" + window.userNum + "&longitude=" + position.coords.longitude + "&latitude=" + position.coords.longitude, "POST", cb);
+                sendRESTRequest("http://raptor.kent.ac.uk:3000/locationUpdate?userNum=" + profile.userNum + "&longitude=" + position.coords.longitude + "&latitude=" + position.coords.longitude, "POST", cb);
 
                 while (RESTReturn == "undefined") {
                 }
@@ -35,7 +41,7 @@ function locationLive(){
 }
 
 function startWorker() {
-    setTimeout("locationLive()",1);
+    setTimeout("window.locationLive()",10000);
 }
 
 startWorker();

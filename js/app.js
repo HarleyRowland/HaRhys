@@ -220,10 +220,6 @@ function phoneNumberValidation(number){
 }
 
 function endState(text){
-    window.locationLive = profile.locationLive;
-    window.togglePlay = profile.togglePlay;
-    window.userNum = profile.userNum;
-    
     document.getElementById("app").innerHTML = "" +
     "<p style='margin-top: 50px;'>" + text + "</p>" +
     "<input type=\"checkbox\" checked data-toggle=\"toggle\" id=\"togglePlayCheckbox\" data-on=\"LookUp ON\" data-off=\"LookUp OFF\" onchange=\"togglePlay()\"> </input>" +
@@ -257,6 +253,7 @@ function endState(text){
     }
 
     worker = new Worker("js/worker.js");
+    work.postMessage([profile]);
 }
 
 /** http://www.w3schools.com/js/js_cookies.asp **/
