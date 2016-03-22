@@ -2,7 +2,7 @@ var profile = {
 	userNum: null,
 	togglePlay: null,
 	locationLive: null,
-	navigator: null
+	geolocator: null
 };
 
 onmessage = function(e) {
@@ -11,7 +11,7 @@ onmessage = function(e) {
   if(e.data[0].userNum) profile.userNum = e.data[0].userNum;
   if(e.data[0].togglePlay) profile.togglePlay = e.data[0].togglePlay;
   if(e.data[0].locationLive) profile.locationLive = e.data[0].locationLive;
-  if(e.data[0].navigator) profile.navigator = e.data[0].navigator;
+  if(e.data[0].geolocator) profile.geolocator = e.data[0].geolocator;
   console.log("profile in message", profile);
 }
 
@@ -51,7 +51,7 @@ function locationLive(){
             }
 
 			var html5Options = { enableHighAccuracy: true, timeout: 6000, maximumAge: 0 };
-            geolocator.locate(successful, error, true, html5Options, null);
+            profile.geolocator.locate(successful, error, true, html5Options, null);
         }
     }
 }
