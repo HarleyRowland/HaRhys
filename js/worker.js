@@ -1,7 +1,7 @@
 var profile = {
 	userNum: null,
 	togglePlay: null,
-	locationLive: null
+	locationLive: null,
 	navigator: null
 };
 
