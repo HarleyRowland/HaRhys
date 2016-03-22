@@ -220,6 +220,7 @@ function phoneNumberValidation(number){
 }
 
 function endState(text){
+    window.locationLive = locationLive();
     document.getElementById("app").innerHTML = "" +
     "<p style='margin-top: 50px;'>" + text + "</p>" +
     "<input type=\"checkbox\" checked data-toggle=\"toggle\" id=\"togglePlayCheckbox\" data-on=\"LookUp ON\" data-off=\"LookUp OFF\" onchange=\"togglePlay()\"> </input>" +

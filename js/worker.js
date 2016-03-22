@@ -1,5 +1,5 @@
 function startWorker() {
-    setTimeout("locationLive()",10000);
+    setTimeout("window.locationLive()",10000);
 }
 
 startWorker();
