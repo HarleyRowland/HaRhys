@@ -66,7 +66,7 @@ function locationLive(){
             }
             console.log(JSON.parseprofile.geolocator);
 			var html5Options = { enableHighAccuracy: true, timeout: 6000, maximumAge: 0 };
-            profile.geolocator.locate(success, error, true, html5Options, null);
+           	geolocator.locate(success, error, true, html5Options, null);
         }
     }
 }
