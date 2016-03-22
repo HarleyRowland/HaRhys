@@ -9,7 +9,7 @@ onmessage = function(e) {
 
 function locationLive(){
 	    	console.log("in no if")
-
+	    	console.log(profile);
     if(profile && profile.hasOwnProperty("locationLive") && profile.hasOwnProperty("togglePlay")) {
     	console.log("in first if")
         if (profile.togglePlay == "on") {
