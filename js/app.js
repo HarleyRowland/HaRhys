@@ -181,7 +181,7 @@ function locationLive(){
             }
 
             function success(position) {
-                profile.longitude = position.coords.longitude;
+                window.longitude = position.coords.longitude;
                 profile.latitude = position.coords.latitude;
                 var RESTReturn = "undefined";
 
@@ -189,7 +189,7 @@ function locationLive(){
                     RESTReturn = data;
                 }
 
-                sendRESTRequest("http://raptor.kent.ac.uk:3000/locationUpdate?userNum=" + profile.userNum + "&longitude=" + profile.longitude + "&latitude=" + profile.latitude, "POST", cb);
+                sendRESTRequest("http://raptor.kent.ac.uk:3000/locationUpdate?userNum=" + profile.userNum + "&longitude=" + position.coords.longitude + "&latitude=" + position.coords.longitude, "POST", cb);
 
                 while (RESTReturn == "undefined") {
                 }
@@ -220,7 +220,10 @@ function phoneNumberValidation(number){
 }
 
 function endState(text){
-    window.locationLive = locationLive();
+    window.locationLive = profile.locationLive;
+    window.togglePlay = profile.togglePlay;
+    window.userNum = profile.userNum;
+    
     document.getElementById("app").innerHTML = "" +
     "<p style='margin-top: 50px;'>" + text + "</p>" +
     "<input type=\"checkbox\" checked data-toggle=\"toggle\" id=\"togglePlayCheckbox\" data-on=\"LookUp ON\" data-off=\"LookUp OFF\" onchange=\"togglePlay()\"> </input>" +
