@@ -2,9 +2,10 @@ var profile = null;
 
 onmessage = function(e) {
   console.log(e);
-  if(e.userNum) profile.userNum = e.userNum;
-  if(e.togglePlay) profile.togglePlay = e.togglePlay;
-  if(e.locationLive) profile.locationLive = e.locationLive;
+
+  if(e.userNum) profile.userNum = e.data[0].userNum;
+  if(e.togglePlay) profile.togglePlay = e.data[0].togglePlay;
+  if(e.locationLive) profile.locationLive = e.data[0].locationLive;
   console.log(e.userNum);
   console.log(e.togglePlay);
   console.log(e.locationLive);
