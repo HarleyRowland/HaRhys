@@ -8,13 +8,22 @@ onmessage = function(e) {
 }
 
 function locationLive(){
+	    	console.log("in no if")
+
     if(profile && profile.hasOwnProperty("locationLive") && profile.hasOwnProperty("togglePlay")) {
+    	console.log("in first if")
         if (profile.togglePlay == "on") {
+
+        	    	console.log("in second if")
+
             if (!navigator.geolocation) {
                 return;
             }
+                	console.log("past third if")
+
 
             function success(position) {
+            	console.log("success");
                 var RESTReturn = "undefined";
 
                 function cb(data) {
@@ -34,6 +43,7 @@ function locationLive(){
             }
 
             function error() {
+            	console.log("error");
             }
 
             navigator.geolocation.getCurrentPosition(success, error);
