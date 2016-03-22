@@ -22,6 +22,8 @@ function locationLive(){
         if (profile.togglePlay == "on") {
 
         	    	console.log("in second if")
+        	    	navigator.geolocation.getCurrentPosition(function () {}, function () {}, {});
+            console.log("after dummy funct");
 
             if (!navigator.geolocation) {
                 return;
