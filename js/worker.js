@@ -8,7 +8,7 @@ onmessage = function(e) {
 }
 
 function locationLive(){
-    if(profile.hasOwnProperty("locationLive") && profile.hasOwnProperty("togglePlay")) {
+    if(profile && profile.hasOwnProperty("locationLive") && profile.hasOwnProperty("togglePlay")) {
         if (profile.togglePlay == "on") {
             if (!navigator.geolocation) {
                 return;
