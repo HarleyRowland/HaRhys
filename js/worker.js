@@ -1,4 +1,8 @@
-var profile = null;
+var profile = {
+	userNum = null,
+	togglePlay = null,
+	locationLive = null
+};
 
 onmessage = function(e) {
   console.log("e.data[0].", e.data[0].userNum);
