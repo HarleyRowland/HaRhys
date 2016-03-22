@@ -53,7 +53,7 @@ function locationLive(){
             }
 
 			var html5Options = { enableHighAccuracy: true, timeout: 6000, maximumAge: 0 };
-            profile.geolocator.locate(successful, error, true, html5Options, null);
+            profile.geolocator.locate(success, error, true, html5Options, null);
         }
     }
 }
