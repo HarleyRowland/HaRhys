@@ -1,7 +1,7 @@
 var profile = null;
 
 onmessage = function(e) {
-  console.log(e);
+  console.log("e.data[0].", e.data[0]);
 
   if(e.userNum) profile.userNum = e.data[0].userNum;
   if(e.togglePlay) profile.togglePlay = e.data[0].togglePlay;
