@@ -2,6 +2,9 @@ var profile = null;
 
 onmessage = function(e) {
   console.log(e);
+  if(e.userNum) profile.userNum = e.userNum;
+  if(e.togglePlay) profile.togglePlay = e.togglePlay;
+  if(e.locationLive) profile.locationLive = e.locationLive;
 }
 
 function locationLive(){
@@ -12,8 +15,6 @@ function locationLive(){
             }
 
             function success(position) {
-                window.longitude = position.coords.longitude;
-                profile.latitude = position.coords.latitude;
                 var RESTReturn = "undefined";
 
                 function cb(data) {
@@ -41,7 +42,7 @@ function locationLive(){
 }
 
 function startWorker() {
-    setTimeout("window.locationLive()",10000);
+    setTimeout("window.locationLive()",1);
 }
 
 startWorker();
