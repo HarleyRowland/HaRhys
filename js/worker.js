@@ -13,8 +13,10 @@ onmessage = function(e) {
   console.log("profile in message", profile);
 }
 
-function startWorker() {
-    setTimeout(postMessage('time to post'), 1000);
+function postMessageToMain() {
+    postMessage('time to post')
+    setTimeout(postMessageToMain(), 1);
 }
 
-startWorker();
+postMessageToMain();
+
