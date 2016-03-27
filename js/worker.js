@@ -16,4 +16,8 @@ function postMessageToMain() {
   console.log("hello");
 }
 
-setInterval(postMessageToMain(), 1000);
+function timed(){
+  setTimeout(postMessageToMain(), 1000);
+}
+
+timed();
