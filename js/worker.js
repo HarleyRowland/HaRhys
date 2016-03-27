@@ -14,11 +14,13 @@ onmessage = function(e) {
 }
 
 function locationLive(){
-	postMessage("time to post");
+  postMessage("time to post");
+  postMessage("time to post");
+  postMessage("time to post");
 }
 
 function startWorker() {
-    setTimeout("locationLive()",1000);
+    setTimeout("locationLive()", 1000);
 }
 
 startWorker();
