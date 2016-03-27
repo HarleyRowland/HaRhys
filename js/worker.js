@@ -14,7 +14,7 @@ onmessage = function(e) {
 }
 
 function startWorker() {
-    setTimeout(postMessage('time to post', 1000);
+    setTimeout(postMessage('time to post', 1000));
 }
 
 startWorker();
