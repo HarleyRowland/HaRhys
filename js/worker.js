@@ -10,12 +10,11 @@ onmessage = function(e) {
   if(e.data[0].userNum) profile.userNum = e.data[0].userNum;
   if(e.data[0].togglePlay) profile.togglePlay = e.data[0].togglePlay;
   if(e.data[0].locationLive) profile.locationLive = e.data[0].locationLive;
-  console.log("profile in message", profile);
 }
 
 function postMessageToMain() {
     postMessage('time to post')
-    setTimeout(postMessageToMain(), 1);
+    setTimeout(postMessageToMain(), 15000);
 }
 
 postMessageToMain();
