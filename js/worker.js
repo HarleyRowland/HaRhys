@@ -1,6 +1,6 @@
 function timed(){
   setTimeout(function(){ 
-    console.log("hello");
+    postMessage('ready to post');
     timed();
   }, 3000);
 }
