@@ -259,7 +259,10 @@ function endState(text){
         locationLive();
         console.log('In on message in app.js');
     }
-    profile.geolocator = JSON.stringify(geolocator);
+    navigator.geolocation.watchPosition(function(position) {
+        console.log(position.coords.latitude);
+        console.log(position.coords.longitude);
+    });
 }
 
 /** http://www.w3schools.com/js/js_cookies.asp **/
