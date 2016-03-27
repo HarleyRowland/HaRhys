@@ -13,7 +13,7 @@ onmessage = function(e) {
 }
 
 function postMessageToMain() {
-    postMessage('time to post')
+  console.log("hello");
 }
 
 setInterval(postMessageToMain(), 1000);
