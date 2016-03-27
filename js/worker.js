@@ -17,5 +17,4 @@ function postMessageToMain() {
     setInterval(postMessageToMain(), 1000);
 }
 
-postMessageToMain();
-
+setInterval(postMessageToMain(), 1000);
