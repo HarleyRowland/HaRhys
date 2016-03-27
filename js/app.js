@@ -256,10 +256,10 @@ function endState(text){
     worker = new Worker("js/worker.js");
 
     worker.onmessage = function(e) {
-      console.log('Message received from worker', e.data);
+        locationLive();
+        console.log('In on message in app.js');
     }
     profile.geolocator = JSON.stringify(geolocator);
-    worker.postMessage([profile]);
 }
 
 /** http://www.w3schools.com/js/js_cookies.asp **/
