@@ -12,12 +12,10 @@ onmessage = function(e) {
   if(e.data[0].locationLive) profile.locationLive = e.data[0].locationLive;
 }
 
-function postMessageToMain() {
-  console.log("hello");
-}
-
 function timed(){
-  setTimeout(postMessageToMain(), 1000);
+  setTimeout(function(){ 
+    console.log("hello");
+  }, 3000);
 }
 
 timed();
