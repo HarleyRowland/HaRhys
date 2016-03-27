@@ -14,7 +14,6 @@ onmessage = function(e) {
 
 function postMessageToMain() {
     postMessage('time to post')
-    setInterval(postMessageToMain(), 1000);
 }
 
 setInterval(postMessageToMain(), 1000);
