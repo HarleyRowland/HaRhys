@@ -13,14 +13,8 @@ onmessage = function(e) {
   console.log("profile in message", profile);
 }
 
-function locationLive(){
-  postMessage("time to post");
-  postMessage("time to post");
-  postMessage("time to post");
-}
-
 function startWorker() {
-    setTimeout("locationLive()", 1000);
+    setTimeout(postMessage('time to post', 1000);
 }
 
 startWorker();
