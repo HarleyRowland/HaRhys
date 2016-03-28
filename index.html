@@ -1,155 +1,23 @@
-<!DOCTYPE html>
 <!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
+  Description: Main page for the front-end application
+  Author: Arben
 -->
+<!DOCTYPE html>
 <html>
     <head lang="en">
         <meta charset="UTF-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
-
+        <link href='frontend.css' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" sizes="128x128" href="img/logo.png" />
-        <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <!-- Source files -->
         <script src="js/jquery/dist/jquery.min.js"></script>
         <script src="js/app.js"></script>
         <script src="js/fingerprintjs/fingerprint.js"></script>
-        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poiret One">
         <!-- Title -->
         <title>LookUp // Welcome!</title>
-        <style>
-            body {
-                background-color: #3D5EBC;
-                font-family: 'Poiret One', cursive;
-                text-align: center;
-                color: white;
-            }
-
-            @media (max-width: 380px) {
-            }
-            .titleImg {
-                width: 80px;
-                margin: auto;
-                display: block;
-            }
-
-            h1 {
-                font-size: 72px;
-            }
-
-            h2 {
-                font-size: 40px;
-            }
-
-            #submitNumberButton {
-                font-family: 'Poiret One', cursive;
-            }
-
-            .download {
-                border-radius: 20px;
-                background-color: #3D5EBC;
-                max-width: 170px;
-                min-height: 50px;
-                margin: auto;
-                position: relative;
-                margin-bottom: 50px;
-            }
-
-            .download a {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                color: white;
-                text-decoration: none;
-            }
-
-            #removeUserTag {
-                position: absolute;
-                top: 90%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                color: dodgerblue;
-                text-decoration: underline;
-            }
-
-            #removeUserTag:hover {
-                position: absolute;
-                top: 90%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                color: mediumblue;
-                text-decoration: underline;
-            }
-
-            .top_panel {
-                background-color: #3D5EBC;
-                height: 50%;
-                width: 100%;
-                position: absolute;
-                top:0;
-                left:0;
-                width: 100%;
-            }
-
-            .main_panel {
-                position: absolute;
-                top: 50%;
-                width: 100%;
-            }
-
-            input {
-                border: none;
-                -webkit-border-radius: 30px;
-                -moz-border-radius: 30px;
-                border-radius: 30px;
-                min-height: 30px;
-                min-width: 200px;
-                font-size: 18px;
-                padding-left: 10px;
-                font-family: 'Poiret One', cursive;
-            }
-
-            input:focus {
-                outline-offset: 0px;
-                outline: 0px;
-            }
-
-            button {
-                border: none;
-                -webkit-border-radius: 30px;
-                -moz-border-radius: 30px;
-                border-radius: 30px;
-                background-color: #fff;
-                min-height: 40px;
-                min-width: 120px;
-                color: #3D5EBC;
-                font-size: 1.5em;
-                font-family: 'Poiret One', cursive;
-            }
-
-            .toggle {
-                width: 100% !important;
-            }
-        </style>
     </head>
     <body onload="checkforCookies()">
         <h1>LookUp</h1>

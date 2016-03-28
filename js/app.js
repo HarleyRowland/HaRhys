@@ -1,5 +1,6 @@
 /**
- * Created by arbenhaxha on 12/02/2016.
+ * Description: Main JavaScript file for the Frontend application
+ * Authors: Arben and Harley
  */
 var profile = {};
 function sendRESTRequest(url, type, cb){

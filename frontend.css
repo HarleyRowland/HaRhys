@@ -1,0 +1,93 @@
+/*
+  Description: CSS for the frontend application
+  Authors: Arben, Jordan, Rhys and Harley
+*/
+
+body {
+  background-color: #3D5EBC;
+  font-family: 'Poiret One', cursive;
+  text-align: center;
+  color: white;
+}
+
+.titleImg {
+  width: 80px;
+  margin: auto;
+  display: block;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+#submitNumberButton {
+  font-family: 'Poiret One', cursive;
+}
+
+#removeUserTag {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
+#removeUserTag:hover {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: mediumblue;
+    text-decoration: underline;
+}
+
+.top_panel {
+    background-color: #3D5EBC;
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+}
+
+.main_panel {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+input {
+    border: none;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    min-height: 30px;
+    min-width: 200px;
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: 'Poiret One', cursive;
+}
+
+input:focus {
+    outline-offset: 0px;
+    outline: 0px;
+}
+
+button {
+    border: none;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background-color: #fff;
+    min-height: 40px;
+    min-width: 120px;
+    color: #3D5EBC;
+    font-size: 1.5em;
+    font-family: 'Poiret One', cursive;
+}
