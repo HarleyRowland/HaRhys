@@ -2,7 +2,6 @@
  * Created by arbenhaxha on 12/02/2016.
  */
 var profile = {};
-var worker = null;
 function sendRESTRequest(url, type, cb){
     $.ajax({
         url: url,
@@ -21,6 +20,7 @@ function sendRESTRequest(url, type, cb){
 function submitNumber() {
     if((phoneNumberValidation(document.getElementById("telephone").value))) {
         profile.userNum = document.getElementById("telephone").value;
+        profile.fingerPrint = new Fingerprint().get();
         var RESTReturn = "undefined";
         function cb(data) {
             RESTReturn = data;
@@ -33,17 +33,7 @@ function submitNumber() {
         if(RESTReturn == 1){
             endState("Welcome back!");
         }
-        else if(RESTReturn == 2){
-            document.getElementById("app").innerHTML = "" +
-            "<p style='margin-top: 50px;'>Your number is already registered. Please enter the verification code we have sent you. (If you cannot find it, it is advised you remove your number and register again)</p>" +
-            "<form style='text-align: center'>" +
-            "<input type=\"tel\" id=\"verificationCode\" required><br/><br/><br/>" +
-            "<button type=\"button\" id=\"submitVerificationCodeButton\" onclick=\"submitVerificationCode()\">Send</button><br/><br/><br/>" +
-            "</form>" +
-            "<button type=\"button\" id=\"removeUserButton\" onclick=\"removeUser()\">Remove my number!</button>";
-        }
         else{
-            profile.fingerPrint = new Fingerprint().get();
             var RESTReturn = "undefined";
             function cb(data) {
                 RESTReturn = data;
@@ -54,12 +44,15 @@ function submitNumber() {
             }
 
             if(RESTReturn == true){
-                document.getElementById("app").innerHTML = "" +
-                "<p style='margin-top: 50px;'>Please enter the verification code that we are sending you!</p>" +
-                "<form style='text-align: center'>" +
-                "<input type=\"tel\" id=\"verificationCode\" required><br/><br/><br/>" +
-                "<button type=\"button\" id=\"submitVerificationCodeButton\" onclick=\"submitVerificationCode()\">Submit!</button>" +
-                "</form>";
+                endState("Welcome to LookUp!");
+                var RESTReturn = "undefined";
+                function cb(data) {
+                    RESTReturn = data;
+                }
+                sendRESTRequest("http://raptor.kent.ac.uk:3000/iceBreaker?userNum=" + profile.userNum, "POST", cb);
+
+                while (RESTReturn == "undefined") {
+                }
             }
             else{
                 document.getElementById("app").innerHTML = "" +
@@ -73,7 +66,7 @@ function submitNumber() {
     }
     else{
         document.getElementById("app").innerHTML = "" +
-        "<p style='margin-top: 50px;'>Please enter your mobile number so that we can send you a verification code!</p>" +
+        "<p style='margin-top: 50px;'>Please enter your mobile number so that you can register! Please remember, registration will only work if you are connected to the Eduroam network.</p>" +
         "<form style='text-align: center'>" +
         "<input type=\"tel\" id=\"telephone\" required><br/><br/><br/>" +
         "<button type=\"button\" id=\"submitNumberButton\" onclick=\"submitNumber()\">Submit!</button>" +
@@ -86,56 +79,22 @@ function submitNumber() {
     }
 }
 
-function submitVerificationCode(){
-    if(document.getElementById("verificationCode").value) {
-        profile.verificationCode = document.getElementById("verificationCode").value;
-        var RESTReturn = "undefined";
-        function cb(data) {
-            RESTReturn = data;
-        }
-        sendRESTRequest("http://raptor.kent.ac.uk:3000/authenticatePhoneNumber?userNum=" + profile.userNum + "&authenticationCode=" + profile.verificationCode , "POST", cb);
+function logout(){
+    profile = {};
+    document.getElementById("app").innerHTML = "" +
+    "<p style='margin-top: 50px;'>Please enter your mobile number so that you can register! Please remember, registration will only work if you are connected to the Eduroam network.</p>" +
+    "<form style='text-align: center'>" +
+    "<input type=\"tel\" id=\"telephone\" required><br/><br/><br/>" +
+    "<button type=\"button\" id=\"submitNumberButton\" onclick=\"submitNumber()\">Submit!</button>" +
+    "</form>";
 
-        while (RESTReturn == "undefined") {
-        }
-
-        if(RESTReturn == true){
-            endState("Account created! Good Job!");
-        }
-        else if(RESTReturn == false){
-            document.getElementById("app").innerHTML = "" +
-            "<p style='margin-top: 50px;'>Please enter the verification code that we are sending you!</p>" +
-            "<form  style='text-align: center'>" +
-            "<input type=\"tel\" id=\"verificationCode\" required><br/><br/><br/>" +
-            "<button type=\"button\" id=\"submitVerificationCodeButton\" onclick=\"submitVerificationCode()\">Submit!</button>" +
-            "</form>" +
-            "<p>The given verification code was incorrect. Make sure to take care when inputting it. If you believe you require a new verification code, remove your number and register again.</p>" +
-            "<button type=\"button\" id=\"removeUserButton\" onclick=\"removeUser()\">Remove my number!</button>";
-        }
-        else{
-            document.getElementById("app").innerHTML = "" +
-            "<p style='margin-top: 50px;'>Something went wrong with our application... please try again another time.</p>" +
-            "<form style='text-align: center'>" +
-            "<input type=\"tel\" id=\"telephone\" required><br/><br/><br/>" +
-            "<button type=\"button\" id=\"submitNumberButton\" onclick=\"submitNumber()\">Submit!</button>" +
-            "</form>";
-        }
-    }
-}
-
-function togglePlay(){
-    var resolve;
-    profile.togglePlay == "on" ? resolve = 0 : resolve = 1;
-    var RESTReturn = "undefined";
-    function cb(data) {
-        RESTReturn = data;
-    }
-    sendRESTRequest("http://raptor.kent.ac.uk:3000/changePlayStatus?userNum=" + profile.userNum + "&play=" + resolve, "POST", cb);
-
-    while (RESTReturn == "undefined") {
-    }
-
-    if(RESTReturn == true) {
-        profile.togglePlay == "on" ? profile.togglePlay = "off" : profile.togglePlay = "on";
+    /** http://stackoverflow.com/questions/179355/clearing-all-cookies-with-javascript **/
+    var cookies = document.cookie.split(";");
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
     }
 }
 
@@ -152,7 +111,7 @@ function removeUser(){
     if(RESTReturn == true){
         profile = {};
         document.getElementById("app").innerHTML = "" +
-        "<p style='margin-top: 50px;'>Please enter your mobile number so that we can send you a verification code!</p>" +
+        "<p style='margin-top: 50px;'>Please enter your mobile number so that you can register! Please remember, registration will only work if you are connected to the Eduroam network.</p>" +
         "<form style='text-align: center'>" +
         "<input type=\"tel\" id=\"telephone\" required><br/><br/><br/>" +
         "<button type=\"button\" id=\"submitNumberButton\" onclick=\"submitNumber()\">Submit!</button>" +
@@ -173,44 +132,6 @@ function removeUser(){
     }
 }
 
-function locationLive(){
-    if(profile.hasOwnProperty("locationLive") && profile.hasOwnProperty("togglePlay")) {
-        if (profile.togglePlay == "on") {
-            navigator.geolocation.getCurrentPosition(function () {}, function () {}, {});
-            console.log("after dummy funct");
-            if (!navigator.geolocation) {
-                return;
-            }
-
-            function success(position) {
-                profile.longitude = position.coords.longitude;
-                profile.latitude = position.coords.latitude;
-                var RESTReturn = "undefined";
-
-                function cb(data) {
-                    RESTReturn = data;
-                }
-
-                sendRESTRequest("http://raptor.kent.ac.uk:3000/locationUpdate?userNum=" + profile.userNum + "&longitude=" + position.coords.longitude + "&latitude=" + position.coords.longitude, "POST", cb);
-
-                while (RESTReturn == "undefined") {
-                }
-
-                if (RESTReturn == true) {
-                    console.log("location update successful");
-                }
-                else {
-                }
-            }
-
-            function error() {
-            }
-
-            navigator.geolocation.getCurrentPosition(success, error);
-        }
-    }
-}
-
 function phoneNumberValidation(number){
     var phoneNumberFormat = /([4]{2}[ ]?|[0])[7][0-9]{3}[ ]?[0-9]{3}[ ]?[0-9]{3}/;
     if(number.match(phoneNumberFormat)){
@@ -221,29 +142,48 @@ function phoneNumberValidation(number){
     }
 }
 
+function locationLive(){
+    if(profile.hasOwnProperty("locationLive")) {
+        if (!navigator.geolocation) {
+            return;
+        }
+
+        function success(position) {
+            var longitude = position.coords.longitude;
+            var latitude = position.coords.latitude;
+            var RESTReturn = "undefined";
+
+            function cb(data) {
+                RESTReturn = data;
+            }
+
+            sendRESTRequest("http://raptor.kent.ac.uk:3000/locationUpdate?userNum=" + profile.userNum + "&longitude=" + longitude + "&latitude=" + latitude, "POST", cb);
+
+            while (RESTReturn == "undefined") {
+            }
+
+            if (RESTReturn == true) {
+                console.log("location update successful");
+            }
+            else {
+            }
+        }
+
+        function error() {
+        }
+
+        navigator.geolocation.getCurrentPosition(success, error);
+
+    }
+}
+
 function endState(text){
     document.getElementById("app").innerHTML = "" +
     "<p style='margin-top: 50px;'>" + text + "</p>" +
-    "<input type=\"checkbox\" checked data-toggle=\"toggle\" id=\"togglePlayCheckbox\" data-on=\"LookUp ON\" data-off=\"LookUp OFF\" onchange=\"togglePlay()\"> </input>" +
     "<button type=\"button\" id=\"infoButton\" onclick=\"toggleInfo()\">?</button>" +
-    "<button type=\"button\" id=\"removeUserButton\" onclick=\"removeUser()\">Opt Out</button>";
-    var RESTReturn = "undefined";
-    function cb(data) {
-        RESTReturn = data;
-    }
-    sendRESTRequest("http://raptor.kent.ac.uk:3000/getPlayStatus?userNum=" + profile.userNum, "POST", cb);
+    "<button type=\"button\" id=\"logoutButton\" onclick=\"logout()\">Logout</button>" +
+    "<a id=\"removeUserTag\" onclick=\"removeUser()\">Opt Out</a>";
 
-    while (RESTReturn == "undefined") {
-    }
-
-    if(RESTReturn == true){
-        $("#togglePlayCheckbox").bootstrapToggle("on");
-        profile.togglePlay = "on";
-    }
-    else if(RESTReturn == false){
-        $("#togglePlayCheckbox").bootstrapToggle("off");
-        profile.togglePlay = "off";
-    }
     profile.locationLive = "true";
 
     if(document.cookie == "") {
@@ -253,16 +193,10 @@ function endState(text){
             }
         }
     }
-    worker = new Worker("js/worker.js");
 
-    worker.onmessage = function(e) {
+    window.setInterval(function () {
         locationLive();
-        console.log('In on message in app.js');
-    }
-    navigator.geolocation.watchPosition(function(position) {
-        console.log(position.coords.latitude);
-        console.log(position.coords.longitude);
-    });
+    }, 10000);
 }
 
 /** http://www.w3schools.com/js/js_cookies.asp **/
@@ -298,7 +232,7 @@ function checkforCookies(){
     }
     else{
         document.getElementById("app").innerHTML = "" +
-        "<p style='margin-top: 50px;'>Please enter your mobile number so that we can send you a verification code!</p>" +
+        "<p style='margin-top: 50px;'>Please enter your mobile number so that you can register! Please remember, registration will only work if you are connected to the Eduroam network.</p>" +
         "<form style='text-align: center'>" +
         "<input type=\"tel\" id=\"telephone\" required><br/><br/><br/>" +
         "<button type=\"button\" id=\"submitNumberButton\" onclick=\"submitNumber()\">Submit!</button>" +
