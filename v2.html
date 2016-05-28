@@ -1,344 +1,425 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Harley Rowland</title>
     <link rel="stylesheet" href="./foundation.css">
     <script src="https://use.typekit.net/lhr4rxd.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script type="text/javascript">
+    function sendMail() {
+      var link = "mailto:harleyrowland@gmail.com"
+             + "?cc="
+             + "&subject=" + escape(document.getElementById('subject').value) + " - " + escape(document.getElementById('name').value)
+             + "&body=" + escape(document.getElementById('email-body').value)
+
+      window.location.href = link;
+    }
+  </script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
     <style type="text/css">
 
-      body, h1, h2, h3, h4, h5, h6 {
-        font-family: "alwyn-new-rounded-web",sans-serif;
-      }
+    .landing {
+      width: 100%;
+      max-height: 100vh;
+    }
 
-      /*Landing Page CSS*/
-      .landing-image {
-        left: 0;
-        top: 0;
-        width:100vw;
-      }
+    body {
+      box-shadow: 0px 100VH rgba(28,143,178, 0.5) inset;
+      background:
+        url('assets/landing.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    body * {
+      font-family: "alwyn-new-rounded-web",sans-serif;
+    }
 
+    .landing {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
 
-      .landing-links {
-        z-index: 100;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-      }
+    /*Landing Page CSS*/
+    .landing-text * {
+      color: #f1f1f1;
+    }
 
-      .landing-links *:hover {
-        color: #f1f1f1;
-      }
+    .landing-text {
+      align-self: center;
+    }
 
-      .landing-text {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        z-index: 100;
+    .landing-text * {
+      text-align: center;
+      margin: -10px;
+    }
 
-        height: 200px;
-        margin-top: -200px;
+    .landing-text > h1 {
+      text-align: center;
+      border-bottom: solid 1px #f1f1f1;
+      margin-bottom: 10px;
+    }
 
-        width: 600px;
-        margin-left: -300px;
-      }
+    .landing-text > h3 {
+      text-align: center;
+      margin-bottom: 2%;
+    }
 
-      .landing-text *, .more * {
-        color: #f1f1f1;
-        margin-left: 0 auto;
-        margin-right: 0 auto;
-        text-align: center;
-        margin: -10px;
-      }
+    .landing-text > .more-info {
+      padding: 3px;
+      border: solid 1px #f1f1f1;
+      margin-top: 20px;
+      margin: 0 auto;
+      width: 75%;
+    }
 
-      .landing-links > a, span {
-        color: #545454;
-        font-size: 15px;
-        margin-left: 10px;  
-        margin-right: 10px;
-      }
+    .landing-text > .more-info:hover {
+      background-color: #f1f1f1;
+      color: #1C8FB2;
+      border: solid 1px #1C8FB2;
+    }
 
+    /* About Me CSS*/
 
-      /*Content Page CCS (general)*/
-      .content-links {
-        float: right;
-        position: relative;
-      }
+    .about-me {
+      padding-left: 15%;
+      padding-right: 15%;
+      margin-bottom: 30px;
+      min-height: 100%;
+      width: 100%;
+      background-color: #FFFFFF;
 
-      .content-links > a, span {
-        font-size: 15px;
-        margin-left: 10px;
-        margin-right: 10px;
-      }
+    }
 
-      .content-page{
-        height: 100vh;
-      }
+    .about-me .heading {
+      margin-bottom: 10px;
+      width: 70%;
+      margin: 0 auto;
+      border-bottom: 1px solid #818181;
+      margin-bottom: 30px;
+      padding-top: 50px;
+    }
 
-      .page-title-text {
-        text-align: center;
-      }
-      
-      .content{
-        padding: 50px;
-        padding-left: 20%;
-        padding-right: 20%;
-      }
+    .about-me .heading * {
+      text-align: center;
+    }
 
-      /*About me page CSS*/
-      .about-me{
-        background-color: #f1f1f1;
-        border-top: 3px solid #545454;
-        color: #545454;
-      }
+    .about-me * {
+      color: #818181;
+    }
 
-      .about-me * {
-        color: #545454; 
-      }
+    .about-me .heading h1 {
+      color: #1C8FB2;
+    }
 
-      .about-me-image {
-        width: 40%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-      }
-      
-      .about-me > .content-links > span {
-        background-color: #545454;
-        border-radius: 0px 0px 1000px 1000px;
-        padding: 4px;
-        padding-top: 3px;
-        padding-bottom: 20px;
-        color: #f1f1f1;
-      }
+    .about-me .heading h5 {
+      color: #818181;
+    }
 
-      .about-me  > .content-links > a:hover {
-        color: #000000;
-      }
+    .bio {
+      display: flex;
+      justify-content: center;
+    }
 
-      .about-me-image > img {
-        border-radius: 1000px 1000px 1000px 1000px;
-        border:solid #545454;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
+    .bio-text {
+      align-self: center;
+      text-align: center;
+    }
 
+    
+    .bio-image img {
+      height: 200px;
+      height: 200px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .bio-image.show-for-small-only {
+      padding-bottom: 20px;
+    }
+    .bio-image.hide-for-small-only {
+      padding: 10px 10px 0px 10px;
+      float: right;
+    }
 
-      .content > p{
-        text-align: center;
-        font-size: 20px;
-      }
+    .separator {
+      margin-bottom: 30px;
+      width: 70%;
+      margin: 0 auto;
+      border-bottom: 1px solid #818181;
+      margin-bottom: 30px;
+      padding-top: 30px;
+    }
 
-      /*My Experience Page CSS*/
+    .contact-me .heading {
+      margin-bottom: 10px;
+      width: 70%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      padding-top: 50px;
+    }
+    
+    /* Contact Me CSS*/
+    
+    .contact-me{
+      background-color: #89A1CB;
+      border-top: 3px solid #7088B2;
+      color: #f1f1f1;
+      height: 100%;
+    }
 
-      .my-experience{
-        background-color: #449fbf;
-        border-top: 3px solid #2B86A6;
-        color: #FF8929;
-      }
+    .contact-me .subtitle {
+      text-align: center;
+    }
 
-      .my-experience * {
-        color: #f1f1f1; 
-      }
+    .contact-me a {
+      color: #f1f1f1;
+    }
 
-      .my-experience > .content-links > span {
-        background-color: #2B86A6;
-        border-radius: 0px 0px 2000px 2000px;
-        padding: 4px;
-        padding-top: 3px;
-        padding-bottom: 30px;
-      }
+    .contact-me *:not(.form-object) {
+      color: #f1f1f1; 
+    }
 
-      .my-experience  > .content-links > a:hover {
-        color: #2B86A6;
-      }
+    .contact-me > .content-links > span {
+      background-color: #7088B2;
+      border-radius: 0px 0px 2000px 2000px;
+      padding: 4px;
+      padding-top: 3px;
+      padding-bottom: 25px;
+      color: #f1f1f1;
+    }
 
-      /* Contact Me CSS*/
+    .contact-me > .content-links > a:hover {
+      color: #7088B2;
+    }
 
-      .contact-me{
-        background-color: #89A1CB;
-        border-top: 3px solid #7088B2;
-        color: #f1f1f1;
-      }
+    .email-form.show-for-medium-up{
+      margin: auto;
+      width: 50%;
+      margin-top: 4vh;
+      margin-bottom: 4vh;
+      color: #A8A8A8; 
+    }
 
-      .contact-me a {
-        color: #f1f1f1;
-      }
+    .email-form.show-for-small-only{
+      margin: auto;
+      width: 80%;
+      margin-top: 4vh;
+      margin-bottom: 4vh;
+      color: #A8A8A8; 
+    }
 
-      .contact-me *:not(.form-object) {
-        color: #f1f1f1; 
-      }
+    input[type=text], .form-object {
+      border-radius: 5px;
+    }
 
-      .contact-me > .content-links > span {
-        background-color: #7088B2;
-        border-radius: 0px 0px 2000px 2000px;
-        padding: 4px;
-        padding-top: 3px;
-        padding-bottom: 25px;
-        color: #f1f1f1;
-      }
+    input[type=button] {
+      width: 100%;
+      font-family: "Arial", Helvetica, sans-serif;
+      padding:5px 15px; 
+      border:0 none;
+      color: #ffffff;
+      background-color: #D6ABBC;
+      cursor:pointer;
+      -webkit-border-radius: 5px;
+      border-radius: 5px; 
+      height: 4vh;
+    }
 
-      .contact-me > .content-links > a:hover {
-        color: #7088B2;
-      }
+    .email-button:hover {
+      color: #F0C5D6;
+      background-color: #BD92A3;
+    }
 
-      .email-form{
-        margin: auto;
-        width: 50%;
-        margin-top: 4vh;
-        margin-bottom: 4vh;
-        color: #A8A8A8; 
-      }
+    .form-object:-moz-placeholder {
+      color: #A8A8A8;
+    }
 
-      input[type=text], .form-object {
-        border-radius: 5px;
-      }
-
-      input[type=submit] {
-        width: 100%;
-        font-family: "Arial", Helvetica, sans-serif;
-        padding:5px 15px; 
-        border:0 none;
-        color: #ffffff;
-        background-color: #D6ABBC;
-        cursor:pointer;
-        -webkit-border-radius: 5px;
-        border-radius: 5px; 
-        height: 4vh;
-      }
-
-      .email-button:hover {
-        color: #F0C5D6;
-        background-color: #BD92A3;
-      }
-
-      .form-object:-moz-placeholder {
-        color: #A8A8A8;
-      }
-
-      /*Footer CSS*/
-
-      .footer {
+    .footer {
         background-color: #3b444c;
         border-top: 3px solid #818181;
-        padding: 60px;
+        padding: 60px 20px 60px 20px;
       }
-
       .social-media {
         text-align: center;
       }
-
       .get-in-touch, .name{
         margin-left: auto;
         margin-right: auto;
         width: 100%;
         text-align: center;
       }
-
       .get-in-touch * {
         color: #f1f1f1;
       }
-
       .name *{
         color: #818181;
         font-size: 12px;
       }
-
       .name a:hover {
         color: #f1f1f1;
       } 
-
       .social-media a {
         padding: 10px;
       }
-
       .social-media a:hover {
         color: #818181;
       }
-
       .social-media * {
         color: #f1f1f1;
       }
 
+  @media screen and (orientation:portrait) {
+    h1 {
+      font-size: 10vw;
+    }
 
+    h2 {
+      font-size: 8.5vw;
+    }
+
+    h3 {
+      font-size: 7vw;
+    }
+
+    h4 {
+      font-size: 6vw;
+    }
+
+    h5 {
+      font-size: 5vw;
+    }
+  }
+
+  @media screen and (orientation:portrait) and (min-width: 450px) {
+    h1 {
+      font-size: 7vw;
+    }
+
+    h2 {
+      font-size: 8.5vw;
+    }
+
+    h3 {
+      font-size: 5vw;
+    }
+
+    h4 {
+      font-size: 6vw;
+    }
+
+    h5 {
+      font-size: 4vw;
+    }
+  }
+
+ @media screen and (orientation:landscape) {
+    h1 {
+      font-size: 4vw;
+    }
+
+    h2 {
+      font-size: 75px;
+    }
+
+    h3 {
+      font-size: 3vw;
+    }
+
+    h4 {
+      font-size: 6vw;
+    }
+
+   h5 {
+      font-size: 2vw;
+    }
+ }
+ @media only screen and (max-width: 40em)  { 
+
+ }
     </style>
   </head>
  
   <body>
     <div class="landing">
-      <img class="landing-image" src="./assets/landing.jpg"/>
-      <div class="landing-links">
-        <a class="about-me-link">About Me</a>
-        <a class="my-experience-link">My Experience</a>
-        <a class="contact-me-link">Contact Me</a>
-      </div>
       <div class="landing-text">
-        <h2> Harley Rowland</h2>
-        <h3> Computer Science Student and</h3>
-        <h3> Aspiring Developer.</h3>
+        <h1> Harley Rowland</h1>
+        <h3> My Online CV</h3>
+        <h5 class="more-info"> More info </h5>
       </div>
     </div>
-
-    <div class="about-me content-page">
-      <div class="content-links">
-        <a class="home-link">Home</a>
-        <span class="about-me-link">About Me</span>
-        <a class="my-experience-link">My Experience</a>
-        <a class="contact-me-link">Contact Me</a>
-      </div>
-      <div class="content">
-        <h1 class="page-title-text">
-          A Little About Myself
-        </h1>
-        <p>
-          Hello! My name is Harley and I am a Computer Science Student at the University of Kent. Currently, I am based in Canterbury but I am <i>likely</i> to reside on the outskirts of London when my final year is completed in July. Persuing a career within technology is a dream of mine and one I fully intend to achieve. I enjoy to keep fit and love to exercise this passion regularly - next year, I am participating in a marathon.
-        </p> 
-        <div class="about-me-image">
-           <img src="./assets/harley-small.jpg"/>
+    <div class="about-me">
+        <div class="heading">
+          <h3 class="subtitle"> Harley Rowland</h1>
+          <h5> Computer Science Graduate and Aspiring Developer</h5>
         </div>
-      </div>
-    </div>
-
-    <div class="my-experience content-page">
-      <div class="content-links">
-        <a class="home-link">Home</a>
-        <a class="about-me-link">About Me</a>
-        <span class="my-experience-link">My Experience</span>
-        <a class="contact-me-link">Contact Me</a>
-      </div>
-      <div class="content">
-        <h1 class="page-title-text">
-          What I Have Done
-        </h1>
-        <p>
-          My University course has taught (and is still teaching me) a great array of skills. I have learnt Object-Oriented programming to a good level and reinforce this regularly when I help in a weekly Java class for first-year students. Also, the Placement I undertook at Holiday Extras taught me a wide range of Web-based technologies such as Node.js, Express (<a href="http://hungrygeek.holidayextras.co.uk/expressjs/2015/04/20/learning-the-basics-of-expressjs/">which I have written an article about</a>) and Backbone.js. 
-        </p> 
-        <div class="my-experience-graph">
-           <div class="skills-graph" style="width:50%; height: 40vh; margin: 0 auto"></div>
+        <div class="bio-image show-for-small-only columns">
+          <img src="./assets/harley-small.jpg"/>
         </div>
-      </div>
+        <div class="bio row">
+          <div class="bio-text medium-12 columns">
+            <div class="bio-image hide-for-small-only">
+               <img src="./assets/harley-small.jpg"/>
+            </div>
+            <p>
+              I am a Computer Science Student at the University of Kent. Currently, I am based in Canterbury but I am <i>likely</i> to reside on the outskirts of London when my final year is completed in July. My placement year at Holiday Extras provided me with a year of experience as a Web Developer. Persuing a career within technology is a dream of mine and one I fully intend to achieve.
+            </p> 
+          </div>
+          
+        </div>
+        <div class="separator"></div>
+        <div class="stats">
+          <div class="stats-heading">
+            <h5 class="subtitle">The Basics</h5>
+          </div>
+          <div class="stats-body row show-for-large-up">
+            <span class="medium-4 columns"><b>Name:</b> Harley Rowland</span>
+            <span class="medium-3 columns"><b>Age:</b> 22</span>
+            <span class="medium-5 columns"><b>Location:</b> Canterbury, Kent, UK</span>
+            <span class="medium-4 columns"><b>University:</b> Kent</span>
+            <span class="medium-3 columns"><b>Gender:</b> Male</span>
+            <span class="medium-5 columns"><b>Favourite PLs:</b> JavaScript, Java & CSS</span>
+          </div>
+          <div class="stats-body row show-for-medium-only">
+            <span class="medium-6 columns"><b>Name:</b> Harley Rowland</span>
+            <span class="medium-6 columns"><b>Age:</b> 22</span>
+            <span class="medium-6 columns"><b>Gender:</b> Male</span>
+            <span class="medium-6 columns"><b>University:</b> Kent</span>
+            <span class="medium-6 columns"><b>Location:</b> Canterbury, Kent, UK</span>
+            <span class="medium-6 columns"><b>Favourite PLs:</b> JavaScript, Java & CSS</span>
+          </div>
+          <div class="stats-body row show-for-small-only">
+            <span class="medium-12 columns"><b>Name:</b> Harley Rowland</span>
+            <span class="medium-12 columns"><b>Age:</b> 22</span>
+            <span class="medium-12 columns"><b>Location:</b> Canterbury, Kent, UK</span>
+            <span class="medium-12 columns"><b>University:</b> Kent</span>
+            <span class="medium-12 columns"><b>Gender:</b> Male</span>
+            <span class="medium-12 columns"><b>Favourite PLs:</b> JavaScript, Java & CSS</span>
+          </div>
+        </div>
+
     </div>
 
-    <div class="contact-me content-page">
-      <div class="content-links">
-        <a class="home-link">Home</a>
-        <a class="about-me-link">About Me</a>
-        <a class="my-experience-link">My Experience</a>
-        <span class="contact-me-link">Contact Me</span>
-      </div>
+     <div class="contact-me content-page">
       <div class="content">
-        <h1 class="page-title-text">
-          Please Contact Me
-        </h1>
-        <form class='email-form' action="MAILTO:harleyrowland17@gmail.com" method="post" enctype="text/plain">
-          <input class='form-object' type="text" name="name" placeholder="What is your name?">
-          <input class='form-object' type="text" name="mail" placeholder="What is your E-mail?">
-          <input class='form-object' type="text" name="subject" placeholder="What is the subject?">
-          <textarea class='form-object' cols="40" rows="5" placeholder="Ask me anything."></textarea>
-          <input class='form-object email-button' type="submit" value="Send">
+        <div class="heading">
+          <h3 class="subtitle"> Contact Me</h3>
+        </div>
+        <form class='email-form show-for-medium-up'>
+          <input class='form-object' id="name" type="text" name="name" placeholder="What is your name?">
+          <input class='form-object' id="subject" type="text" name="subject" placeholder="What is the subject?">
+          <textarea class='form-object' id="email-body" cols="40" rows="7" placeholder="Ask me anything."></textarea>
+          <input class='form-object email-button' type="button" onclick="sendMail()" value="Send">
+        </form>
+
+        <form class='email-form show-for-small-only'>
+          <input class='form-object' id="name" type="text" name="name" placeholder="What is your name?">
+          <input class='form-object' id="subject" type="text" name="subject" placeholder="What is the subject?">
+          <textarea class='form-object' id="email-body" cols="40" rows="7" placeholder="Ask me anything."></textarea>
+          <input class='form-object email-button' type="button" onclick="sendMail()" value="Send">
         </form>
       </div>
     </div>
@@ -359,130 +440,9 @@
 
     </footer>
 
+
   </body>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-  <script src="http://code.highcharts.com/highcharts.js"></script>
-  <script src="http://code.highcharts.com/highcharts-more.js"></script>
-  <script src="http://code.highcharts.com/modules/exporting.js"></script>
-  <script>
-      $(document).ready(function (){
-        $(".home-link").click(function (){
-          $('html, body').animate({
-            scrollTop: $(".landing").offset().top
-         }, 1000);
-        });
-
-        $(".about-me-link").click(function (){
-          $('html, body').animate({
-            scrollTop: $(".about-me > .content-links").offset().top
-         }, 1000);
-        });
-
-        $(".my-experience-link").click(function (){
-          $('html, body').animate({
-            scrollTop: $(".my-experience > .content-links").offset().top
-         }, 1000);
-        });
-
-        $(".contact-me-link").click(function (){
-          $('html, body').animate({
-            scrollTop: $(".contact-me > .content-links").offset().top
-         }, 1000);
-        });
-
-        function webHighCharts(){
-          $('.skills-graph').highcharts({
-              chart: {
-                polar: true,
-                type: 'line',
-                backgroundColor: "#f1f1f1",
-                borderWidth: 1,
-                borderRadius: 30,
-                borderColor: "#A8A8A8",
-                margin: 0,
-                spacingRight: 0,
-                style: {
-                  fontFamily: 'alwyn-new-rounded-web'
-                }
-              },
-              title: {
-                text: undefined,
-                enabled: false,
-                style: {
-                  color: '#0099CC'
-                }
-              },
-              pane: {
-                size: '75%'
-              },
-              legend: {
-                enabled: false
-              },
-              plotOptions: {
-                line: {
-                  slicedOffset: 0,
-                  color: "#2B86A6",
-                  size:'100%',
-                  dataLabels: {
-                      enabled: false
-                  },
-                }
-              },
-              exporting: { 
-                enabled: false 
-              },
-              xAxis: {
-                categories: ['JavaScript', 'HTML', 'CSS', 'PHP', 'Ruby', 'MySQL/PostgresSQL'],
-                tickmarkPlacement: 'on',
-                lineWidth: 0,
-                lineColor: "#FFFFFF",
-                minPadding: 0,
-                maxPadding: 0
-              },
-              yAxis: {
-                gridLineInterpolation: 'polygon',
-                lineWidth: 0,
-                min: 0,
-                labels: {
-                  enabled: false
-                }
-              },
-              credits: {
-                enabled: false
-              },
-              tooltip: {
-                  formatter: function () {
-                      return this.point.description;
-                  }
-              },
-              series: [{
-                name: 'Web Technologies',
-                data: [{
-                    y: 7,
-                    description: 'Whilst on placement I spent a lot of<br>time using JavaScript.I have had a<br>lot of exposure to various frameworks<br>such as Express and Backbone.js<br>and have also used the Node.js platform<br>quite a lot. I also practice JavaScript<br>regularly in my spare time.'
-                }, {
-                    y: 8,
-                    description: 'I wanted to learn how to use HTML at a<br>highlevel because it is the basic<br>building blocks which website are<br>made from. Doing this has given<br>me a strong foundation when learning<br>other web languages and<br>technologies. On my placement I gained<br>a good understanding of templating<br>lanaguages and used HAML and<br>Handlebars frequently.'
-                }, {
-                    y: 6,
-                    description: 'CSS is the language which I enjoy<br>using the most and was another one<br>that I had regular exposure to on my<br>placement. I enjoy the creative<br>aspect of CSS and like playing around<br>with different styling. I have used<br>foundation to style this website.<br>I also have Bootstrap experience.'
-                  },{
-                    y: 5,
-                    description: 'I have learnt how to use PHP at<br>university and have completed two sucessful<br>assignments using it. The first using<br>the CodeIgniter framework and another which<br>involved creating an adminstration<br>system for a mock business which<br>involved user-type permissions, sessions<br> and database interaction for user authentication.' 
-                }, {
-                    y: 3,
-                    description: 'I briefly used Ruby whilst on my<br>placement and it is the next programming<br>language that I am going to teach<br>myself.'
-                }, {
-                    y: 6,
-                    description: 'I have used MySQL both in university<br>assignments and on my own personal<br>projects. I have had to use PostgresSQL<br>for on assignment recently which had me inputing<br>to a Postgres Database from a Java program<br>and then reading from this database in a web application.'
-                  }]
-              }]
-          });
-};
-
-        webHighCharts();
-      });
-
-
+  <script type="text/javascript">
   </script>
 </html>
