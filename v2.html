@@ -8,6 +8,7 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <script type="text/javascript">
     function sendMail() {
+      console.log(escape(document.getElementById('subject').value));
       var link = "mailto:harleyrowland@gmail.com"
              + "?cc="
              + "&subject=" + escape(document.getElementById('subject').value) + " - " + escape(document.getElementById('name').value)
@@ -111,7 +112,7 @@
       color: #818181;
     }
 
-    .about-me .heading h1 {
+    .about-me .subtitle, .heading h3 {
       color: #1C8FB2;
     }
 
@@ -120,7 +121,6 @@
     }
 
     .bio {
-      display: flex;
       justify-content: center;
     }
 
@@ -196,17 +196,9 @@
       color: #7088B2;
     }
 
-    .email-form.show-for-medium-up{
+    .email-form{
       margin: auto;
       width: 50%;
-      margin-top: 4vh;
-      margin-bottom: 4vh;
-      color: #A8A8A8; 
-    }
-
-    .email-form.show-for-small-only{
-      margin: auto;
-      width: 80%;
       margin-top: 4vh;
       margin-bottom: 4vh;
       color: #A8A8A8; 
@@ -241,8 +233,9 @@
     .footer {
         background-color: #3b444c;
         border-top: 3px solid #818181;
-        padding: 60px 20px 60px 20px;
+        padding: 60px 10px 60px 10px;
       }
+
       .social-media {
         text-align: center;
       }
@@ -263,7 +256,7 @@
         color: #f1f1f1;
       } 
       .social-media a {
-        padding: 10px;
+        padding: 5px;
       }
       .social-media a:hover {
         color: #818181;
@@ -337,9 +330,53 @@
       font-size: 2vw;
     }
  }
- @media only screen and (max-width: 40em)  { 
 
+  @media  screen and (min-width: 30em) and (max-width: 60em)  { 
+    h1 {
+      font-size: 5vw;
+    }
+
+    h2 {
+      font-size: 85px;
+    }
+
+    h3 {
+      font-size: 4vw;
+    }
+
+    h4 {
+      font-size: 7vw;
+    }
+
+   h5 {
+      font-size: 3vw;
+    }
+  }
+
+ @media only screen and (max-width: 40em)  { 
+    .about-me {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .about-me .stats {
+      align:center;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    
+    .email-form {
+      width:80%;
+    }
+    
+    .footer {
+        background-color: #3b444c;
+        border-top: 3px solid #818181;
+        padding: 30px 10px 30px 10px;
+      }
  }
+
+
     </style>
   </head>
  
@@ -377,7 +414,7 @@
           </div>
           <div class="stats-body row show-for-large-up">
             <span class="medium-4 columns"><b>Name:</b> Harley Rowland</span>
-            <span class="medium-3 columns"><b>Age:</b> 22</span>
+            <span class="medium-3 columns"><b>Age:</b> <span class="date-of-birth"></span></span>
             <span class="medium-5 columns"><b>Location:</b> Canterbury, Kent, UK</span>
             <span class="medium-4 columns"><b>University:</b> Kent</span>
             <span class="medium-3 columns"><b>Gender:</b> Male</span>
@@ -385,7 +422,7 @@
           </div>
           <div class="stats-body row show-for-medium-only">
             <span class="medium-6 columns"><b>Name:</b> Harley Rowland</span>
-            <span class="medium-6 columns"><b>Age:</b> 22</span>
+            <span class="medium-6 columns"><b>Age:</b> <span class="date-of-birth"></span></span>
             <span class="medium-6 columns"><b>Gender:</b> Male</span>
             <span class="medium-6 columns"><b>University:</b> Kent</span>
             <span class="medium-6 columns"><b>Location:</b> Canterbury, Kent, UK</span>
@@ -393,7 +430,7 @@
           </div>
           <div class="stats-body row show-for-small-only">
             <span class="medium-12 columns"><b>Name:</b> Harley Rowland</span>
-            <span class="medium-12 columns"><b>Age:</b> 22</span>
+            <span class="medium-12 columns"><b>Age:</b> <span class="date-of-birth"></span></span>
             <span class="medium-12 columns"><b>Location:</b> Canterbury, Kent, UK</span>
             <span class="medium-12 columns"><b>University:</b> Kent</span>
             <span class="medium-12 columns"><b>Gender:</b> Male</span>
@@ -408,14 +445,7 @@
         <div class="heading">
           <h3 class="subtitle"> Contact Me</h3>
         </div>
-        <form class='email-form show-for-medium-up'>
-          <input class='form-object' id="name" type="text" name="name" placeholder="What is your name?">
-          <input class='form-object' id="subject" type="text" name="subject" placeholder="What is the subject?">
-          <textarea class='form-object' id="email-body" cols="40" rows="7" placeholder="Ask me anything."></textarea>
-          <input class='form-object email-button' type="button" onclick="sendMail()" value="Send">
-        </form>
-
-        <form class='email-form show-for-small-only'>
+        <form class='email-form'>
           <input class='form-object' id="name" type="text" name="name" placeholder="What is your name?">
           <input class='form-object' id="subject" type="text" name="subject" placeholder="What is the subject?">
           <textarea class='form-object' id="email-body" cols="40" rows="7" placeholder="Ask me anything."></textarea>
@@ -444,5 +474,30 @@
   </body>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
   <script type="text/javascript">
+    $( document ).ready(function() {
+      $( ".more-info" ).click(function() {
+        $('html, body').animate({
+          scrollTop: $(".about-me").offset().top
+        }, 2000);
+      });    
+    });
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = date.getMonth();
+    var day = date.getDate();
+    var age;
+    if(month > 1){
+      age = year;
+    } else if(month == 1){
+      if(day >= 17){
+        age = year;
+      } else {
+        age = year-1;
+      }
+    } else {
+      age = year-1;
+    }
+    age = age-1993;
+    $(".date-of-birth").text(age);
   </script>
 </html>
