@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Harley Rowland</title>
+    <link rel="stylesheet" href="./foundation.css">
+    <script src="https://use.typekit.net/exj8ifs.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+ 
+  <body>
+    <div class="nav-bar">
+      <div class="active" id="nav-landing top">Top</div>
+      <div id="nav-about">About</div>
+      <div id="nav-contact">Portfolio</div>
+      <div id="nav-footer bottom">Contact</div>
+    </div>
+    <div class="landing">
+      <div class="landing-text">
+        <h1> Harley Rowland</h1>
+        <h3> My Online CV</h3>
+        <h5 class="more-info"> More info </h5>
+      </div>
+    </div>
+    <div class="about-me">
+        <div class="heading">
+          <h3 class="subtitle"> Harley Rowland</h1>
+          <h5> Computer Science Graduate and Aspiring Developer</h5>
+        </div>
+        <div class="bio-image show-for-small-only columns">
+          <img src="./assets/harley-small.jpg"/>
+        </div>
+        <div class="bio row">
+          <div class="bio-text medium-12 columns">
+            <div class="bio-image hide-for-small-only">
+               <img src="./assets/harley-small.jpg"/>
+            </div>
+            <p>
+              I have recently graduated from the University of Kent and attained a first-class honours degree in computer science. My course taught me a wide range of skills from Object-Oriented programming with Java and JavaScript to functional languages such as Erlang and OCAML.
+            </p> 
+            <p>
+              The third year of my four-year degree was a year in industry where I worked using mostly JavaScript (Node.js and ExpressJS) and CSS (LESS). The company also used Agile methodologies which gave me a good exposure to Scrum and the way it works.
+            </p> 
+          </div>
+          
+        </div>
+        <div class="separator"></div>
+        <div class="stats">
+          <div class="stats-heading">
+            <h5 class="subtitle">The Basics</h5>
+          </div>
+          <div class="stats-body row show-for-large-up">
+            <span class="medium-4 columns"><b>Name:</b> Harley Rowland</span>
+            <span class="medium-3 columns"><b>Age:</b> <span class="date-of-birth"></span></span>
+            <span class="medium-5 columns"><b>Location:</b> London, United Kingdom</span>
+            <span class="medium-4 columns"><b>University:</b> Kent</span>
+            <span class="medium-3 columns"><b>Gender:</b> Male</span>
+            <span class="medium-5 columns"><b>Favourite PLs:</b> JavaScript, Java & CSS</span>
+          </div>
+          <div class="stats-body row show-for-medium-only">
+            <span class="medium-6 columns"><b>Name:</b> Harley Rowland</span>
+            <span class="medium-6 columns"><b>Age:</b> <span class="date-of-birth"></span></span>
+            <span class="medium-6 columns"><b>Gender:</b> Male</span>
+            <span class="medium-6 columns"><b>University:</b> Kent</span>
+            <span class="medium-6 columns"><b>Location:</b> Canterbury, Kent, UK</span>
+            <span class="medium-6 columns"><b>Favourite PLs:</b> JavaScript, Java & CSS</span>
+          </div>
+          <div class="stats-body row show-for-small-only">
+            <span class="medium-12 columns"><b>Name:</b> Harley Rowland</span>
+            <span class="medium-12 columns"><b>Age:</b> <span class="date-of-birth"></span></span>
+            <span class="medium-12 columns"><b>Location:</b> Canterbury, Kent, UK</span>
+            <span class="medium-12 columns"><b>University:</b> Kent</span>
+            <span class="medium-12 columns"><b>Gender:</b> Male</span>
+            <span class="medium-12 columns"><b>Favourite PLs:</b> JavaScript, Java & CSS</span>
+          </div>
+        </div>
+
+    </div>
+
+     <div class="contact-me content-page">
+      <div class="content">
+        <div class="heading">
+          <h3 class="subtitle"> Contact Me</h3>
+        </div>
+        <form class='email-form'>
+          <input class='form-object' id="name" type="text" name="name" placeholder="What is your name?">
+          <input class='form-object' id="subject" type="text" name="subject" placeholder="What is the subject?">
+          <textarea class='form-object' id="email-body" cols="40" rows="7" placeholder="Ask me anything."></textarea>
+          <input class='form-object email-button' type="button" onclick="sendMail()" value="Send">
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="get-in-touch">
+        <span class="footerText">Get in Touch!</span>
+      </div>
+      <div class="social-media">
+        <a class="linkedin" href="https://uk.linkedin.com/pub/harley-rowland/71/365/799">LinkedIn </a><span>|</span>
+        <a class="twitter" href="https://twitter.com/HarleyRowland"> Twitter </a><span>|</span>
+        <a class="instagram" href="https://instagram.com/harleyrowland/"> Instagram </a><span>|</span>
+        <a class="github" href="https://github.com/HarleyRowland"> GitHub </a>
+      </div>
+      <div class="name">
+        <span class="footerText">Harley Rowland 2016 - Made using <a href="http://foundation.zurb.com">Foundation</a> and <a href="https://typekit.com/fonts">Typekit</a></span>
+      </div>
+
+    </footer>
+
+
+  </body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    
+    function sendMail() {
+      var link = "mailto:harleyrowland17@gmail.com"
+             + "?cc="
+             + "&subject=" + escape(document.getElementById('subject').value) + " - " + escape(document.getElementById('name').value)
+             + "&body=" + escape(document.getElementById('email-body').value)
+      window.location.href = link;
+    }
+
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = date.getMonth();
+    var day = date.getDate();
+    var age;
+
+    if(month > 1){
+      age = year;
+    } else if(month == 1){
+      if(day >= 17){
+        age = year;
+      } else {
+        age = year-1;
+      }
+    } else {
+      age = year-1;
+    }
+    age = age-1993;
+    $(".date-of-birth").text(age);
+
+    $( document ).ready(function() {
+      $( ".more-info" ).click(function() {
+        $('html, body').animate({
+          scrollTop: $(".about-me").offset().top
+        }, 1500);
+      });
+
+      $( "#nav-landing" ).click(function() {
+        $('html, body').animate({
+          scrollTop: $("body").offset().top
+        }, 1500);
+      });
+
+      $( "#nav-about" ).click(function() {
+        $('html, body').animate({
+          scrollTop: $(".about-me").offset().top
+        }, 1500);
+      });
+
+      $( "#nav-contact" ).click(function() {
+        $('html, body').animate({
+          scrollTop: $(".contact-me").offset().top
+        }, 1500);
+      });
+
+      $( "#nav-footer" ).click(function() {
+        $('html, body').animate({
+          scrollTop: $(".footer").offset().top
+        }, 1500);
+      });
+    });
+
+  </script>
+</html>
