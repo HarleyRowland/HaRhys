@@ -8,14 +8,15 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+
   </head>
  
   <body>
-    <div class="nav-bar">
-      <div class="active" id="nav-landing top">Top</div>
-      <div id="nav-about">About</div>
-      <div id="nav-contact">Portfolio</div>
-      <div id="nav-footer bottom">Contact</div>
+    <div class="nav-bar show-for-medium-up">
+      <button type="button" class="active" id="nav-landing">Top</button>
+      <button type="button" id="nav-about">About</button>
+      <button type="button" id="nav-contact">Contact</button>
+      <button type="button" id="nav-activity">Activity</button>
     </div>
     <div class="landing">
       <div class="landing-text">
@@ -79,7 +80,7 @@
 
     </div>
 
-     <div class="contact-me content-page">
+     <div class="contact-me">
       <div class="content">
         <div class="heading">
           <h3 class="subtitle"> Contact Me</h3>
@@ -88,8 +89,21 @@
           <input class='form-object' id="name" type="text" name="name" placeholder="What is your name?">
           <input class='form-object' id="subject" type="text" name="subject" placeholder="What is the subject?">
           <textarea class='form-object' id="email-body" cols="40" rows="7" placeholder="Ask me anything."></textarea>
-          <input class='form-object email-button' type="button" onclick="sendMail()" value="Send">
+          <div class="button-div">
+            <input class='form-object email-button' type="button" onclick="sendMail()" value="Send">
+          </div>        
         </form>
+      </div>
+    </div>
+
+    <div class="activity">
+      <div class="content">
+        <div class="heading">
+          <h3 class="subtitle">Activity</h3>
+        </div>
+        <div class="activity-text">
+          <p>I enjoy keeping fit and run regularly and when I run I keep track of speed and distance using the <a class="running-app" href="https://itunes.apple.com/us/app/nike+-run-club/id387771637?mt=8"> Nike+ RunClub app</a>. I try to run at least three times a week. My current goal is to run 5 kilometers in under 22 minutes and hopefully one day I will be fit enough to run the London Marathon. Below is some information about the my most recent runs which has been retrieved using the Nike+ API.</p>
+        </div>
       </div>
     </div>
 
@@ -112,8 +126,9 @@
 
   </body>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+  <script src="jquery.viewport.js" type="text/javascript"></script>
+  <script src="moment.js" type="text/javascript"></script>
   <script type="text/javascript">
-    
     function sendMail() {
       var link = "mailto:harleyrowland17@gmail.com"
              + "?cc="
@@ -161,18 +176,84 @@
         }, 1500);
       });
 
+      $( "#nav-activity" ).click(function() {
+        $('html, body').animate({
+          scrollTop: $(".activity").offset().top
+        }, 1500);
+      });
+
       $( "#nav-contact" ).click(function() {
         $('html, body').animate({
           scrollTop: $(".contact-me").offset().top
         }, 1500);
       });
 
-      $( "#nav-footer" ).click(function() {
-        $('html, body').animate({
-          scrollTop: $(".footer").offset().top
-        }, 1500);
-      });
     });
+
+    $(window).scroll(function(){
+      if($(".landing-text").visible()){
+        $("#nav-landing").addClass("active");
+        $("#nav-about").removeClass("active");
+        $("#nav-contact").removeClass("active");
+        $("#nav-activity").removeClass("active");
+      }
+      if($(".bio-text").visible()){
+        $("#nav-about").addClass("active");
+        $("#nav-landing").removeClass("active");
+        $("#nav-contact").removeClass("active");
+        $("#nav-activity").removeClass("active");
+      }
+      if($(".email-form").visible()){
+        $("#nav-contact").addClass("active");
+        $("#nav-landing").removeClass("active");
+        $("#nav-about").removeClass("active");
+        $("#nav-activity").removeClass("active");
+      }
+      if($(".activity-text").visible()){
+        $("#nav-activity").addClass("active");
+        $("#nav-landing").removeClass("active");
+        $("#nav-about").removeClass("active");
+        $("#nav-contact").removeClass("active");
+      }
+    });
+
+        $.ajax({
+          url: "https://api.nike.com/v1/me/sport/activities?offset=1&count=1&access_token=otozGWQu03aBPlo4V2eapXApcntW&_=1473003714361",
+          type: "GET",
+          dataType: 'text',
+          success: function(result){
+            var data = JSON.parse(result)
+            data = data.data[0];
+
+            var activityType = data.activityType.toLowerCase();
+            var startTime = moment(data.startTime).fromNow();
+            var calories = data.metricSummary.calories;
+            var distance = data.metricSummary.distance.substring(0,4);
+            var hours = data.metricSummary.duration.substring(0,1);
+            var minutes = data.metricSummary.duration.substring(2,4);
+            var steps = data.metricSummary.steps;
+
+
+            var activityString = "I last went for a " + activityType + " " + startTime + ". The " + activityType + " took " + lengthString(hours, minutes) + " and I travelled " + distance + ". I burnt " + calories + " calories!"
+
+            console.log(activityString);
+          },
+          error: function (xhr, ajaxOptions, thrownError) {
+            $('.exerciseContent > p').text('Error loading workout from Nike+');
+        }
+        });
+
+        var lengthString = function(hours, minutes){
+          var returnString;
+          if(hours == "0"){
+            returnString = minutes + "minutes";
+          } else if(hours == "1"){
+            returnString = "1 hour and " + minutes + " minutes";
+          } else {
+            returnString = hours + "hours and " + minutes + " minutes";
+          }
+          return returnString;s
+        }
 
   </script>
 </html>
