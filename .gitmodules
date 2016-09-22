@@ -1,0 +1,3 @@
+[submodule "restaurantExample"]
+	path = restaurantExample
+	url = https://github.com/harleyrowland/restaurantExample
