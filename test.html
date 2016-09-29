@@ -9,7 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
   <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/general.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/nav-bar.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/landing.css"> 
+    <link rel="stylesheet" type="text/css" href="stylesheets/about-me.css"> 
+    <link rel="stylesheet" type="text/css" href="stylesheets/contact-me.css"> 
+    <link rel="stylesheet" type="text/css" href="stylesheets/portfolio.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/footer.css">
 
   </head>
  
@@ -20,25 +26,26 @@
       <button type="button" id="nav-contact">Contact</button>
       <button type="button" id="nav-portfolio">Portfolio</button>
     </div>
-    <div class="landing">
-      <div class="landing-text">
-        <h1> Harley Rowland</h1>
-        <h3> My Online CV</h3>
+    <div class="landing page">
+      <div class="heading">
+        <h1 class="title"> Harley Rowland</h1>
+        <h3 class="subtitle"> My Online CV</h3>
         <h5 class="more-info"> More info </h5>
       </div>
     </div>
-    <div class="about-me">
-        <div class="heading">
-          <h3 class="subtitle"> Harley Rowland</h1>
-          <h5> Computer Science Graduate and Aspiring Developer</h5>
-        </div>
+    <div class="about-me page">
+      <div class="heading">
+        <h3 class="title"> Harley Rowland</h3>
+        <h5 class="subtitle"> Computer Science Graduate and Aspiring Developer</h5>
+      </div>
+      <div class="content">
         <div class="bio-image show-for-small-only columns">
           <img src="./assets/harley-small.jpg"/>
         </div>
         <div class="bio row">
           <div class="bio-text medium-12 columns">
             <div class="bio-image hide-for-small-only">
-               <img src="./assets/harley-small.jpg"/>
+               <img class="shake" src="./assets/harley-small.jpg"/>
             </div>
             <p>
               I have recently graduated from the University of Kent and attained a first-class honours degree in computer science. My course taught me a wide range of skills from Object-Oriented programming with Java and JavaScript to functional languages such as Erlang and OCAML.
@@ -47,12 +54,11 @@
               The third year of my four-year degree was a year in industry where I worked using mostly JavaScript (Node.js and ExpressJS) and CSS (LESS). The company also used Agile methodologies which gave me a good exposure to Scrum and the way it works.
             </p> 
           </div>
-          
         </div>
         <div class="separator"></div>
         <div class="stats">
           <div class="stats-heading">
-            <h5 class="subtitle">The Basics</h5>
+            <h5 class="title">The Basics</h5>
           </div>
           <div class="stats-body row show-for-large-up">
             <span class="large-4 columns"><b>Name:</b> Harley Rowland</span>
@@ -79,13 +85,15 @@
             <span class="small-12 columns"><b>Favourite PLs:</b> JavaScript, Java & CSS</span>
           </div>
         </div>
+      </div>
 
     </div>
 
-     <div class="contact-me">
+     <div class="contact-me page">
       <div class="content">
         <div class="heading">
-          <h3 class="subtitle">Contact Me</h3>
+          <h3 class="title">Contact Me</h3>
+          <h5 class="subtitle">Feel Free To Get In Touch</h5>
         </div>
         <form class='email-form'>
           <input class='form-object' id="name" type="text" name="name" placeholder="What is your name?">
@@ -99,11 +107,12 @@
       </div>
     </div>
 
-    <div class="portfolio">
+    <div class="portfolio page">
+      <div class="heading">
+        <h3 class="title">Portfolio</h3>
+        <h5 class="subtitle">Some of the Things I Have Been Up To!</h5>
+      </div>
       <div class="content">
-        <div class="heading">
-          <h3 class="subtitle">Portfolio</h1>
-        </div>
         <div class="row">
           <div class="webLink pizzaSample large-6 medium-12 small-12 columns">
             <div class="title hide-for-large-up">
@@ -249,7 +258,7 @@
     });
 
     $(window).scroll(function(){
-      if($(".landing-text").visible()){
+      if($(".landing .heading").visible()){
         $("#nav-landing").addClass("active");
         $("#nav-about").removeClass("active");
         $("#nav-contact").removeClass("active");
