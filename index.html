@@ -3,12 +3,7 @@
   <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Harley Rowland</title>
-    <link rel="stylesheet" href="./foundation.css">
-    <script src="https://use.typekit.net/exj8ifs.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
-  <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/general.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/nav-bar.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/landing.css"> 
@@ -172,117 +167,21 @@
         <a class="github" href="https://github.com/HarleyRowland"> GitHub </a>
       </div>
       <div class="name">
-        <span class="footerText">Harley Rowland 2016 - Made using <a href="http://foundation.zurb.com">Foundation</a> and <a href="https://typekit.com/fonts">Typekit</a></span>
+        <span class="footerText">Harley Rowland 2016 - Made using <a href="http://foundation.zurb.com"> Foundation</a> and <a href="https://typekit.com/fonts">Typekit</a>
+        </span>
       </div>
-
     </footer>
 
-
   </body>
+
+  <script src="https://use.typekit.net/exj8ifs.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-  <script src="jquery.viewport.js" type="text/javascript"></script>
-  <script src="moment.js" type="text/javascript"></script>
+  <script src="scripts/jquery.viewport.js" type="text/javascript"></script>
+  <script src="scripts/ageCalculation.js" type="text/javascript"></script>
+  <script src="scripts/email.js" type="text/javascript"></script>
+  <script src="scripts/nav-bar.js" type="text/javascript"></script>
   <script type="text/javascript">
-    function sendMail() {
-      $('.email-button').attr('disabled','disabled');
-      var name = escape(document.getElementById('name').value);
-      var subject = escape(document.getElementById('subject').value);
-      var email = escape(document.getElementById('email').value);
-      var body = escape(document.getElementById('email-body').value);
-      var url = "https://arcane-anchorage-33274.herokuapp.com/email?name="+name+"&subject="+subject+"&email="+email+"&body="+body;
-      $.ajax({
-        url: url, 
-        success: function(result){
-          alert("You have sent '" + unescape(body)   + "' to Harley Rowland");
-          $('.email-button').removeAttr('disabled');
-        }, 
-        error: function (xhr, ajaxOptions, thrownError) {
-          console.log(xhr.status, thrownError);
-          alert("There has been an error sending this message. Please try again later!")
-          $('.email-button').removeAttr('disabled');
-        }
-      });
-    }
-
-    var date = new Date();
-    var year = date.getFullYear();
-    var month = date.getMonth();
-    var day = date.getDate();
-    var age;
-
-    if(month > 1){
-      age = year;
-    } else if(month == 1){
-      if(day >= 17){
-        age = year;
-      } else {
-        age = year-1;
-      }
-    } else {
-      age = year-1;
-    }
-    age = age-1993;
-    $(".date-of-birth").text(age);
-
-    $( document ).ready(function() {
-      $( ".more-info" ).click(function() {
-        $('html, body').animate({
-          scrollTop: $(".about-me").offset().top
-        }, 1500);
-      });
-
-      $( "#nav-landing" ).click(function() {
-        $('html, body').animate({
-          scrollTop: $("body").offset().top
-        }, 1500);
-      });
-
-      $( "#nav-about" ).click(function() {
-        $('html, body').animate({
-          scrollTop: $(".about-me").offset().top
-        }, 1500);
-      });
-
-      $( "#nav-portfolio" ).click(function() {
-        $('html, body').animate({
-          scrollTop: $(".portfolio").offset().top
-        }, 1500);
-      });
-
-      $( "#nav-contact" ).click(function() {
-        $('html, body').animate({
-          scrollTop: $(".contact-me").offset().top
-        }, 1500);
-      });
-
-    });
-
-    $(window).scroll(function(){
-      if($(".landing .heading").visible()){
-        $("#nav-landing").addClass("active");
-        $("#nav-about").removeClass("active");
-        $("#nav-contact").removeClass("active");
-        $("#nav-portfolio").removeClass("active");
-      }
-      if($(".bio-text").visible()){
-        $("#nav-about").addClass("active");
-        $("#nav-landing").removeClass("active");
-        $("#nav-contact").removeClass("active");
-        $("#nav-portfolio").removeClass("active");
-      }
-      if($(".email-form").visible()){
-        $("#nav-contact").addClass("active");
-        $("#nav-landing").removeClass("active");
-        $("#nav-about").removeClass("active");
-        $("#nav-portfolio").removeClass("active");
-      }
-      if($(".webLink").visible()){
-        $("#nav-portfolio").addClass("active");
-        $("#nav-landing").removeClass("active");
-        $("#nav-about").removeClass("active");
-        $("#nav-contact").removeClass("active");
-      }
-    }); 
-
+    calculateAge();
   </script>
 </html>
