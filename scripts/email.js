@@ -1,3 +1,11 @@
+$("textarea").keyup(function(){
+  if($(this).val().length < 30){
+    $('.count').text("Characters left until can send: " + (30 - $(this).val().length));      
+  } else {
+    $('.count').text("Characters left: " + (500 - $(this).val().length));      
+  }
+});
+
 $( "#submit-button" ).click(function(){
   sendMail();
 });
@@ -16,7 +24,7 @@ var validateForm = function(canSend){
   var subject = escape(document.getElementById('subject').value);
   var email = escape(document.getElementById('email').value);
   var body = escape(document.getElementById('email-body').value);
-  
+
   if(name == ""){
     $('#name').addClass('animated shake');
     canSend = false;
@@ -39,7 +47,7 @@ var validateForm = function(canSend){
       $('#email').removeClass('shake');
     });
   }
-  if(body == ""){
+  if(body == "" || body.length < 30){
     canSend = false;
     $('#email-body').addClass('animated shake');
     $('#email-body').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
