@@ -10,6 +10,14 @@ $( "#submit-button" ).click(function(){
   sendMail();
 });
 
+$( ".clear" ).click(function(){
+  $('#name').val('');
+  $('#subject').val('');
+  $('#email').val('');
+  $('#email-body').val('');
+  $('.count').text("Characters left until you can send: 30");
+});
+
 function sendMail() {
   $('.email-button').attr('disabled','disabled');
 

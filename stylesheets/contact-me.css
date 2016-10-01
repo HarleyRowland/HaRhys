@@ -56,6 +56,11 @@ input[type=button] {
   position: relative;
 }
 
+.clear {
+  float: right;
+  text-decoration: underline;
+}
+
 .modal {
   display: none;
 }
