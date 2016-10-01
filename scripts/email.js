@@ -61,17 +61,20 @@ var validateForm = function(name, subject, body, email){
 }
 
 var callAPI = function(canSend, url, body){
-  if(canSend){    
+  if(canSend){
+    $('.message-send-overlay').show();
     $.ajax({
       url: url, 
       success: function(result){
         alert("You have sent '" + unescape(body)   + "' to Harley Rowland");
         $('.email-button').removeAttr('disabled');
+        $('.message-send-overlay').hide();
       }, 
       error: function (xhr, ajaxOptions, thrownError) {
         console.log(xhr.status, thrownError);
         alert("There has been an error sending this message. Please try again later!")
         $('.email-button').removeAttr('disabled');
+        $('.message-send-overlay').hide();
       }
     });
   } else {
