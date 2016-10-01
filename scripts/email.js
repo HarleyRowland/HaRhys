@@ -66,7 +66,8 @@ var callAPI = function(canSend, url, body){
     $.ajax({
       url: url, 
       success: function(result){
-        alert("You have sent '" + unescape(body)   + "' to Harley Rowland");
+        $('.messageSent').text('You have sent to following message to Harley Rowland: ' + unescape(body));
+        $('.modal').trigger('click');
         $('.email-button').removeAttr('disabled');
         $('.message-send-overlay').hide();
       }, 

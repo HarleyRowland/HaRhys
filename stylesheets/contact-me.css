@@ -56,6 +56,10 @@ input[type=button] {
   position: relative;
 }
 
+.modal {
+  display: none;
+}
+
 .message-send-overlay {
   padding-top: 100px;
   max-width: 100%;
@@ -69,8 +73,6 @@ input[type=button] {
 }
 
 /*Reference: http://projects.lukehaas.me/css-loaders/*/
-
-
 .loader {
   color: #1C8FB2;
   font-size: 90px;
