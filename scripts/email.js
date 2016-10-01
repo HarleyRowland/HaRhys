@@ -1,6 +1,6 @@
 $("textarea").keyup(function(){
   if($(this).val().length < 30){
-    $('.count').text("Characters left until can you send: " + (30 - $(this).val().length));      
+    $('.count').text("Characters left until you can send: " + (30 - $(this).val().length));      
   } else {
     $('.count').text("Characters left: " + (500 - $(this).val().length));      
   }
@@ -24,6 +24,8 @@ var validateForm = function(canSend){
   var subject = escape(document.getElementById('subject').value);
   var email = escape(document.getElementById('email').value);
   var body = escape(document.getElementById('email-body').value);
+
+  var url = "https://arcane-anchorage-33274.herokuapp.com/email?name="+name+"&subject="+subject+"&email="+email+"&body="+body;
 
   if(name == ""){
     $('#name').addClass('animated shake');
@@ -58,9 +60,7 @@ var validateForm = function(canSend){
 }
 
 var callAPI = function(canSend){
-  if(canSend){
-    var url = "https://arcane-anchorage-33274.herokuapp.com/email?name="+name+"&subject="+subject+"&email="+email+"&body="+body;
-    
+  if(canSend){    
     $.ajax({
       url: url, 
       success: function(result){
