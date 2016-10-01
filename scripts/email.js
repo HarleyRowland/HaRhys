@@ -13,19 +13,20 @@ $( "#submit-button" ).click(function(){
 function sendMail() {
   $('.email-button').attr('disabled','disabled');
 
-  var canSend = validateForm(true);
-  
-
-  callAPI(canSend);
-}
-
-var validateForm = function(canSend){
   var name = escape(document.getElementById('name').value);
   var subject = escape(document.getElementById('subject').value);
   var email = escape(document.getElementById('email').value);
   var body = escape(document.getElementById('email-body').value);
 
   var url = "https://arcane-anchorage-33274.herokuapp.com/email?name="+name+"&subject="+subject+"&email="+email+"&body="+body;
+
+  var canSend = validateForm(name, subject, body, email); 
+
+  callAPI(canSend, url, body);
+}
+
+var validateForm = function(name, subject, body, email){
+  var canSend = true;
 
   if(name == ""){
     $('#name').addClass('animated shake');
@@ -59,7 +60,7 @@ var validateForm = function(canSend){
   return canSend;
 }
 
-var callAPI = function(canSend){
+var callAPI = function(canSend, url, body){
   if(canSend){    
     $.ajax({
       url: url, 
