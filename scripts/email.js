@@ -1,6 +1,6 @@
 $("textarea").keyup(function(){
   if($(this).val().length < 30){
-    $('.count').text("Characters left until you can send: " + (30 - $(this).val().length));      
+    $('.count').text("Characters until send: " + (30 - $(this).val().length));      
   } else {
     $('.count').text("Characters left: " + (500 - $(this).val().length));      
   }
