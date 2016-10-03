@@ -1,11 +1,13 @@
 body {
+  background-size:100%;
+width:100%;
   box-shadow: 0px 100vh rgba(28,143,178, 0.5) inset; /*Adds a layer of colour over the landing page image*/
-  background:
-    url('../assets/landing.jpg');
+
+  background: url('../assets/landing.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
 }
 
 .landing {
