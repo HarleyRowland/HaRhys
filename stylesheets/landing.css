@@ -1,7 +1,7 @@
 body {
   box-shadow: 0px 100VH rgba(28,143,178, 0.5) inset;
   background:
-    url('assets/landing.jpg');
+    url('../assets/landing.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -19,20 +19,16 @@ body * {
 
 /*Landing Page CSS*/
 
-.landing-text * {
+.landing * {
   color: #ffffff;
 }
 
-.landing-text {
+.landing .heading {
   align-self: center;
+  width: 50%;
 }
 
-.landing-text * {
-  text-align: center;
-  margin: -10px;
-}
-
-.landing-text > h1 {
+.landing h1 {
   text-align: center;
   border-bottom: solid 1px #ffffff;
   margin-bottom: 10px;
@@ -43,15 +39,15 @@ body * {
   margin-bottom: 2%;
 }
 
-.landing-text > .more-info {
+.more-info {
   padding: 3px;
   border: solid 1px #ffffff;
   margin-top: 20px;
   margin: 0 auto;
-  width: 75%;
+  width: 30%;
 }
 
-.landing-text > .more-info:hover {
+.more-info:hover {
   background-color: #ffffff;
   color: #1C8FB2;
   border: solid 1px #1C8FB2;
