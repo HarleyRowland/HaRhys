@@ -1,33 +1,49 @@
 body {
-  background-size:100%;
-width:100%;
-  box-shadow: 0px 100vh rgba(28,143,178, 0.5) inset; /*Adds a layer of colour over the landing page image*/
-
-  background: url('../assets/landing.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+  box-shadow: 0px 100VH rgba(28,143,178, 0.5) inset;
+  background:
+    url('assets/landing.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+body * {
+  font-family: "alwyn-new-rounded-web",sans-serif;
 }
 
 .landing {
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
 
-.landing * {
+/*Landing Page CSS*/
+
+.landing-text * {
   color: #ffffff;
 }
 
-.landing h1 {
+.landing-text {
+  align-self: center;
+}
+
+.landing-text * {
+  text-align: center;
+  margin: -10px;
+}
+
+.landing-text > h1 {
+  text-align: center;
   border-bottom: solid 1px #ffffff;
+  margin-bottom: 10px;
 }
 
-.landing .heading {
-  width: 40%;
+.landing-text > h3 {
+  text-align: center;
+  margin-bottom: 2%;
 }
 
-.more-info {
+.landing-text > .more-info {
   padding: 3px;
   border: solid 1px #ffffff;
   margin-top: 20px;
@@ -35,7 +51,7 @@ width:100%;
   width: 75%;
 }
 
-.more-info:hover {
+.landing-text > .more-info:hover {
   background-color: #ffffff;
   color: #1C8FB2;
   border: solid 1px #1C8FB2;
