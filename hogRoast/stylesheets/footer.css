@@ -1,0 +1,27 @@
+footer {
+	text-align: center;
+}
+
+.footer a {
+	padding: 20px;
+	color: #C9C9C9;
+}
+
+.createdBy > a, a {
+	padding: 0px;
+	color: #e3be42;
+}
+
+.social a {
+	font-size: 40px;
+}
+
+.footer a:hover {
+	color: #e3be42;
+}
+
+.rights {
+	padding-top: 40px;
+	margin-top: 30px;
+	border-top:2px solid #87421F;
+}

@@ -1,0 +1,22 @@
+.calendar {
+	height: auto;
+}
+
+.cal {
+	width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
+.view-container-border {
+	background-color: white;
+}
+
+@media only screen and (max-width: 40em)  {
+
+ 	.cal {
+		width: 70%; 
+	}
+}
