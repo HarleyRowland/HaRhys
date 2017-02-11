@@ -1,6 +1,0 @@
-[submodule "restaurantExample"]
-	path = restaurantExample
-	url = https://github.com/harleyrowland/restaurantExample
-[submodule "barbersExample"]
-	path = barbersExample
-	url = https://github.com/harleyrowland/barbersExample
