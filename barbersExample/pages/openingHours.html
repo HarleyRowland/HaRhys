@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tony's Barber's</title>
+
+  <link rel="shortcut icon" href="../assets/icon.png" />  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
+  <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../stylesheets/general.css">
+  <link rel="stylesheet" href="../stylesheets/opening.css">
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="https://use.typekit.net/exj8ifs.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+<body> 
+  <div class="menuOverlay">
+      <a href="#"><i class="fi-x"></i></a>
+      <div>
+        <h1> Menu </h1>
+        <a href="../index.html">Home</a></br>
+        <a class="close" href="#">When & Where</a></br>
+        <a href="gallery.html">The Gallery</a></br>
+        <a href="prices.html">Price List</a></br>
+      </div>
+  </div> 
+
+  <div class="row header">
+    <div class="logo small-12 large-4 columns">
+      <div class="menu">
+        <a href="#"><i class="fi-list hide-for-large-up"></i></a>
+      </div>
+      <img src="../assets/logo.png">
+    </div>
+    <div class="links show-for-large-up large-8 columns">
+      <a  href="../index.html">Home</a>|
+      <a class="selected" href="#">When & Where</a>|
+      <a href="gallery.html">The Gallery</a>|
+      <a href="prices.html">Price List</a>
+    </div>
+  </div>
+
+  <div class="small-12 text-center columns">
+    <h4>When & Where</h4>
+  </div>
+  
+  <div class="row">
+    <div class="medium-6 image columns">
+       <div class="table"> 
+        <table class="opening-times">
+          <tr>
+            <th>Day</th>
+            <th>Times</th>
+          </tr>
+          <tr class="sunday">
+            <td>Sunday</td>
+            <td>Noon - 10pm</td> 
+          </tr>
+          <tr class="monday">
+            <td>Monday</td>
+            <td>11am - 10pm</td> 
+          </tr>
+          <tr class="tuesday">
+            <td>Tuesday</td>
+            <td>11am - 10pm</td> 
+          </tr>
+          <tr class="wednesday">
+            <td>Wednesday</td>
+            <td>11am - 10pm</td> 
+          </tr>
+          <tr class="thursday">
+            <td>Thursday</td>
+            <td>11am - 10pm</td> 
+          </tr>
+          <tr class="friday">
+            <td>Friday</td>
+            <td>Noon - Midnight</td> 
+          </tr>
+          <tr class="saturday">
+            <td>Saturday</td>
+            <td>Noon - Midnight</td> 
+          </tr>
+        </table>
+      </div>
+      <p class="callUs">
+        Come in or give us a call if you want to make a booking on: <span>0208 333 3333</span>.
+      </p>
+    </div>
+    <div class="map small-12 medium-6 columns">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6319.058019724919!2d0.14338318790776516!3d51.45658004748061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8ae5ea26cc243%3A0xc7c9565d2f2b6096!2sThe+Mall%2C+Broadway+Shopping+Centre%2C+Bexleyheath+DA6+7JJ!5e0!3m2!1sen!2suk!4v1474389151849" width="100%" height="370px" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer row">
+      <div class="rights small-12 columns">
+        <div class="copyright medium-6 columns">
+          &copy; Tony's Barbers - 2016
+        </div>
+        <div class="createdBy medium-6 columns">
+          Created by <a href="http://www.harleyrowland.com">Harley Rowland</a>
+        </div>
+        </div>
+      <div class="social small-12 columns">
+        <a href="#"><i class="fi-social-facebook large"></i></a><a href="#"><i class="fi-social-google-plus large"></i><a href="#"><i class="fi-social-twitter large"></i></a></i>
+      </div> 
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+  <script src="../scripts.js"></script>
+  <script>
+    $(document).foundation();
+    openingTimes();
+    menuOverlay();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+.image {
+	padding-top: 10px;
+	text-align: center;
+}
+
+.image h3 {
+	padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 40em) {
+	.image {
+		margin-bottom: 20px;
+	}
+}
