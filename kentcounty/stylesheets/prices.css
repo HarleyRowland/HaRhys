@@ -36,9 +36,15 @@
  /*Small screens*/
 @media only screen and (max-width: 40em)  { 
   .package {
-  border: solid 1px black;
-  margin: 5px;
-  width: 90%;
+    border: solid 1px black;
+    margin: 5px;
+    width: 90%;
+  }
 }
 
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

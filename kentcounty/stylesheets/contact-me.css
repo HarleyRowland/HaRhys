@@ -213,3 +213,10 @@ input[type=date] {
     text-align: center;
   }
 }
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
