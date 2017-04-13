@@ -1,16 +1,35 @@
-.questions {
-  margin: auto;
-  width: 90%;
+.faq {
+  min-height: 90%;
+}
+
+.faq * {
+	text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+}
+
+.accordion-navigation * {
+	color: #4B651E !important;
+	margin-left: 10px;
+}
+
+.content p {
+	margin: 10px;
+}
+
+.footer {
+	margin-top: 20px;
 }
 
 h4 {
   text-decoration: underline;
-  /*color: #BFDF8A;*/
 }
 
 /*Small Only*/
 @media only screen and (max-width: 40em)  { 
-
+  .main {
+    margin-right: 0px !important;
+  }
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
@@ -19,3 +38,5 @@ h4 {
   	padding-left: 20px;
   }
 }
+
+

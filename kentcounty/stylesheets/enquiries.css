@@ -1,23 +1,10 @@
-.contact-me {
-  background-color: #4B651E;
-}
-
-.contact-me .heading {
-  border-bottom: 1px solid #ffffff;
-}
-
-.contact-me a {
-  color: #ffffff;
-}
-
-.contact-me *:not(.form-object):not(.loader) {
-  color: #ffffff; 
+.enquiries {
+  min-height: 90%;
 }
 
 .email-form{
   padding-bottom: 30px;
   margin: auto;
-  width: 80%;
   color: #A8A8A8;
 }
 
@@ -121,6 +108,7 @@ input[type=date] {
   -webkit-animation: load6 1.7s infinite ease;
   animation: load6 1.7s infinite ease;
 }
+
 @-webkit-keyframes load6 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -200,10 +188,7 @@ input[type=date] {
 }
 
 /*Small screens*/
-@media only screen and (max-width: 40em)  { 
-  .email-form {
-    width:95%;
-  }  
+@media only screen and (max-width: 40em)  {
 
   input[type=button] {
     width: 40%;
@@ -212,11 +197,20 @@ input[type=date] {
   .clear {
     text-align: center;
   }
+
+  .enquiries {
+    padding: 10px;
+  }
+
+  .main {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-  .content {
-    padding-left: 20px;
-    padding-right: 20px;
+
+  .enquiries {
+    padding: 10px;
   }
 }
