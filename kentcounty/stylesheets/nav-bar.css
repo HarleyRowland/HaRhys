@@ -1,5 +1,5 @@
 .top-bar {
-  background-color: #4B651E;
+  background-color: #003300;
   top:0;
   width: 100%;
   height: auto;
@@ -19,22 +19,24 @@
   -ms-transition: all 0.3s ease;
 }
 
-.link-group a {
-  font-size: 12px;
+.link-group a, .span {
+  font-size: 15px;
   color: white;
   margin-right: 30px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .active {
-  font-size: 22px !important;
+  font-size: 15px !important;
+  text-decoration: underline !important;
 }
 
-.link-group a:hover, .fi-list:hover  {
- font-size: 22px;
+.link-group a:hover, .fi-list:hover, .span:hover  {
+  color: #BFDF8A !important;
 }
 
 .top-bar .span {

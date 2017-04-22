@@ -6,15 +6,20 @@
 	text-align: justify;
     -moz-text-align-last: center;
     text-align-last: center;
+    text-decoration: none !important;
 }
 
 .accordion-navigation * {
-	color: #4B651E !important;
+	color: #003300 !important;
 	margin-left: 10px;
 }
 
 .content p {
 	margin: 10px;
+}
+
+dd .content p {
+  text-decoration: none !important;
 }
 
 .footer {

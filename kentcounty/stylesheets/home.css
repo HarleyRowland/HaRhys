@@ -10,7 +10,7 @@ body * {
 }
 
 .text a {
-  color: #4B651E;
+  color: #003300;
 }
 
 .text a:hover {
@@ -30,7 +30,7 @@ body * {
 }
 
 .landing img {
-  border: 3px solid #4B651E;
+  border: 3px solid #003300;
 }
 
 .content-buttons {
@@ -38,9 +38,9 @@ body * {
 }
 
 .content-buttons a {
-  border: 3px solid #4B651E;
+  border: 3px solid #003300;
   background-color: white;
-  color: #4B651E;
+  color: #003300;
   text-align: center;
   padding: 10px; 
   -o-transition:.5s;
@@ -66,7 +66,7 @@ body * {
 }
 
 .prices img{
-  border: 7px solid #4B651E !important;
+  border: 7px solid #003300 !important;
 }
 
 .content img {
@@ -81,7 +81,7 @@ body * {
 }
 
 .divider {
-  border-top: 3px #4B651E solid;
+  border-top: 3px #003300 solid;
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
@@ -95,7 +95,7 @@ body * {
 }
 
 .prices *, .meat *, .service * {
-  color: #4B651E;
+  color: #003300;
 }
 
 .section img.show-for-medium-only {
@@ -107,7 +107,7 @@ body * {
 
 .prices img, .meat img, .service img {
   border-radius: 1000px;
-  border: 7px solid #4B651E;
+  border: 7px solid #003300;
 }
 
 .prices img.show-for-medium-only {
@@ -129,7 +129,7 @@ body * {
   }
 
   .meat, .service {
-    background-color: #4B651E;
+    background-color: #003300;
   }
 
   .meat * , .service * {

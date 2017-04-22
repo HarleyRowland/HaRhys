@@ -36,9 +36,9 @@ input[type=date] {
 
 
 .email-button {
-  border: 3px solid #4B651E !important;
+  border: 3px solid #003300 !important;
   background-color: white !important;
-  color: #4B651E !important;
+  color: #003300 !important;
   -o-transition:.5s;
   -ms-transition:.5s;
   -moz-transition:.5s;
@@ -60,7 +60,7 @@ input[type=date] {
 }
 
 .clear {
-  color: #4B651E;
+  color: #003300;
   margin-top: -10px;
   float: right;
   text-decoration: underline;
@@ -93,7 +93,7 @@ input[type=date] {
 
 /*Reference: http://projects.lukehaas.me/css-loaders/*/
 .loader {
-  color: #4B651E;
+  color: #003300;
   font-size: 90px;
   text-indent: -9999em;
   overflow: hidden;
@@ -114,7 +114,7 @@ input[type=date] {
 }
 
 .map-and-details {
-  border-top: 3px solid #4B651E;
+  border-top: 3px solid #003300;
   padding-top: 20px; 
   max-width: 100%;
 }
@@ -124,7 +124,7 @@ input[type=date] {
 }
 
 .details a:hover, .details span {
-  color: #4B651E;
+  color: #003300;
 }
 
 @-webkit-keyframes load6 {

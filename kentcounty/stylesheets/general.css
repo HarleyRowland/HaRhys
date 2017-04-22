@@ -1,6 +1,6 @@
 body * {
   font-family: Futura Next, "Trebuchet MS", Arial, sans-serif !important;
-  color: #4B651E;
+  color: #003300;
 }
 
 p, .text {
@@ -14,7 +14,7 @@ h1 {
 }
 
 a {
-  color: #4B651E;
+  color: #003300;
   text-decoration: underline;
 }
 
@@ -23,12 +23,12 @@ a:hover {
 }
 
 .title {
-  margin-top: 5%;
+  margin-top: 30px;
   text-align:center;
 }
 
 .title h1 {
-  color: #4B651E;
+  color: #003300;
 }
 
 /*Small screens*/
