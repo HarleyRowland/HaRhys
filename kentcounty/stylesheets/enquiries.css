@@ -109,6 +109,24 @@ input[type=date] {
   animation: load6 1.7s infinite ease;
 }
 
+.map {
+  margin-bottom: 20px;
+}
+
+.map-and-details {
+  border-top: 3px solid #4B651E;
+  padding-top: 20px; 
+  max-width: 100%;
+}
+
+.details a, .details span {
+  color: #BFDF8A;
+}
+
+.details a:hover, .details span {
+  color: #4B651E;
+}
+
 @-webkit-keyframes load6 {
   0% {
     -webkit-transform: rotate(0deg);

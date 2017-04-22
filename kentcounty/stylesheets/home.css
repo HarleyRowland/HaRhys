@@ -1,6 +1,32 @@
+body * {
+  text-align: justify;
+  -moz-text-align-last: center;
+  text-align-last: center;
+}
+
 .landing {
   padding-bottom: 30px;
   min-height: 30%;
+}
+
+.text a {
+  color: #4B651E;
+}
+
+.text a:hover {
+  color: #BFDF8A;
+}
+
+.content-buttons {
+  padding-left: 0px !important;
+  margin-top: 0px !important;
+}
+
+.info {
+  text-align: justify;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  padding: 15px;
 }
 
 .landing img {
@@ -55,7 +81,7 @@
 }
 
 .divider {
-  border-top: 1px #4B651E solid;
+  border-top: 3px #4B651E solid;
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
