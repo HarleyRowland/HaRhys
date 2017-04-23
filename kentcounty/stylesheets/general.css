@@ -5,8 +5,6 @@ body * {
 
 p, .text {
   text-align: justify;
-  -moz-text-align-last: center;
-  text-align-last: center;
 }
 
 .title *, .heading * {

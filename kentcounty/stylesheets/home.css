@@ -1,7 +1,5 @@
 body * {
-  text-align: justify;
-  -moz-text-align-last: center;
-  text-align-last: center;
+  text-align: center;
 }
 
 body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6){
@@ -28,8 +26,6 @@ body *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6){
 
 .info {
   text-align: justify;
-  -moz-text-align-last: center;
-  text-align-last: center;
   padding: 15px;
 }
 
