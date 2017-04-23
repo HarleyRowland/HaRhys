@@ -2,10 +2,6 @@
   min-height: 90%;
 }
 
-.info {
-  font-size: 16px !important;
-}
-
 .email-form{
   padding-bottom: 30px;
   margin: auto;
@@ -240,4 +236,8 @@ input[type=date] {
     margin-right: 0px !important;
     margin-left: 0px !important;
   }
+}
+
+.info {
+  font-size: 16px !important;
 }
