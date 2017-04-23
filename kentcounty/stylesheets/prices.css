@@ -55,6 +55,12 @@ a.button:hover {
     margin-right: 0px !important;
     margin-left: 0px !important;
   }
+
+  .pricing-table {
+    width: 92% !important;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
 }
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
