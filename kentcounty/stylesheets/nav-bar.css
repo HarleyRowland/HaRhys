@@ -59,7 +59,7 @@
   top: 45px;
   width: 100%;
   background-color: rgba(75,101,30,0.8);
-  text-align: center;
+  text-align: center !important;
   display: none;
 }
 

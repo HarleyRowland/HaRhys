@@ -89,7 +89,7 @@
 }
 
 .content .heading {
-  text-align: center;
+  text-align: center !important;
 }
 
 .prices *, .meat *, .service * {
