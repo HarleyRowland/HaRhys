@@ -52,6 +52,7 @@ body * {
   float:left;
   clear:left;
   width: 100%;
+  text-decoration: none;
 }
 
 .content-buttons a:hover {
@@ -90,7 +91,6 @@ body * {
 }
 
 .content .heading {
-  text-decoration: underline;
   text-align: center;
 }
 

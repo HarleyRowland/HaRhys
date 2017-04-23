@@ -1,5 +1,5 @@
 body * {
-  font-family: Futura Next, "Trebuchet MS", Arial, sans-serif !important;
+  font-family: "acumin-pro", Arial, sans-serif;
   color: #003300;
 }
 
@@ -9,7 +9,7 @@ p, .text {
   text-align-last: center;
 }
 
-h1 {
+.title *, .heading * {
   font-family: Copperplate, "Copperplate Gothic Light", fantasy !important;
 }
 
@@ -38,6 +38,11 @@ a:hover {
     text-align: justify;
     -moz-text-align-last: center;
     text-align-last: center;
+  }
+
+  h1 {
+    font-size: 30px !important;
+    text-align: center !important;
   }
 
 }

@@ -80,4 +80,9 @@
 
 .drop-down a:hover {
   transform: scale(1.1);
+  background-color: rgba(0,51,0,0.8);;
+}
+
+.drop-down a:not(.active){
+  text-decoration: none;
 }
