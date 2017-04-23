@@ -35,8 +35,6 @@ a:hover {
 
   .content p {
     text-align: justify;
-    -moz-text-align-last: center;
-    text-align-last: center;
   }
 
   h1 {

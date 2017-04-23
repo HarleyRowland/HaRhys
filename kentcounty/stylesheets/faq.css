@@ -4,9 +4,7 @@
 
 .faq * {
 	text-align: justify;
-    -moz-text-align-last: center;
-    text-align-last: center;
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .accordion-navigation * {
