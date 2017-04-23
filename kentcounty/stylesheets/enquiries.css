@@ -2,6 +2,10 @@
   min-height: 90%;
 }
 
+.info {
+  font-size: 16px !important;
+}
+
 .email-form{
   padding-bottom: 30px;
   margin: auto;
