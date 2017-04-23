@@ -3,7 +3,7 @@ body * {
   color: #003300;
 }
 
-p, .text {
+div *:not(.nav-bar *), p, .text {
   text-align: justify;
 }
 
