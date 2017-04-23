@@ -11,6 +11,7 @@ p, .text {
 
 .title *, .heading * {
   font-family: Copperplate, "Copperplate Gothic Light", fantasy !important;
+  text-align: center;
 }
 
 a {
