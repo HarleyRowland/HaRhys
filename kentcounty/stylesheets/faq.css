@@ -6,11 +6,7 @@
 }
 
 .faq-question:hover {
-	background-color: #A0A0A0;
-}
-
-.faq-question:hover *{
-	color: #FFFFFF;
+	background-color: #D0D0D0;
 }
 
 .answer {
@@ -22,7 +18,7 @@
 /* Small Screens */
 @media only screen and (max-width: 40em)  { 
 	.faq-question {
-		height: 60px;
+		min-height: 60px;
 	}
 }
 

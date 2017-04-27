@@ -3,9 +3,13 @@
   padding-bottom: 30px;
 }
 
-.text {
+.landing .text {
   width: 100%;
-  overflow-y: 0 !important;
+  margin: 0px;
+}
+
+.landing .image {
+  padding-left: 0px;
 }
 
 .landing .image img {
@@ -40,10 +44,6 @@
   color: black;
 }
 
-.introduction {
-  margin-left: 15px;
-}
-
 /* Divider CSS */
 .divider {
   border-top: 3px #003300 solid;
@@ -62,6 +62,14 @@
 
 .prices *, .meat *, .service * {
   color: #003300;
+}
+
+.meat {
+  padding-left: 0px;
+}
+
+.service {
+  padding-right: 0px;
 }
 
 .section .image {
@@ -95,15 +103,15 @@
     padding-left: 0px;
   }
 
-  .prices, .service {
+  .service, .meat {
     background-color: #003300;
   }
 
-  .prices * , .service * {
+  .service * , .meat * {
     color: white;
   }
 
-  .prices img, .service img {
+  .service img, .meat img {
     border: 7px solid #ffffff;
   }
 
