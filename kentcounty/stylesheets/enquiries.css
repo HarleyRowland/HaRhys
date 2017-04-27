@@ -62,6 +62,7 @@ input[type=date] {
   -moz-transition:.5s;
   -webkit-transition:.5s;
   transition:.5s;
+  padding-bottom: 10px;
 }
 
 .clear:hover {
@@ -121,15 +122,19 @@ input[type=date] {
   padding: 0px;
 }
 
+.details a {
+  color: #BFDF8A;
+}
+
+.details a:hover {
+  color: #003300;
+}
+
 
 /* Small screens */ 
 @media only screen and (max-width: 40em)  {
   input[type=button] {
     width: 40%;
-  }
-
-  .clear {
-    text-align: center;
   }
 
   .enquiries {
