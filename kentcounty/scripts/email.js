@@ -18,6 +18,11 @@ $( ".clear" ).click(function(){
   $('#package').val('');
 });
 
+function loadServer() {
+  var url = "https://arcane-anchorage-33274.herokuapp.com"
+  $.ajax({ url: url });
+}
+
 function sendMail() {
   $('.email-button').attr('disabled','disabled');
 
