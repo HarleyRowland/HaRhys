@@ -4,6 +4,11 @@ $( "#submit-button" ).click(function(){
   sendMail();
 });
 
+
+$( ".close-reveal-modal" ).click(function(){
+  $('#myModal').hide()
+});
+
 $( ".clear" ).click(function(){
   $('#name').val('');
   $('#email').val('');
@@ -74,7 +79,7 @@ var callAPI = function(canSend, url, body){
       url: url, 
       success: function(result){
         $('.messageSent').text('We aim to reply within 48 hours. We will be in touch soon.');
-        $('.modal').trigger('click');
+        $('#myModal').show();
         $('.email-button').removeAttr('disabled');
         $('.message-send-overlay').hide();
       }, 

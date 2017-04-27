@@ -5,8 +5,7 @@
     
     <title>Kent County Hog Roast</title>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
+    <link rel="stylesheet" href="../foundation/css/foundation.min.css">
     <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="../stylesheets/general.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/faq.css"> 
@@ -19,14 +18,14 @@
  
   <body>
     <nav class="top-bar" data-topbar role="navigation">
-      <a href="../index.html" class="span">Kent County Hog Roast</a>
-      <div class="link-group show-for-medium-up">
-        <a href="../index.html" type="button">Home</a>
-        <a href="enquiries.html" type="button">Enquiries</a>
-        <a href="prices.html" type="button">Hog Roast Packages</a>
-        <a class="active" type="button">FAQs</a>
+      <a href="../index.html" class="logo">Kent County Hog Roast</a>
+      <div class="link-group show-for-large">
+        <a href="../index.html">Home</a>
+        <a href="enquiries.html">Enquiries</a>
+        <a href="packages.html">Hog Roast Packages</a>
+        <a href="" class="active">FAQs</a>
       </div>
-      <div class="menu show-for-small-only">
+      <div class="menu hide-for-large">
         <a href="#"><i class="fi-list large"></i></a>
       </div>
     </nav>
@@ -34,100 +33,116 @@
     <div class="drop-down">
       <a href="../index.html">Home</a>
       <a href="enquiries.html">Enquiries</a>
-      <a href="prices.html">Hog Roast Packages</a>
+      <a href="packages.html">Hog Roast Packages</a>
       <a class="active" href="">FAQs</a>
     </div>
     
-    <div class="faq row">
-      <div class="title small-12 columns">
-        <h1>FAQs</h1>
+    <div class="main row">
+      <div class="title">
+        <h1 class="hide-for-landscape">FAQs</h1>
+        <h2 class="show-for-landscape">FAQs</h2>
       </div>
-      <div class="content row main">
-        <div class="row main">
-         <div class="large-12 columns text-center">
-           
-         </div>
+      <div class="questions">
+        <div class="faq-question">
+          <div class="question">
+            1. How many people will a hog roast cater for?
+            <div class="answer" id="answer1">
+              <p>A full hog will cater for up to 200 guests. A half hog will feed up to 100 guests.</p>
+            </div>
+          </div>
         </div>
-        <dl class="accordion" data-accordion>
-         <dd class="accordion-navigation">
-            <a href="#panel1">1. How many people will a hog roast cater for?</a>
-            <div id="panel1" class="content">
-              <p>A full hog will cater for up to 200 guests. A half hog will feed up to 100 guests.</p>   
-            </div>
-         </dd>
-          
-         <dd class="accordion-navigation">
-           <a href="#panel2">2. How long before the event will you need to set up?</a>
-            <div id="panel2" class="content">
-              <p>Our team will be with you roughly seven hours before your event. This is so we have time to set up and can get the hog cooking.</p>   
-            </div>
-         </dd>
 
-         <dd class="accordion-navigation">
-            <a href="#panel3">3. How long does a full hog take to cook?</a>
-            <div id="panel3" class="content">
-              <p>5-6 hours.</p>   
+        <div class="faq-question">
+          <div class="question">
+            2. How long before the event will you need to set up?
+            <div class="answer" id="answer2">
+              <p>Our team will be with you roughly seven hours before your event. This is so we have time to set up and can get the hog cooking.</p>
             </div>
-         </dd>
-          
-         <dd class="accordion-navigation">
-           <a href="#panel4">4. How much will it cost?</a>
-            <div id="panel4" class="content">
+          </div>
+        </div>
+
+        <div class="faq-question">
+          <div class="question">
+            3. How long does a full hog take to cook?
+            <div class="answer" id="answer3">
+              <p>5-6 hours.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-question">
+          <div class="question">
+            4. How much will it cost?
+            <div class="answer" id="answer4">
               <p>Please visit our <a href="prices.html">Hog Roast Packages</a> page to give you an idea on costs. If you just require the equipment, machine hire, gas, set up and delivery and collection then the cost is only £150.</p>
 
-              <p>If our packages do not meet your requirements then please contact us and a bespoke package can be made which will be perfect for your event.</p>   
+              <p>If our packages do not meet your requirements then please contact us and a bespoke package can be made which will be perfect for your event.</p>
             </div>
-         </dd>
+          </div>
+        </div>
 
-         <dd class="accordion-navigation">
-           <a href="#panel5">5. Are you registered?</a>
-            <div id="panel5" class="content">
-              <p>Yes, we are registered with local authority environmental officers and have HACCP in place.</p>   
+        <div class="faq-question">
+          <div class="question">
+            5. Are you registered?
+            <div class="answer" id="answer5">
+              <p>Yes, we are registered with local authority environmental officers and have HACCP in place.</p>
             </div>
-         </dd>
+          </div>
+        </div>
 
-         <dd class="accordion-navigation">
-           <a href="#panel6">6. Are you insured?</a>
-            <div id="panel6" class="content">
-              <p>Yes, we hold public liability insurance which allows us to operate almost anywhere. We can provide relevant documents upon request.</p>   
+        <div class="faq-question">
+          <div class="question">
+            6. Are you insured?
+            <div class="answer" id="answer6">
+              <p>Yes, we hold public liability insurance which allows us to operate almost anywhere. We can provide relevant documents upon request.</p>
             </div>
-         </dd>
+          </div>
+        </div>
 
-         <dd class="accordion-navigation">
-            <a href="#panel7">7. Where is your meat from?</a>
-            <div id="panel7" class="content">
-              <p>We use locally-sourced produce and are in partnership with P W Copus Butchers to ensure that we provide you with the highest quality meats.</p>   
+        <div class="faq-question">
+          <div class="question">
+            7. Where is your meat from?
+            <div class="answer" id="answer7">
+              <p>We use locally-sourced produce and are in partnership with P W Copus Butchers to ensure that we provide you with the highest quality meats.</p>
             </div>
-         </dd>
-          
-         <dd class="accordion-navigation">
-           <a href="#panel8">8. What do I need to provide?</a>
-            <div id="panel8" class="content">
-              <p>All we need you to do is have a flat, 3m by 3m square area for us to set up our Gazebo and hog roasting equipment. The gazebo ensures that come rain or shine we can still operate. Everything else is done by us so you can sit back and enjoy your day.</p>   
-            </div>
-         </dd>
+          </div>
+        </div>
 
-         <dd class="accordion-navigation">
-            <a href="#panel9">9. How far do you travel?</a>
-            <div id="panel9" class="content">
-              <p>Kent County Hog Roast operate all over Kent and the surrounding areas.</p>   
+        <div class="faq-question">
+          <div class="question">
+            8. What do I need to provide?
+            <div class="answer" id="answer8">
+              <p>All we need you to do is have a flat, 3m by 3m square area for us to set up our Gazebo and hog roasting equipment. The gazebo ensures that come rain or shine we can still operate. Everything else is done by us so you can sit back and enjoy your day.</p>
             </div>
-         </dd>
+          </div>
+        </div>
 
-         <dd class="accordion-navigation">
-            <a href="#panel10">10. How will your team look on the day?</a>
-            <div id="panel10" class="content">
-              <p>We will be we well presented. Our chefs wear traditional chef whites and our team will be wearing our uniform. We want to give you a professional and friendly service on your day.</p>   
+        <div class="faq-question">
+          <div class="question">
+            9. How far do you travel?
+            <div class="answer" id="answer9">
+              <p>Kent County Hog Roast operate all over Kent and the surrounding areas.</p>
             </div>
-         </dd>
+          </div>
+        </div>
 
-         <dd class="accordion-navigation">
-            <a href="#panel11">11. What happens after the event?</a>
-            <div id="panel11" class="content">
-              <p>We will ensure that everything is tidied away. We would love to hear your experiences following the event so please feel free to share these with us.</p>   
+        <div class="faq-question">
+          <div class="question">
+            10. How will your team look on the day?
+            <div class="answer" id="answer10">
+              <p>We will be we well presented. Our chefs wear traditional chef whites and our team will be wearing our uniform. We want to give you a professional and friendly service on your day.</p>
             </div>
-         </dd>
-        </dl>
+          </div>
+        </div>
+
+        <div class="faq-question">
+          <div class="question">
+            11. What happens after the event?
+            <div class="answer" id="answer11">
+              <p>We will ensure that everything is tidied away. We would love to hear your experiences following the event so please feel free to share these with us.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -144,11 +159,11 @@
   </body>
   <script src="https://use.typekit.net/lgo5yej.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="../scripts/email.js" type="text/javascript"></script>
+  <script src="../scripts/jquery.js"></script>
   <script src="../scripts/nav-bar.js" type="text/javascript"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
-  <script type="text/javascript">
-    $(document).foundation();
+  <script src="../scripts/faq.js" type="text/javascript"></script>
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+ -->  <script type="text/javascript">
+    // $(document).foundation();
   </script>
 </html>

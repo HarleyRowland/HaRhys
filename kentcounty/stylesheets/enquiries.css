@@ -1,8 +1,5 @@
-.enquiries {
-  min-height: 90%;
-}
-
-.email-form{
+/* Form CSS */
+form {
   padding-bottom: 30px;
   margin: auto;
   color: #A8A8A8;
@@ -12,7 +9,7 @@ input[type=text], .form-object {
   border-radius: 5px;
 }
 
-.button-div {
+.submit {
   width: 100%;
   text-align: center;
 }
@@ -34,8 +31,7 @@ input[type=date] {
   border-radius: 5px;
 }
 
-
-.email-button {
+.submit .form-object {
   border: 3px solid #003300 !important;
   background-color: white !important;
   color: #003300 !important;
@@ -44,19 +40,16 @@ input[type=date] {
   -moz-transition:.5s;
   -webkit-transition:.5s;
   transition:.5s;
+  padding-bottom: 20px;
 }
 
-.email-button:hover {
+.submit .form-object:hover {
   background-color: #BFDF8A !important;
   color: black !important;
 }
 
 .form-object:-moz-placeholder {
   color: #A8A8A8;
-}
-
-.contact-me {
-  position: relative;
 }
 
 .clear {
@@ -75,8 +68,16 @@ input[type=date] {
   color: #BFDF8A;
 }
 
-.modal {
+#myModal {
   display: none;
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.close-reveal-modal {
+  float: right;
 }
 
 .message-send-overlay {
@@ -109,24 +110,46 @@ input[type=date] {
   animation: load6 1.7s infinite ease;
 }
 
-.map {
-  margin-bottom: 20px;
-}
 
+/* Map and Details CSS*/
 .map-and-details {
   border-top: 3px solid #003300;
   padding-top: 20px; 
-  max-width: 100%;
 }
 
-.details a, .details span {
-  color: #BFDF8A;
+.details, .map {
+  padding: 0px;
 }
 
-.details a:hover, .details span {
-  color: #003300;
+
+/* Small screens */ 
+@media only screen and (max-width: 40em)  {
+  input[type=button] {
+    width: 40%;
+  }
+
+  .clear {
+    text-align: center;
+  }
+
+  .enquiries {
+    padding: 10px;
+  }
+
+  .details {
+    text-align: center;
+  }
+
 }
 
+/* Medium screens */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .details {
+    padding-right: 20px;
+  }
+}
+
+/* Animate */
 @-webkit-keyframes load6 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -203,41 +226,4 @@ input[type=date] {
     box-shadow: 0 -2em;
     height: 5em;
   }
-}
-
-/*Small screens*/
-@media only screen and (max-width: 40em)  {
-
-  input[type=button] {
-    width: 40%;
-  }
-
-  .clear {
-    text-align: center;
-  }
-
-  .enquiries {
-    padding: 10px;
-  }
-
-  .main {
-    margin-right: 0px !important;
-    margin-left: 0px !important;
-  }
-}
-
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
-
-  .enquiries {
-    padding: 10px;
-  }
-  
-  .main {
-    margin-right: 0px !important;
-    margin-left: 0px !important;
-  }
-}
-
-.info {
-  font-size: 16px !important;
 }

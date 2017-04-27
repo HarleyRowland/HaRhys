@@ -1,45 +1,58 @@
+body {
+  background-color: #fefefe;
+}
+
 body * {
   font-family: "acumin-pro", Arial, sans-serif;
   color: #003300;
 }
 
-div *:not(.nav-bar *), p, .text {
-  text-align: justify;
+.main, .extra-info {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  margin-bottom: 50px;
 }
 
-.title *, .heading * {
+.title *, .sub-title *, .heading * {
   font-family: Copperplate, "Copperplate Gothic Light", fantasy !important;
-  text-align: center;
-}
-
-a {
-  color: #003300;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #BFDF8A;
+  text-align: center !important;
 }
 
 .title {
-  margin-top: 30px;
-  text-align:center;
+  padding: 10px;
 }
 
-.title h1 {
-  color: #003300;
+.sub-title {
+  padding: 10px;
+  text-decoration: underline;
+}
+
+.text {
+  text-align: justify !important;
+  font-size: 16px !important;
 }
 
 /*Small screens*/
-@media only screen and (max-width: 40em)  { 
-
-  .content p {
-    text-align: justify;
+@media only screen and (max-width: 40em)  {
+  .main, .extra-info {
+    margin-left: 0% !important;
+    margin-right: 0% !important;
+    width: 100%;
+    margin-bottom: 0px;
+    padding: 25px;
+    padding-bottom: 0px;
   }
 
-  h1 {
-    font-size: 30px !important;
-    text-align: center !important;
+  .main .text {
+    margin-left: 0px;
+    margin-right: 0px;
   }
+}
 
+/* Medium Screens */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .extra-info {
+    padding-top: 0px;
+  }
 }
