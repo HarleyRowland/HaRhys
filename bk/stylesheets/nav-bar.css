@@ -1,0 +1,96 @@
+.top-bar {
+  background-color: rgba(28,143,178, 0);
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 1000;
+  height: 45px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.link-group, .fi-list {
+  float: right;
+}
+
+.fi-list {
+  font-size: 18px;
+  color: #ffffff;
+  transition: 1s;
+  left: 0;
+}
+
+.link-group a:nth-child(3) {
+  margin-right: 0px;
+}
+
+.link-group a {
+  margin-right: 30px;
+  border-bottom: 0px solid transparent;
+  transition: 0.5 ease;
+}
+
+.link-group a:not(.active){
+  color: #FFFFFF;
+}
+
+.active {
+  color: #1FAFF1;
+}
+
+.link-group a:hover:not(.fi-list), .fi-list:hover:not(.fi-list)  {
+  color: #34316F;
+  border-bottom: 3px solid #34316F;
+}
+
+.fi-list:hover {
+  color: #34316F;
+}
+
+.top-bar .name {
+  float: left;
+  color: #ffffff;
+}
+
+.menu-up {
+  display: none;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

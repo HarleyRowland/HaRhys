@@ -1,0 +1,50 @@
+.landing {
+  background:
+    url('../assets/workers.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  transition: background 2s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh ;
+}
+
+.landing .layer {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33,33,33,0.5)
+}
+
+.landing * {
+  color: #ffffff;
+  text-align: center;
+}
+
+
+.landing .header {
+  text-align: center;
+  border-bottom: solid 1px #ffffff;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.landing .subtitle {
+  padding-bottom: 5px;
+}
+
+.landing .title {
+  width: 100%;
+  z-index: 100;
+}
+
+.landing .fa {
+  position: absolute;
+  text-align: center;
+  bottom: 5%;
+  font-size: 50px;
+}
