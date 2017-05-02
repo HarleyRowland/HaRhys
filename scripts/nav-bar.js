@@ -16,13 +16,6 @@
     }, 1500);
   });
 
-  $( "#nav-portfolio" ).click(function() {
-    console.log('hello');
-    $('html, body').animate({
-      scrollTop: $(".portfolio").offset().top
-    }, 1500);
-  });
-
   $( "#nav-contact" ).click(function() {
     $('html, body').animate({
       scrollTop: $(".contact-me").offset().top
@@ -50,13 +43,6 @@
     $('.drop-down').hide();
   });
 
-  $( "#menu-portfolio" ).click(function() {
-    $('html, body').animate({
-      scrollTop: $(".portfolio").offset().top
-    }, 1500);
-    $('.drop-down').hide();
-  });
-
   $( ".menu" ).click(function(e) {
     e.preventDefault();
     if($(".drop-down").visible()){
@@ -72,29 +58,20 @@ $(window).resize(function() {
   }
 });
 
-$(window).scroll(function(){
-  if($(".landing .heading").visible()){
+$(window).on('mousewheel', function(){
+  if($(".landing .title").visible()){
     $("#nav-landing, #menu-top").addClass("active");
     $("#nav-about, #menu-about").removeClass("active");
     $("#nav-contact, #menu-contact").removeClass("active");
-    $("#nav-portfolio, #menu-portfolio").removeClass("active");
   }
-  if($(".bio-text").visible()){
+  if($(".about-me .image").visible()){
     $("#nav-about, #menu-about").addClass("active");
     $("#nav-landing, #menu-top").removeClass("active");
     $("#nav-contact, #menu-contact").removeClass("active");
-    $("#nav-portfolio, #menu-portfolio").removeClass("active");
   }
   if($(".email-form").visible()){
     $("#nav-contact, #menu-contact").addClass("active");
     $("#nav-landing, #menu-top").removeClass("active");
     $("#nav-about, #menu-about").removeClass("active");
-    $("#nav-portfolio, #menu-portfolio").removeClass("active");
-  }
-  if($(".webLink").visible()){
-    $("#nav-portfolio, #menu-portfolio").addClass("active");
-    $("#nav-landing, #menu-top").removeClass("active");
-    $("#nav-about, #menu-about").removeClass("active");
-    $("#nav-contact, #menu-contact").removeClass("active");
   }
 }); 

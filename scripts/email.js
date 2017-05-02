@@ -15,7 +15,7 @@ $( ".clear" ).click(function(){
   $('#subject').val('');
   $('#email').val('');
   $('#email-body').val('');
-  $('.count').text("Characters left until you can send: 30");
+  $('.count').text("Characters until send: 30");
 });
 
 function sendMail() {

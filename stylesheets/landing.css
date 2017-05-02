@@ -1,48 +1,35 @@
-body {
+.landing {
   box-shadow: 0px 100VH rgba(28,143,178, 0.5) inset;
   background:
-    url('../assets/landing.jpg');
+    url('../assets/plitvice.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-}
-
-body * {
-  font-family: "alwyn-new-rounded-web",sans-serif;
-}
-
-.landing {
-  height: 100vh;
+  transition: background 2s linear;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
 }
-
-/*Landing Page CSS*/
 
 .landing * {
   color: #ffffff;
+  text-align: center;
 }
 
-.landing .heading {
-  align-self: center;
-  width: 50%;
-}
 
-.landing h1 {
+.landing .header {
   text-align: center;
   border-bottom: solid 1px #ffffff;
-  margin-bottom: 10px;
 }
 
-.landing-text > h3 {
-  text-align: center;
-  margin-bottom: 2%;
+.landing .title {
+  width: 100%;
 }
 
 .more-info {
   padding: 3px;
   border: solid 1px #ffffff;
-  margin-top: 20px;
   margin: 0 auto;
   width: 30%;
 }
@@ -51,13 +38,4 @@ body * {
   background-color: #ffffff;
   color: #1C8FB2;
   border: solid 1px #1C8FB2;
-}
-
-.arrow {
-  height: 10px;
-  width: 10px;
-  position: fixed;
-  top:50px;
-  width:10px;
-  z-index: 10000;
 }

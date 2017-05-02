@@ -5,6 +5,8 @@
   width: 100%;
   z-index: 1000;
   height: 45px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .link-group, .fi-list {
@@ -13,7 +15,6 @@
 
 .fi-list {
   font-size: 18px;
-  margin-right: 30px;
   color: #ffffff;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -21,9 +22,11 @@
   -ms-transition: all 0.3s ease;
 }
 
+.link-group a:nth-child(3) {
+  margin-right: 0px;
+}
+
 .link-group a {
-  font-size: 12px;
-  color: white;
   margin-right: 30px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -31,17 +34,20 @@
   -ms-transition: all 0.3s ease;
 }
 
+.link-group a:not(.active){
+  color: #FFFFFF;
+}
+
 .active {
-  font-size: 22px !important;
+  color: #F5D04C;
 }
 
 .link-group a:hover, .fi-list:hover  {
- font-size: 22px;
+  color: #F5D04C;
 }
 
-.top-bar span {
+.top-bar .name {
   float: left;
-  padding-left: 30px;
   color: #ffffff;
 }
 
@@ -62,17 +68,13 @@
 .drop-down a {
   display: block;
   color: #ffffff;
+  height: 30px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
 }
 
-.drop-down a.active {
-  transform: scale(1.1);   
-}
-
-
-.drop-down a:hover {
-  transform: scale(1.1); 
+.drop-down .active {
+  color: #F5D04C !important;
 }

@@ -1,32 +1,19 @@
 body * {
   font-family: "alwyn-new-rounded-web", sans-serif;
+  text-align: center;
+
+}
+
+.columns, .row {
+  padding: 0px !important;
 }
 
 .page {
   width: 100%;
-  min-height: 100%;
-}
-
-.content {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 50px;
   padding-bottom: 50px;
-}
-
-.heading {
-  align-self: center;
-  padding-bottom: 30px;
-  padding-top: 70px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  width: 70%;
-}
-
-.heading * {
-  text-align: center;
-  margin: -10px;
-}
-
-.heading h1, .heading h3 {
-  margin-bottom: 10px;
 }
 
 .separator {
@@ -34,4 +21,49 @@ body * {
   margin: 0 auto;
   margin-bottom: 30px;
   margin-top: 30px;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.white {
+  background-color: #FFFFFF;
+}
+
+.white .heading {
+  color: #1C8FB2;
+}
+
+.white *:not(.heading) {
+  color: #818181;
+}
+
+.blue {
+  background-color: #1C8FB2;
+}
+
+.white .heading {
+  color: #1C8FB2;
+}
+
+.white *:not(.heading) {
+  color: #818181;
+}
+
+.title {
+  text-align: center;
+}
+
+.text * {
+  text-align: justify;
+}
+
+.white a {
+  color: #1C8FB2 !important;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #F5D04C !important;
 }
