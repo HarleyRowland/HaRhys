@@ -1,3 +1,15 @@
+var isAtTop = function(){
+  if($(window).scrollTop() == 0){
+    $('.top-bar').css('background-color', 'rgba(0,0,0,0)');
+  } else {
+    $('.top-bar').css('background-color', 'rgba(0,0,0,0)');
+  }
+}
+
+$(window).on('mousewheel', function(){
+  isAtTop();
+}); 
+
   $( ".more-info" ).click(function() {
     $('html, body').animate({
       scrollTop: $(".about-me").offset().top

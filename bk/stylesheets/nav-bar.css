@@ -1,50 +1,38 @@
 .top-bar {
-  background-color: rgba(28,143,178, 0);
+  background-color: rgba(50,50,50,0);
   position: fixed;
   top:0;
   width: 100%;
   z-index: 1000;
-  height: 45px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  max-height: 120px;
 }
 
-.link-group, .fi-list {
+.logo {
+  max-height: 100%;
+  float: left;
+}
+
+.logo img {
+  max-height: 60px;
+}
+
+.fi-list {
   float: right;
 }
 
 .fi-list {
-  font-size: 18px;
-  color: #ffffff;
+  font-size: 24px;
+  color: #1FAFF1 !important;
   transition: 1s;
   left: 0;
 }
 
-.link-group a:nth-child(3) {
-  margin-right: 0px;
-}
-
-.link-group a {
-  margin-right: 30px;
-  border-bottom: 0px solid transparent;
-  transition: 0.5 ease;
-}
-
-.link-group a:not(.active){
-  color: #FFFFFF;
-}
-
-.active {
-  color: #1FAFF1;
-}
-
-.link-group a:hover:not(.fi-list), .fi-list:hover:not(.fi-list)  {
-  color: #34316F;
-  border-bottom: 3px solid #34316F;
-}
-
 .fi-list:hover {
-  color: #34316F;
+  color: #332e71 !important;
 }
 
 .top-bar .name {
@@ -63,7 +51,7 @@
   z-index: 1000;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #111111;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -73,7 +61,7 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #ffffff;
     display: block;
     transition: 0.3s;
 }
@@ -93,4 +81,11 @@
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+@media only screen and (max-width: 40em)  { 
+  .top-bar {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }

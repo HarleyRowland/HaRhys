@@ -1,5 +1,5 @@
 .top-bar {
-  background-color: rgba(28,143,178,0.8);
+  background-color: rgba(28,143,178, 0);
   position: fixed;
   top:0;
   width: 100%;
@@ -16,10 +16,8 @@
 .fi-list {
   font-size: 18px;
   color: #ffffff;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
+  transition: 1s;
+  left: 0;
 }
 
 .link-group a:nth-child(3) {
@@ -28,10 +26,8 @@
 
 .link-group a {
   margin-right: 30px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
+  border-bottom: 0px solid transparent;
+  transition: 0.5 ease;
 }
 
 .link-group a:not(.active){
@@ -39,11 +35,11 @@
 }
 
 .active {
-  color: #F5D04C;
+  color: #ff6969;
 }
 
 .link-group a:hover, .fi-list:hover  {
-  color: #F5D04C;
+  border-bottom: 3px solid #ff6969;
 }
 
 .top-bar .name {

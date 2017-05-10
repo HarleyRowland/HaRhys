@@ -1,19 +1,52 @@
-body * {
-  font-family: "alegreya", sans-serif;
-  text-align: center;
-
+body {
+  background-color: #ffffff;
 }
 
-.columns, .row {
-  padding: 0px !important;
+body *:not(.fa-angle-down) {
+  font-family: 'Raleway', sans-serif;
+  color: #818181;
+}
+
+a {
+  text-decoration: underline;
+  transition: 1s;
+}
+
+a:hover {
+  color: #1FAFF1;
 }
 
 .page {
   width: 100%;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+
+.title {
+  margin-bottom: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.heading {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  color: #332e71;
+}
+
+.subtitle {
+  font-weight: normal;
+}
+
+.title .header {
+  display: inline-block;
+}
+
+.text, .text {
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 .separator {
@@ -23,38 +56,14 @@ body * {
   margin-top: 30px;
 }
 
-.title {
-  margin-bottom: 30px;
+.highlight {
+  color: #332e71;
 }
 
-.white {
-  background-color: #FFFFFF;
+@media only screen and (max-width: 40em)  { 
+  
 }
 
-.white .heading {
-  color: #1C8FB2;
-}
-
-.white *:not(.heading) {
-  color: #818181;
-}
-
-.blue {
-  background-color: #1C8FB2;
-}
-
-.white .heading {
-  color: #1C8FB2;
-}
-
-.white *:not(.heading) {
-  color: #818181;
-}
-
-.title {
-  text-align: center;
-}
-
-.text * {
-  text-align: justify;
+@media only screen and (min-width: 40em) and (max-width: 64em)  { 
+  
 }

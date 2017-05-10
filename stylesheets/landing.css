@@ -1,7 +1,6 @@
 .landing {
-  box-shadow: 0px 100VH rgba(28,143,178, 0.5) inset;
   background:
-    url('../assets/plitvice.jpg');
+    url('../assets/guiting.JPG');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -9,7 +8,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh ;
+}
+
+.landing .layer {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  background-color: rgba(200,200,200, 0.5);
+  /*box-shadow: 0px 100VH rgba(200,200,200, 0.5) inset;*/
 }
 
 .landing * {
@@ -21,15 +30,24 @@
 .landing .header {
   text-align: center;
   border-bottom: solid 1px #ffffff;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.landing .subtitle {
+  padding-bottom: 5px;
 }
 
 .landing .title {
   width: 100%;
+  z-index: 1000;
 }
 
+
 .more-info {
-  padding: 3px;
   border: solid 1px #ffffff;
+  border-radius: 1000px;
+  background-color: #ff6969;
   margin: 0 auto;
   width: 30%;
 }
@@ -38,4 +56,10 @@
   background-color: #ffffff;
   color: #1C8FB2;
   border: solid 1px #1C8FB2;
+}
+
+@media only screen and (max-width: 40em)  { 
+  .more-info {
+    width: 60%;
+  }
 }

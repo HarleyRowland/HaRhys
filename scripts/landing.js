@@ -5,10 +5,10 @@ function changeLanding() {
 		$('.landing').css("background-image", "url(assets/london.jpg)");  
 		next = "guiting";
 	} else if(next == "guiting"){
-		$('.landing').css("background-image", "url(assets/guiting.jpg)"); 
+		$('.landing').css("background-image", "url(assets/guiting.JPG)"); 
 		next = "plitvice"; 
 	} else {
-		$('.landing').css("background-image", "url(assets/plitvice.jpg)");  
+		$('.landing').css("background-image", "url(assets/plitvice.JPG)");  
 		next = "london";
 	}
   	tid = setTimeout(changeLanding, 5000);
