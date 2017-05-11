@@ -1,18 +1,18 @@
 setTimeout(changeLanding, 5000);
-var next = "notes";
+var next = "calculator";
 function changeLanding() {
-	if(next == "notes"){
-		$('.landing').css("background-image", "url(assets/notes.jpg)");  
+	if(next == "workers"){
+		$('.landing .layer').css("background-image", "url(assets/workers.jpg)");  
 		next = "calculator";
 	} else if(next == "calculator"){
-		$('.landing').css("background-image", "url(assets/calculator.jpg)"); 
+		$('.landing .layer').css("background-image", "url(assets/calculator.jpg)"); 
 		next = "diary"; 
 	} else if(next == "diary"){
-		$('.landing').css("background-image", "url(assets/diary.jpg)");  
-		next = "workers";
+		$('.landing .layer').css("background-image", "url(assets/diary.jpg)");  
+		next = "ipad";
 	} else {
-		$('.landing').css("background-image", "url(assets/workers.jpg)");  
-		next = "notes";
+		$('.landing .layer').css("background-image", "url(assets/ipad.jpg)");  
+		next = "workers";
 	}
   	tid = setTimeout(changeLanding, 5000);
 }
@@ -29,3 +29,15 @@ function bounceArrow() {
 function abortTimer() {
   clearTimeout(tid);
 }
+
+ $( ".landing .button").click(function() {
+	$('html, body').animate({
+  		scrollTop: $(".about").offset().top
+	}, 1500);
+});
+
+$( ".fa-angle-down").click(function() {
+    $('html, body').animate({
+      	scrollTop: $(".about").offset().top
+    }, 1500);
+});

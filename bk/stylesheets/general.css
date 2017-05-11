@@ -4,7 +4,6 @@ body {
 
 body *:not(.fa-angle-down) {
   font-family: 'Raleway', sans-serif;
-  color: #818181;
 }
 
 a {
@@ -26,7 +25,7 @@ a:hover {
 
 
 .title {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -34,7 +33,7 @@ a:hover {
 .heading {
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
-  color: #332e71;
+  color: #818181;
 }
 
 .subtitle {
@@ -47,6 +46,21 @@ a:hover {
 
 .text, .text {
   font-family: 'Open Sans', sans-serif !important;
+  color: #818181;
+}
+
+.button {
+  color: #1FAFF1;
+  background-color: rgba(0,0,0,0);
+  border: 5px solid #1FAFF1;
+  text-decoration: none;
+  font-weight: bold;
+  width: 150px;
+}
+
+.button:hover {
+  color: #FFFFFF;
+  background-color: #1FAFF1;
 }
 
 .separator {
@@ -54,16 +68,4 @@ a:hover {
   margin: 0 auto;
   margin-bottom: 30px;
   margin-top: 30px;
-}
-
-.highlight {
-  color: #332e71;
-}
-
-@media only screen and (max-width: 40em)  { 
-  
-}
-
-@media only screen and (min-width: 40em) and (max-width: 64em)  { 
-  
 }

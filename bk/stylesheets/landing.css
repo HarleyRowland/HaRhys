@@ -1,10 +1,4 @@
 .landing {
-  background:
-    url('../assets/workers.JPG');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-  transition: background 2s linear;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,12 +6,27 @@
 }
 
 .landing .layer {
+  transition: background 2s linear;
+  background:
+    url('../assets/workers.JPG');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  -webkit-filter: brightness(50%);
+  -moz-filter: brightness(50%);
+  -o-filter: brightness(50%);
+  -ms-filter: brightness(50%);
+  filter: brightness(50%);
   position: absolute;
   top:0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(75,75,75, 0.5);
+}
+
+.landing .button {
+  color: #818181;
 }
 
 .services .heading {
@@ -44,9 +53,8 @@
 
 .landing .header {
   text-align: center;
-  border-bottom: solid 1px #ffffff;
-  width: 50%;
-  margin-left: 25%;
+  width: 100%;
+  margin-left: 0%;
 }
 
 .landing .subtitle {
@@ -54,7 +62,7 @@
 }
 
 .landing-title {
-  width: 100% !important;
+  width: 100%;
   z-index: 100;
 }
 
@@ -68,62 +76,35 @@
 .dividing-image {
   background:
     url('../assets/notes.jpg');
-    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-size: cover;
     height: 300px;
-}
-
-.button {
-  background-color: rgba(0,0,0,0);
-  border: 5px solid #1FAFF1;
-}
-
-.button:hover {
-  color: #FFFFFF !important;
-  background-color: #1FAFF1;
 }
 
 .list {
   margin-top: 30px;
 }
 
-.contact .button * {
-  color: #1FAFF1 !important;
-}
-
-.contact .button:hover * {
-  color: #FFFFFF !important;
-}
-
 .boxes {
   text-align: center;
 }
 
-.description {
-  height: 100% !important;
-}
 .boxes > .message > *, .boxes > .faq > * {
-  border: 1px solid black;
-  margin: 5%;
+  border: 1px solid #818181;
+  /*margin: 5%;*/
   padding: 30px;
   padding-left: 30px;
   padding-right: 30px;
 }
 
-.contact .button {
-  width: 60%;
-  height: auto;
-  margin: 10px;
-  padding: 15px;
-}
-
-.button { 
-  font-weight: bold !important;
+.fa-angle-down {
+  cursor: pointer;
 }
 
 .boxes > div > div > p{
-  height: 50px;
+  height: 60px;
 }
 
 .boxes > div > div > h4{
@@ -132,7 +113,16 @@
 
 @media only screen and (max-width: 40em)  { 
   .boxes > div > div > p{
-    height: 100px;
+    height: 80px;
+  }
+
+  .services .heading {
+    padding-bottom: 20px;
+  }
+
+  .boxes > .message > *, .boxes > .faq > * {
+    margin: 0; 
+    margin-bottom: 20px;
   }
 }
 
@@ -143,5 +133,11 @@
 
   .boxes > div > div > h4{
     height: 60px;
+  }
+}
+
+@media only screen and (min-width: 40em)  { 
+  .services .image {
+    margin-bottom: 20px;
   }
 }
