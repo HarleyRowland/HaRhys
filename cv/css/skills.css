@@ -1,0 +1,41 @@
+.skill {
+	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+}
+
+.skill div:first-child {
+	text-align: center;
+}
+
+.prog-bar {
+	width: 50%;
+	background-color: grey;
+	height: 30px;
+	margin: 5px;
+	display: flex;
+ 	align-items: center;
+ 	padding-left: 3px;
+ 	padding-right: 3px;
+ 	border-radius: 10px;
+}
+
+.prog-bar div {
+	background-color: #BB4430;
+	height: 80%;
+	border-radius: 7px;
+}
+
+.empty {
+	visibility: hidden;
+}
+
+.prog-bars .prog-section-title {
+	font-weight: bold;
+	font-size: 20px;
+	display: block;
+}
+
+.group {
+	margin-bottom: 70px;
+}

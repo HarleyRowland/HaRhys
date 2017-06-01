@@ -1,0 +1,90 @@
+#nav-bar {
+	background-color: #231F20;	
+	height: 60px;
+	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+}
+
+#nav-bar *:not(i) {
+	font-family: 'Exo', serif;
+}
+
+#nav-bar .content {
+	height: 100%;
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-bar span, #nav-bar span a {
+	color: #EFE6DD;
+}
+
+#links a { 
+	margin-right: 20px;
+	cursor: pointer;
+	transition: 1s;
+}
+
+#links a:hover { 
+	color: #BB4430;
+}
+
+#nav-bar #links {
+	height: 100%;
+	float: left;
+	display: flex;
+ 	align-items: center;
+}
+
+#nav-bar #logo {
+    margin: 0px;
+    margin-right: 10px;
+	height: 100%;
+	float: right;
+	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	transition: 1s;
+}
+
+#nav-bar #logo img {
+
+}
+
+#logo {
+    position:relative;
+    margin:0 auto;
+}
+
+#logo img {
+	right: 0;
+	height: 70%;
+  	position:absolute;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+#logo img#top:hover {
+  opacity:0;
+}
+
+#menu {
+    color: #EFE6DD;
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 40em)  { 
+  
+}
+
+@media only screen and (min-width: 40em) and (max-width: 64em)  { 
+  
+}
