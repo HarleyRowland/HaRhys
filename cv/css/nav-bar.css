@@ -4,6 +4,8 @@
 	display: flex;
  	justify-content: center;
  	align-items: center;
+ 	padding-left: 100px;
+	padding-right: 100px;
     width: 100%;
     z-index: 100;
     position: fixed;
@@ -82,9 +84,15 @@
 }
 
 @media only screen and (max-width: 40em)  { 
-  
+  	#nav-bar {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
 
 @media only screen and (min-width: 40em) and (max-width: 64em)  { 
-  
+  	#nav-bar {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
 }

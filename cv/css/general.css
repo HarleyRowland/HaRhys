@@ -47,12 +47,12 @@ body *:not(i) {
 	text-align: center;
 }
 
-.text a {
+.text a, div a {
 	transition: 1s;
 	color: #BB4430;
 }
 
-.text a:hover {
+.text a:hover, div a:hover {
 	color: #231F20;
 }
 
