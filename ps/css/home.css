@@ -1,0 +1,89 @@
+body {
+	background:
+	    url('../assets/stadium.jpeg');
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	text-align: center;
+}
+
+body *:not(.fa) {
+  font-family: 'Raleway', sans-serif;
+}
+
+.content {
+	min-height: 100vh;
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	background-color: #FFFFFF;
+}
+
+.nav-bar {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	height: 30px;
+	display: flex;
+  	justify-content: center;
+ 	align-items: center;
+ 	border-bottom: 1px #c1c1c1 solid;
+}
+
+.title {
+ 	padding-top: 20px;	
+}
+
+.fa {
+	transition: 1s;
+}
+
+#links {
+	text-align: center;
+}
+
+#links a {
+	padding-left: 30px;
+	transition: 1s;
+}
+
+#links a:hover, .nav-bar .fa:hover {
+	color: black;
+}
+
+#explaination {
+	display: flex;
+  	justify-content: center;
+ 	align-items: center;
+	border-bottom: 1px #c1c1c1 solid;
+ 	padding-bottom: 40px;
+}
+
+#explaination * {
+	text-align: center;
+}
+
+.boxes {
+  text-align: center;
+  padding: 30px;
+}
+
+.boxes > .message > *, .boxes > .faq > * {
+  border: 1px solid #c1c1c1;
+  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.fa-angle-down {
+  cursor: pointer;
+}
+
+.boxes > div > div > p{
+  height: 60px;
+}
+
+.boxes > div > div > h4{
+  margin-bottom: 20px;
+}
