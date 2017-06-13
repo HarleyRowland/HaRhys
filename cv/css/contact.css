@@ -1,15 +1,15 @@
-#clear {
+.clear {
 	text-align: right;
 	cursor: pointer;
 	text-decoration: underline;
 	transition: 1s;
 }
 
-#clear:hover {
+.clear:hover {
 	color: #8EDCE6;	
 }
 
-#submit-button {
+.submit-button {
 	padding-left: 20px;
 	padding-right: 20px;
 	color: #3E7CB1;
@@ -20,26 +20,25 @@
 	border: 1px solid #FFFFFF;
 }
 
-#submit-button:hover {
+.submit-button:hover {
 	color: #FFFFFF;
 	background-color: #3E7CB1;
 	border: 1px solid #FFFFFF;
 }
 
 @media only screen and (max-width: 40em)  { 
-  	#clear {
+  	.clear {
   		margin-top: 5px;
 		text-align: center;
 	}
 
-	#count {
+	.count {
 		text-align: center;
 	}
 
-	#submit-button {
+	.submit-button {
 		margin-top: 5px;
-		margin-left: 25%;
-		margin-right: 25%;
-		width:50%;
+		margin-left: 20%;
+		/*width:50%;*/
 	}
 }
