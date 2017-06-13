@@ -1,6 +1,6 @@
 body {
 	margin: 0px;
-	background-color: #EFE6DD !important;
+	background-color: #FBFBFF !important;
 }
 
 body *:not(i) {
@@ -17,12 +17,12 @@ body *:not(i) {
 }
 
 .page.blue {
-	background-color: #7EBDC2;
-	color: #EFE6DD;
+	background-color: #3E7CB1;
+	color: #FBFBFF;
 }
 
 .page.white {
-	color: #231F20;
+	color: #666B6A;
 }
 
 .heading {
@@ -48,12 +48,13 @@ body *:not(i) {
 }
 
 .text a, div a {
+	text-decoration: underline;
 	transition: 1s;
-	color: #BB4430;
+	color: #3E7CB1;
 }
 
 .text a:hover, div a:hover {
-	color: #231F20;
+	color: #8EDCE6;
 }
 
 @media only screen and (max-width: 40em)  { 

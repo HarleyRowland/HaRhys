@@ -15,19 +15,17 @@
 
 .prog-bar {
 	width: 50%;
-	background-color: grey;
+	background-color: #FBFBFF;
 	height: 30px;
 	margin: 5px;
 	display: flex;
  	align-items: center;
- 	padding-left: 3px;
- 	padding-right: 3px;
  	border-radius: 10px;
 }
 
 .prog-bar div {
-	background-color: #BB4430;
-	height: 80%;
+	background-color: #8EDCE6;
+	height: 100%;
 	border-radius: 7px;
 }
 
