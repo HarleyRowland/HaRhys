@@ -1,5 +1,3 @@
-initAPI()
-
 $("#email-body").keyup(function(){
   console.log("hi")
   if($("#email-body").val().length < 30){
@@ -11,6 +9,11 @@ $("#email-body").keyup(function(){
 
 $(".submit-button").click(function(){
   sendMail()
+});
+
+$( "#close-message-sent-modal" ).click(function(e) {
+  e.preventDefault()
+  $("#message-sent-modal").hide()
 });
 
 function sendMail() {
@@ -36,11 +39,12 @@ var initAPI = function(){
       }, 
       error: function (xhr, ajaxOptions, thrownError) {
         console.log(xhr.status, thrownError);
-        alert("There has been an error sending this message. Please try again later!")
-        $('.email-button').removeAttr('disabled');
       }
     });
 }
+
+initAPI()
+
 
 var callAPI = function(canSend, url, body){
   if(canSend){
