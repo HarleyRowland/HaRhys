@@ -1,5 +1,4 @@
 $("#email-body").keyup(function(){
-  console.log("hi")
   if($("#email-body").val().length < 30){
     $('.count').text("Characters until send: " + (30 - $("#email-body").val().length));      
   } else {
@@ -33,10 +32,7 @@ function sendMail() {
 
 var initAPI = function(){
   $.ajax({
-      url: "https://arcane-anchorage-33274.herokuapp.com", 
-      success: function(result){
-        $('.email-button').removeAttr('disabled');
-      }, 
+      url: "https://arcane-anchorage-33274.herokuapp.com",
       error: function (xhr, ajaxOptions, thrownError) {
         console.log(xhr.status, thrownError);
       }
@@ -45,23 +41,35 @@ var initAPI = function(){
 
 initAPI()
 
+var run = false;
+var display = function(){
+    if(run){
+      $('#message-sent-modal').show()
+      run = false;
+    }
+    else {
+      run = true;      
+      setTimeout(display, 1000); // check again in a second
+    }
+}
+
 
 var callAPI = function(canSend, url, body){
   if(canSend){
+    display();
     $.ajax({
       url: url, 
       success: function(result){
-        console.log("MESSAGE SENT!")
-        $('.email-button').removeAttr('disabled');
+        $('.submit-button').removeAttr('disabled');
       }, 
       error: function (xhr, ajaxOptions, thrownError) {
         console.log(xhr.status, thrownError);
         alert("There has been an error sending this message. Please try again later!")
-        $('.email-button').removeAttr('disabled');
+        $('.submit-button').removeAttr('disabled');
       }
     });
   } else {
-    $('#submit-button').removeAttr('disabled'); 
+    $('.submit-button').removeAttr('disabled'); 
   }
 }
 
