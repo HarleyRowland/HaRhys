@@ -85,7 +85,6 @@ var validateForm = function(name, email, subject, body){
 
   }
   if(!validateEmail(email)){
-  	console.log(email)
     $('#email').addClass('animated shake');
     canSend = false;
     $('#email').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){

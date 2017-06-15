@@ -1,5 +1,5 @@
 .clear {
-	text-align: right;
+	float: right;
 	cursor: pointer;
 	text-decoration: underline;
 	transition: 1s;

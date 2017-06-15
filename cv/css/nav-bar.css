@@ -1,5 +1,5 @@
 #nav-bar {
-	background-color: #1A1423;	
+	background-color: rgba(0,0,0,0);	
 	height: 60px;
 	display: flex;
  	justify-content: center;
@@ -9,6 +9,11 @@
     width: 100%;
     z-index: 100;
     position: fixed;
+    transition: 2s;
+}
+
+#nav-bar:hover {
+	background-color: #1A1423;
 }
 
 #nav-bar *:not(i) {
@@ -25,6 +30,8 @@
 
 #nav-bar span, #nav-bar span a {
 	color: #FBFBFF;
+	text-decoration: none;
+	font-weight: bold;
 }
 
 #links a { 
@@ -62,6 +69,7 @@
 #logo {
     position:relative;
     margin:0 auto;
+    cursor: pointer;
 }
 
 #logo img {

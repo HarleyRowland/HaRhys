@@ -1,3 +1,23 @@
+var bio = true;
+var isAtTop = function(){
+	if($(window).scrollTop() < 300){
+	    $('#nav-bar').css('background-color', 'rgba(0,0,0,0)');
+	} else {
+	    $('#nav-bar').css('background-color', '#1A1423');
+	}
+} 
+
+$(window).on('mousewheel', function(){
+  isAtTop();
+});
+isAtTop();
+
+$( "#logo" ).click(function() {
+	$('html, body').animate({
+  		scrollTop: $("#landing").offset().top+20
+	}, 1500);
+});
+
 $( "#top-link" ).click(function() {
 	$('html, body').animate({
   		scrollTop: $("#landing").offset().top-50
