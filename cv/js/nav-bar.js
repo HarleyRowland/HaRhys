@@ -1,6 +1,5 @@
-var bio = true;
 var isAtTop = function(){
-	if($(window).scrollTop() < 300){
+	if($(window).scrollTop() < 100){
 	    $('#nav-bar').css('background-color', 'rgba(0,0,0,0)');
 	} else {
 	    $('#nav-bar').css('background-color', '#1A1423');

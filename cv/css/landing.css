@@ -5,8 +5,11 @@
 
 #landing {
 	height: 100vh;
- 	/*background-color: #7cdbd5;*/
- 	background-color: #3E7CB1;
+ 	background:
+    url('../assets/landing.jpg');
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    background-position: center center;
  	position: relative;
 
 }
