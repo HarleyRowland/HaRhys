@@ -1,16 +1,3 @@
-var isAtTop = function(){
-	if($(window).scrollTop() < 100){
-	    $('#nav-bar').css('background-color', 'rgba(0,0,0,0)');
-	} else {
-	    $('#nav-bar').css('background-color', '#1A1423');
-	}
-} 
-
-$(window).on('mousewheel', function(){
-  isAtTop();
-});
-isAtTop();
-
 $( "#logo" ).click(function() {
 	$('html, body').animate({
   		scrollTop: $("#landing").offset().top+20

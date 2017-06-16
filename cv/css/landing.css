@@ -5,11 +5,12 @@
 
 #landing {
 	height: 100vh;
- 	background:
-    url('../assets/landing.jpg');
-	    background-size: cover;
+ 	  background:
+	    url('../assets/landing2.jpg');
+	    background-attachment: fixed;
+	    background-position: center;
 	    background-repeat: no-repeat;
-	    background-position: center center;
+	    background-size: cover;
  	position: relative;
 
 }
@@ -28,7 +29,7 @@
 }
 
 #landing .image img {
-	border: solid 10px #FBFBFF;
+	border: solid 5px #FBFBFF;
 	border-radius: 1000px;
 	height: 90%;
 	width: 90%;

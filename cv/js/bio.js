@@ -4,13 +4,3 @@ $( "#contact-in-bio" ).click(function() {
 	}, 1500);
 });
 
-var bioInView = function(){
-	if(bio && $('#bio .title').visible()){
-		$('#bio .content').css('opacity', '1');
-	}
-} 
-
-$(window).on( 'scroll', function(event){
-	console.log("hello")
-  	bioInView();
-});

@@ -3,8 +3,10 @@
 	float: left !important;
 }
 
-.slot * {
+.slot {
 	margin-top: 5px;
+	opacity: 0;
+	transition: 2s;
 }
 
 .skill {
@@ -27,7 +29,8 @@
 	background-color: #8EDCE6;
 	height: 100%;
 	border-radius: 7px;
-	transition:2s;
+	width: 0%;
+	transition: width 2s;
 }
 
 .empty {
