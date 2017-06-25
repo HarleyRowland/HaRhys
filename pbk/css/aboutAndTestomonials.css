@@ -1,0 +1,35 @@
+#about {
+	background-color: #2E2C59;
+}
+
+#testomonials {
+	background-color: #2E2C59;
+}
+.bubbles {
+	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+	margin-bottom: 50px !important;
+}
+
+.bubble {
+	margin: 30px;
+	padding: 30px;
+	padding-bottom: 10px;
+	border-radius: 30px;
+	border: #FFFFFE dashed 3px;
+	color: #FFFFFE;
+}
+
+.who {
+	margin-top: 10px;
+	position: relative;
+	float: right;
+	font-size: small;
+}
+
+
+/*#569FCA - blue
+#8B8D8C - grey
+#2E2C59 - navy
+#FFFFFE - white*/

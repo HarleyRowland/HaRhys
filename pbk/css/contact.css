@@ -1,0 +1,37 @@
+#contact .heading {
+	padding-bottom: 50px;
+}
+
+.form {
+
+}
+
+.text {
+	text-align: center;
+}
+
+.talk {
+	font-size: xx-large;
+	color: #2E2C59;
+}
+
+.textNumber {
+	font-size: xx-large;
+	color: #569FCA;
+}
+
+.obligation {
+	color: #569FCA;	
+}
+
+.addressAndLinks {
+	margin-top: 30px;
+}
+
+.address {
+	text-align: right;
+}
+
+.links {
+	border-left: solid 1px #8B8D8C;
+}

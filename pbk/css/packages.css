@@ -1,0 +1,140 @@
+/**/
+#packages {
+	background: linear-gradient(90deg, #8B8D8C 50%, #569FCA 50%)
+}
+
+#packages .title {
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 20px;
+}
+
+.package {
+	padding: 30px !important;
+}
+
+.package {
+	min-height: 30px;
+}
+
+.first {
+	background-color: #8B8D8C;
+	color: #FFFFFE;
+}
+
+.second {
+	background-color: #FFFFFE;
+	color: #2E2C59;
+}
+
+.third {
+	background-color: #569FCA;
+	color: #FFFFFE;
+}
+
+.package .title {
+	text-align: left;
+}
+
+.cost {
+	margin: 30px; 
+	margin-left: 10px !important;
+	width: 300px;
+	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+	border: solid #2E2C59 2px;
+}
+
+.first .cost {
+		height: 80px;
+}
+
+.second .cost {
+		height: 80px;
+}
+
+.third .cost {
+	height: 150px;
+}
+
+.price {
+	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+	height: 100%;
+	background-color: #2E2C59;
+	line-height: 0.7;
+}
+
+.first .price {
+	color: #8B8D8C;
+}
+
+.upperContent {
+	height: 510px;
+}
+
+.lowerContent {
+	height: 200px;
+}
+
+.second .price {
+	color: #FFFFFE;
+}
+
+.third .price {
+	color: #569FCA;
+}
+
+.pounds {
+	font-size: xx-large;
+}
+
+.description {
+	color: #2E2C59;
+}
+
+.pm {
+	margin-left: 20px;
+	font-size: small;
+}
+
+.from {
+	position: absolute;
+	font-size: small;
+	margin-left: -18px;
+}
+
+.third ul {
+	font-size: x-small;
+	line-height: 1;
+}
+
+.image {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.first .image {
+
+	width: 80%;	
+}
+
+.second .image {
+	width: 100%;	
+}
+
+.third .image {
+	width: 90%;	
+}
+
+.extra-info {
+	font-size: x-small;
+	margin: 10px !important;
+	width: 90%;
+}
+
+.extra-info > * {
+	padding: 5px !important;
+}
