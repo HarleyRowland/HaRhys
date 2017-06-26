@@ -28,6 +28,14 @@
 	font-size: small;
 }
 
+.fa-quote-left {
+	position: absolute;
+	background-color: #2E2C59;
+	font-size: 30px;
+	margin-left: -30px;
+	margin-top: -50px;
+	padding: 10px;
+}
 
 /*#569FCA - blue
 #8B8D8C - grey
