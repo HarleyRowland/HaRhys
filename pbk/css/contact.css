@@ -40,6 +40,10 @@ input, textarea {
 	border-radius: 5px !important;
 }
 
+input::placeholder, textarea::placeholder {
+  color: #2E2C59 !important;
+}
+
 .addressAndLinks {
 	font-size: large;
 	margin-top: 30px;
@@ -79,15 +83,24 @@ input, textarea {
 	color: #8EDCE6;	
 }
 
+.submit {
+	max-width: 100% !important;
+	text-align: center;
+}
+
+
 .submit-button {
 	padding-left: 20px;
 	padding-right: 20px;
-	color: #FFFFFE;
+	color: #2E2C59;
 	background-color: #FFFFFF;
 	border: none;
 	transition: 1s;
 	cursor: pointer;
 	border: solid 1px #FFFFFE;
+	width: 60% !important;
+	margin-left: 20%;
+	float: left !important;
 }
 
 .submit-button:hover {

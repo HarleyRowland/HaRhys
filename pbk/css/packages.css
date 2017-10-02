@@ -8,10 +8,14 @@
 .package {
 	padding: 30px !important;
 	height: 800px;
+	min-height: 30px;
+	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
 }
 
-.package {
-	min-height: 30px;
+.package .content {
+	max-width: 500px;
 }
 
 .first {
@@ -159,4 +163,11 @@
 
 .extra-info > * {
 	padding: 5px !important;
+}
+
+@media only screen and (min-width: 40em) and (max-width: 64em){ 
+	.package {
+		float: left !important;
+		clear: both;
+	}
 }

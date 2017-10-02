@@ -16,33 +16,27 @@ $(document).ready(function(){
 	});
 });
 
-$( "#logo" ).click(function() {
-	$('html, body').animate({
-  		scrollTop: $("#landing").offset().top+20
-	}, 1500);
-});
-
 $( "#top-link" ).click(function() {
 	$('html, body').animate({
   		scrollTop: $("#landing").offset().top-50
 	}, 1500);
 });
 
-$( "#bio-link" ).click(function() {
+$( "#about-link" ).click(function() {
 	$('html, body').animate({
-  		scrollTop: $("#bio").offset().top-50
+  		scrollTop: $("#about").offset().top-50
 	}, 1500);
 });
 
-$( "#skills-link" ).click(function() {
+$( "#packages-link" ).click(function() {
 	$('html, body').animate({
-  		scrollTop: $("#skills").offset().top-50
+  		scrollTop: $("#packages").offset().top-50
 	}, 1500);
 });
 
-$( "#timeline-link" ).click(function() {
+$( "#testomonials-link" ).click(function() {
 	$('html, body').animate({
-  		scrollTop: $("#timeline").offset().top-50
+  		scrollTop: $("#testomonials").offset().top-50
 	}, 1500);
 });
 
