@@ -1,59 +1,197 @@
 #landing {
-	padding-top: 65px;
-	background-color: #FFFFFE;
+	overflow: hidden;
 	height: 100vh;
-	text-align: center;
-	display: flex;
- 	justify-content: center;
- 	align-items: center;
+	min-height: 1000px;
 }
 
-#landing .main {
-	text-align: center;
-	width: 40% !important;
+#landing .image {
+	width: 50%;
+	height: 1000px;
+	bottom: 0;
+	left: 0;
+	margin-left: 25%;
+} 
+
+#landing .heading {
+	position: absolute;
+	top: 0;
+	padding-top: 10%;
+	padding-left: 10%;
 }
 
 #landing .title {
-	line-height: 1.3;
 	font-size: 50px;
-	margin: 0px;
 }
 
-#landing .text {
-	color: #2E2C59;
+#landing .subtitle {
+	font-size: 30px;
 }
 
-#landing #cloud {
-	width: 100%;
+.logo {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: 300px;
+	margin-right: 80px;
+	width: 100px;
 }
 
-#landing #logo {
-	display: flex;
- 	justify-content: center;
- 	align-items: center;	
- 	height: 100px;
-	width: 100%;
-}
-
-#landing #logo img {
+#clouds{
+	padding: 100px 0;
 	height: 100%;
+	background: #569FCA;
+	background: -webkit-linear-gradient(top, #569FCA 0%, #fff 100%);
+	background: -linear-gradient(top, #569FCA 0%, #fff 100%);
+	background: -moz-linear-gradient(top, #569FCA 0%, #fff 100%);
+	z-index: -1;
 }
 
-.scrollToAbout {
-	margin-top: 30px;
+/*Time to finalise the cloud shape*/
+.cloud {
+	width: 200px; height: 80px;
+	background: #fff;
+	
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	
+	position: relative; 
 }
 
-.scrollToAbout span {
-	border: solid 4px #2E2C59;
-	font-weight: bold;
-	color: #2E2C59;
-	padding: 10px;
-	transition: 1s;
-	cursor: pointer;
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute; 
+	background: #fff;
+	width: 100px; height: 80px;
+	position: absolute; top: -15px; left: 10px;
+	
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
 }
 
-.scrollToAbout span:hover {
-	border: solid 4px #569FCA;
-	color: #569FCA;
-	padding: 10px;
+.cloud:after {
+	width: 120px; height: 120px;
+	top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+	left: 550px;
+	-webkit-animation: moveclouds 15s linear infinite;
+	-moz-animation: moveclouds 15s linear infinite;
+	-o-animation: moveclouds 15s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+	left: 600px;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+	opacity: 0.6; /*opacity proportional to the size*/
+	
+	/*Speed will also be proportional to the size and opacity*/
+	/*More the speed. Less the time in 's' = seconds*/
+	-webkit-animation: moveclouds 25s linear infinite;
+	-moz-animation: moveclouds 25s linear infinite;
+	-o-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+	left: 570px; top: 200px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+	left: 700px; top: -250px;
+	
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	transform: scale(0.75);
+	opacity: 0.75; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 18s linear infinite;
+	-moz-animation: moveclouds 18s linear infinite;
+	-o-animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+	left: 750px; top: -150px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+
+@keyframes do-levitation {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 1em);
+  }
+}
+
+#landing .image {
+  animation: do-levitation 1.2s alternate ease-in-out infinite;
+}
+
+@media only screen and (max-width: 40em){ 
+	#landing {
+		min-height: 700px;
+	}
+
+	#landing .title, #landing .subtitle {
+		margin: 0px;
+	}
+
+	#landing .heading {
+		margin-top: 30px;
+	}
+
+	#landing .title {
+		font-size: 30px;
+	}
+
+	#landing .subtitle {
+		font-size: 20px;
+	}
+
+	#landing .image {
+		width: 100%;
+		margin-left: 0%;
+		margin-top: -100px;
+	} 
 }

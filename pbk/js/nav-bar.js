@@ -1,3 +1,21 @@
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+			if($("#nav-bar").offset().top > 300){
+				$("#nav-bar *").css("color", "#2E2C59");
+			} else {
+				$("#nav-bar *").css("color", "#FFFFFE");
+			}
+		} else {
+			if($("#nav-bar").offset().top > 150){
+				$("#nav-bar").css("background-color", "rgba(86,159,202,0.80)");
+			} else {
+				$("#nav-bar").css("background-color", "rgba(0,0,0,0)");
+			}
+		}
+	});
+});
+
 $( "#logo" ).click(function() {
 	$('html, body').animate({
   		scrollTop: $("#landing").offset().top+20

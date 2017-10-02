@@ -1,24 +1,25 @@
 #about {
-	background-color: #2E2C59;
+	background-color: #FFFFFE;
 }
 
 #testomonials {
-	background-color: #2E2C59;
+	background-color: #FFFFFE;
 }
+
 .bubbles {
+	margin-bottom: 50px !important;
 	display: flex;
  	justify-content: center;
  	align-items: center;
-	margin-bottom: 50px !important;
 }
 
 .bubble {
+	position: relative;
 	margin: 30px;
-	padding: 30px;
-	padding-bottom: 10px;
-	border-radius: 30px;
-	border: #FFFFFE dashed 3px;
-	color: #FFFFFE;
+	padding: 30px !important;
+	border: #569FCA solid 3px;
+	color: #569FCA;
+	background-color: #FFFFFE;
 }
 
 .who {
@@ -30,14 +31,35 @@
 
 .fa-quote-left {
 	position: absolute;
-	background-color: #2E2C59;
+	background-color: #FFFFFE;
 	font-size: 30px;
-	margin-left: -30px;
-	margin-top: -50px;
 	padding: 10px;
+	margin: 10px;
+	margin-left: -40px;
+	margin-top: -50px;
 }
 
+.fa-quote-right {
+	position: absolute;
+	background-color: #FFFFFE;
+	font-size: 30px;
+	margin: 10px;
+	padding: 10px;
+}
 /*#569FCA - blue
 #8B8D8C - grey
 #2E2C59 - navy
 #FFFFFE - white*/
+
+@media only screen and (max-width: 40em){ 
+	.bubbles {
+		display: block;
+		padding: 30px;
+	}
+
+	.bubble {
+		margin: 0px;
+		margin-top: 10px;
+		margin-bottom: 50px;
+	}
+}

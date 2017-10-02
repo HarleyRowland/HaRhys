@@ -1,5 +1,4 @@
 #nav-bar {
-	background-color: #FFFFFE;	
 	height: 60px;
 	display: flex;
  	justify-content: center;
@@ -10,7 +9,6 @@
     z-index: 100;
     position: fixed;
     transition: 2s;
-    border-bottom: solid 3px #2E2C59;
 }
 
 #nav-bar .main {
@@ -23,26 +21,26 @@
 }
 
 #nav-bar div, #nav-bar div a {
-	color: #2E2C59;
+	color: #FFFFFE;
 	text-decoration: none;
 }
 
 #links a { 
-	color: #2E2C59;
+	color: #FFFFFE;
 	margin-right: 20px;
 	cursor: pointer;
 	transition: 1s;
 }
 
 #links a:hover { 
-	color: #569FCA;
+	color: #2E2C59;
 }
 
 #nav-bar #links {
 	height: 100%;
-	float: left;
 	display: flex;
  	align-items: center;
+  	justify-content: center;
 }
 
 #nav-bar #navLogo {
@@ -78,8 +76,12 @@
 }
 
 .fa-bars {
+	float: right;
 	cursor: pointer;
 	transition: 1s;
+	padding-top: 15px;
+	z-index: 10000;
+	color: #FFFFFE;
 }
 
 .fa-bars:hover {
@@ -99,7 +101,7 @@
 		top: 0;
 		height: 100vh;
 		width:100vw;
-    	background:rgba(0,0,0,0.80); 
+    	background-color:rgba(86,159,202,0.80); 
     	text-align: center;
     	padding-top: 100px;
     	transition: 1s;
