@@ -26,7 +26,6 @@ $( "#close-message-sent-modal" ).click(function(e) {
 
 function sendMail() {
   // $('.email-button').attr('disabled','disabled');
-  console.log("HERE")
   var name = escape(document.getElementById('name').value);
   var number = escape(document.getElementById('number').value);
   var email = escape(document.getElementById('email').value);

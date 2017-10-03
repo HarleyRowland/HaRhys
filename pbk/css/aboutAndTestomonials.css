@@ -3,7 +3,7 @@
 }
 
 #testomonials {
-	background-color: #FFFFFE;
+	background-color: #569FCA;
 }
 
 .bubbles {
@@ -16,13 +16,41 @@
 .bubble {
 	position: relative;
 	margin: 30px;
-	padding: 30px !important;
+	padding: 30px;
+}
+
+#about .bubble{
 	border: #569FCA solid 3px;
 	color: #569FCA;
 	background-color: #FFFFFE;
+	padding: 30px !important;
 }
 
-.who {
+#testomonials .bubble {
+	padding: 50px;
+	padding-bottom: 20px;
+}
+
+#testomonials #right {
+	border: #2E2C59 solid 3px;
+	color: #FFFFFE;
+	background-color: #2E2C59;
+}
+
+#testomonials #left {
+	border: #FFFFFE solid 3px;
+	color: #2E2C59;
+	background-color: #FFFFFE;
+}
+
+#testomonials .who {
+	clear: both;
+	font-size: small;
+	margin-top: 10px;
+	padding-left: 40px;
+}
+
+#about .who {
 	margin-top: 10px;
 	position: relative;
 	float: right;
@@ -39,13 +67,24 @@
 	margin-top: -50px;
 }
 
-.fa-quote-right {
+#about .fa-quote-right {
 	position: absolute;
 	background-color: #FFFFFE;
 	font-size: 30px;
 	margin: 10px;
 	padding: 10px;
+	float: right;
 }
+
+
+#testomonials #right .fa-quote-right, #testomonials #left .fa-quote-right {
+	float: right;
+	font-size: 30px;
+}
+#testomonials #right .fa-quote-right, #testomonials #right .fa-quote-left {
+	background-color: #2E2C59;
+}
+
 /*#569FCA - blue
 #8B8D8C - grey
 #2E2C59 - navy

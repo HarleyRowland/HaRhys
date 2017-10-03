@@ -1,3 +1,8 @@
+#packages {
+	padding: 0;
+	background: linear-gradient(90deg, #2E2C59 50%, #8B8D8C 50%);
+}
+
 #packages .title {
 	padding: 0px;
 	margin: 0px;
@@ -31,12 +36,10 @@
 .second {
 	background-color: #FFFFFE;
 	color: #2E2C59;
-	border-top: 3px solid #8B8D8C;
-	border-bottom: 3px solid #8B8D8C;
 }
 
 .third {
-	background-color: #569FCA;
+	background-color: #8B8D8C;
 	color: #FFFFFE;
 }
 

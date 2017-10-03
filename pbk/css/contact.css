@@ -2,13 +2,9 @@
 	padding-bottom: 50px;
 }
 
-#contact .heading p span {
-	background-color: #569FCA;
-}
-
 #contact {
-	 background-color: #2E2C59;
-	 color: #FFFFFE;
+	 background-color: #FFFFFE;
+	 color: #569FCA;
 	 padding: 50px;
 }
 
@@ -28,7 +24,7 @@
 
 .talk {
 	font-size: xx-large;
-	color: #FFFFFE;
+	color: #569FCA;
 }
 
 .textNumber {
@@ -37,7 +33,7 @@
 }
 
 .obligation {
-	color: #569FCA;	
+	color: #2E2C59;	
 }
 
 input, textarea {
@@ -52,7 +48,7 @@ input::placeholder, textarea::placeholder {
 	font-size: large;
 	text-align: center;
  	align-items: center;
-	color: #FFFFFE;
+	color: #569FCA;
 }
 
 .address {
@@ -64,9 +60,13 @@ input::placeholder, textarea::placeholder {
 	border-left: solid 1px #8B8D8C;
 }
 
+.links i {
+	color: #2E2C59;
+}
+
 .links * {
 	transition: 1s;
-	color: #FFFFFE;
+	color: #569FCA;
 }
 
 .links span {
@@ -102,7 +102,7 @@ input::placeholder, textarea::placeholder {
 	border: none;
 	transition: 1s;
 	cursor: pointer;
-	border: solid 1px #FFFFFE;
+	border: solid 1px #569FCA;
 	width: 60% !important;
 	margin-left: 20%;
 	float: left !important;
