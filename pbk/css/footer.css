@@ -1,24 +1,23 @@
 #footer {
 	padding: 50px;
-	background-color: #FFFFFE;
-	background: #569FCA;
+	background-color: #2E2C59;
 	display: flex;
  	justify-content: center;
  	align-items: center;
+ 	border-top: 3px solid #FFFFFE;
 }
 
 #footer .main {
-	color: #2E2C59;
 	font-size: 30px;
 }
 
 #footer .main i {
-	color: #2E2C59;
+	color: #FFFFFE;
 	margin-left: 10px;
 	margin-right: 10px;
 	transition: 1s;
 }
 
 #footer .main i:hover {
-	color: #FFFFFE;
+	color: #569FCA;
 }

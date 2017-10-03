@@ -9,18 +9,22 @@
 #contact {
 	 background-color: #2E2C59;
 	 color: #FFFFFE;
+	 padding: 50px;
 }
 
 .social {
 	display: flex;
  	justify-content: center;
  	align-items: center;
+ 	text-align: center;
  	height: 300px;
 }
 
 .social .text {
+	padding-right: 30px;
 	text-align: center;
-}
+ 	align-items: center;
+ }
 
 .talk {
 	font-size: xx-large;
@@ -46,7 +50,8 @@ input::placeholder, textarea::placeholder {
 
 .addressAndLinks {
 	font-size: large;
-	margin-top: 30px;
+	text-align: center;
+ 	align-items: center;
 	color: #FFFFFE;
 }
 

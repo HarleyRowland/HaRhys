@@ -62,24 +62,24 @@ $( "#top-mobile-link" ).click(function() {
 	}, 1500);
 });
 
-$( "#bio-mobile-link" ).click(function() {
+$( "#about-mobile-link" ).click(function() {
 	$(".mobile-menu").hide()
 	$('html, body').animate({
-  		scrollTop: $("#bio").offset().top-50
+  		scrollTop: $("#about").offset().top-50
 	}, 1500);
 });
 
-$( "#skills-mobile-link" ).click(function() {
+$( "#packages-mobile-link" ).click(function() {
 	$(".mobile-menu").hide()
 	$('html, body').animate({
-  		scrollTop: $("#skills").offset().top-50
+  		scrollTop: $("#packages").offset().top-50
 	}, 1500);
 });
 
-$( "#timeline-mobile-link" ).click(function() {
+$( "#testomonials-mobile-link" ).click(function() {
 	$(".mobile-menu").hide()
 	$('html, body').animate({
-  		scrollTop: $("#timeline").offset().top-50
+  		scrollTop: $("#testomonials").offset().top-50
 	}, 1500);
 });
 

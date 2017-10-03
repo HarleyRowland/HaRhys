@@ -7,7 +7,16 @@ $("#email-body").keyup(function(){
 });
 
 $(".submit-button").click(function(){
+  console.log("hello")
   sendMail()
+});
+
+$(".clear").click(function(){
+  $("#name").val("")
+  $("#number").val("")
+  $("#email").val("")
+  $("#subject").val("")
+  $("#email-body").val("")
 });
 
 $( "#close-message-sent-modal" ).click(function(e) {
@@ -16,8 +25,8 @@ $( "#close-message-sent-modal" ).click(function(e) {
 });
 
 function sendMail() {
-  $('.email-button').attr('disabled','disabled');
-
+  // $('.email-button').attr('disabled','disabled');
+  console.log("HERE")
   var name = escape(document.getElementById('name').value);
   var number = escape(document.getElementById('number').value);
   var email = escape(document.getElementById('email').value);
@@ -25,18 +34,17 @@ function sendMail() {
   var body = escape(document.getElementById('email-body').value);
 
   var url = "https://arcane-anchorage-33274.herokuapp.com/email?name="+name+"&subject="+subject+"&email="+email+"&number="+number+"&body="+body;
-
-  var canSend = validateForm(name, email, subject, body); 
+  var canSend = validateForm(name, number, email, subject, body);
   callAPI(canSend, url, body);
 }
 
 var initAPI = function(){
   $.ajax({
-      url: "https://arcane-anchorage-33274.herokuapp.com",
-      error: function (xhr, ajaxOptions, thrownError) {
-        console.log(xhr.status, thrownError);
-      }
-    });
+    url: "https://arcane-anchorage-33274.herokuapp.com",
+    error: function (xhr, ajaxOptions, thrownError) {
+      console.log(xhr.status, thrownError);
+    }
+  });
 }
 
 initAPI()
@@ -73,16 +81,14 @@ var callAPI = function(canSend, url, body){
   }
 }
 
-var validateForm = function(name, email, subject, body){
+var validateForm = function(name, number, email, subject, body){
   var canSend = true;
-
   if(name == ""){
     $('#name').addClass('animated shake');
     canSend = false;
     $('#name').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       $('#name').removeClass('shake');
     });
-
   }
   if(!validateEmail(email)){
     $('#email').addClass('animated shake');
