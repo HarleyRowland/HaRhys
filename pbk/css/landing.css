@@ -10,13 +10,14 @@
 	bottom: 0;
 	left: 0;
 	margin-left: 25%;
+	padding-bottom: 200px;
 } 
 
 #landing .heading {
 	position: absolute;
 	top: 0;
-	padding-top: 10%;
-	padding-left: 10%;
+	padding-top: 100px;
+	padding-left: 100px;
 }
 
 #landing .title {
