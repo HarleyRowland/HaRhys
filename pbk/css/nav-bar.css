@@ -11,6 +11,16 @@
     transition: 2s;
 }
 
+
+.logo {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: 10px;
+	margin-right: 80px;
+	width: 100px;
+}
+
 #nav-bar .main {
 	height: 100%;
 	width: 100%;
@@ -76,7 +86,7 @@
 }
 
 .fa-bars {
-	float: right;
+	float: left;
 	cursor: pointer;
 	transition: 1s;
 	padding-top: 15px;
@@ -135,6 +145,11 @@
 	}
 }
 
+@media only screen and (max-width: 64em) {
+	.logo {
+		margin-right: 10px;
+	}
+}
 
 
 

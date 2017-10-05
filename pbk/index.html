@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/contact.css"> 
     <link rel="stylesheet" type="text/css" href="css/nav-bar.css"> 
     <link rel="stylesheet" type="text/css" href="css/footer.css"> 
+    <link rel="stylesheet" type="text/css" href="css/animate.css"> 
 	  <link href="https://fonts.googleapis.com/css?family=Muli|Exo" rel="stylesheet">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.css">	
     <link rel="shortcut icon" href="assets/icon.png" />  
@@ -24,21 +25,26 @@
 
   	<div id="nav-bar">
   		<div class="main row">
-	  		<div id="links" class="show-for-medium"><a id="top-link" href="#">Top</a><a id="about-link" href="#">About</a><a id="packages-link" href="#">Packages</a><a id="testomonials-link" href="#">Testomonials</a><a id="contact-link" href="#">Contact</a></div>
-
-			  <i class="fa fa-bars hide-for-medium" id="menu" aria-hidden="true"></i>
+	  		<div id="links" class="show-for-large"><a id="top-link" href="#">Top</a><a id="packages-link" href="#">Packages</a><a id="about-link" href="#">About</a><a id="testomonials-link" href="#">Testomonials</a><a id="contact-link" href="#">Contact</a><img class="logo" src="assets/logo.png"></div>
+        <div class="hide-for-large">
+  			  <i class="fa fa-bars" id="menu" aria-hidden="true"></i>
+          <img class="logo" src="assets/logo.png">
+        </div>
 			</div>
   	</div>
 
   	<div class="mobile-menu hide-for-medium">
   		<a id="close-menu" href="#">X</a>
   		<a id="top-mobile-link" href="#">To the top</a>
-  		<a id="about-mobile-link" href="#">About</a>
-  		<a id="packages-mobile-link" href="#">Packages</a>
   		<a id="testomonials-mobile-link" href="#">Testomonials</a>
+      <a id="about-mobile-link" href="#">About</a>
+      <a id="packages-mobile-link" href="#">Packages</a>
   		<a id="contact-mobile-link" href="#">Contact</a>
   	</div>
     <div id="landing">
+      <div class="arrow show-for-large">
+        <i class="fa fa-arrow-down bouncingArrow animated"></i>
+      </div>
     	<div id="clouds">
         <div class="cloud x1"></div>
         <div class="cloud x2"></div>
@@ -59,65 +65,8 @@
       </div>
     </div>
 
-  	<div id="about" class="page">
-  		<div class="main row">
-	  		<div class="heading">
-	  			<p class="title"><span>A BIT</span></br><span>ABOUT US...</span></p>
-	  		</div>
-          <div class="bubbles">
-          <div class="bubble small-12 columns">
-            <i class="fa fa-quote-left"></i>
-              After six year of working in the practice, I decidedd to set up Precision Bookkeeping in 2011. Since then, I have been helping a range of small businesses and companies to spend less time on their accounts and more time doing what they enjoy. My speciality is Computerised Accounting, so the cloud revolution has played to my strengths. When not in the office, I enjoy playing football, running and I'm still finding time to play the drums.
-            <div class="who">
-              Simon Edwards</br>FMAAT AATQB
-            <i class="fa fa-quote-right"></i>
-            </br>
-            </div>
-          </div>
-          <div class="bubble small-12 columns">
-            <i class="fa fa-quote-left"></i>
-              I started my career at 18, working for a Top 20 Accountacy Practice as an Accounts Junior, working up to being head of the Outsourcing Department. Here I gained experience in bookkeeping, accounts and audit for a range of businesses, from sole traders to charities and large corporate clients. I completed my AAT qualification and went on to study CIMA, which enabled me to continue my professional development and build on my skill set. After 10 years in practice, I decided to join PBK to help the company grow and assist businesses on a more face to face level. In my spare time, you can find me on the beach, in the forest, on my bike or in a Harry Potter book! 
-            <div class="who">
-              Lana Brenchley</br>FMAAT, CIMA Adv Dip MA, AATQB
-              <i class="fa fa-quote-right"></i>
-              </br>
-            </div>
-
-          </div>
-        </div> 
-  		</div>
-  	</div> 
-
-    <div id="testomonials" class="page">
+    <div id="packages" class="page">
       <div class="main row">
-        <div class="heading">
-          <p class="title"><span>WHAT OUR</span></br><span>CLIENTS SAY...</span></p>
-        </div>
-          <div class="bubbles">
-          <div id="left" class="bubble small-12 columns">
-            <i class="fa fa-quote-left"></i>
-              Precision Bookkeeping has played an integral part in helping my new business run smoothly on a day to day basis. Via their hands on, no jargon, down to earth approach, they disentangled the first few months of my trading chaos and created simple systems for me that I rely on every day. I couldn't have got through my first year of business without them. Highly recommended!
-            <div class="who">
-              Milly Gregory</br>TM & SON LTD
-            <i class="fa fa-quote-right"></i>
-            </br>
-            </div>
-          </div>
-          <div id="right" class="bubble small-12 columns">
-            <i class="fa fa-quote-left"></i>
-              PBK have helped me through the early stages of my new company, getting me set up with everything I have needed such as VAT and CIS. The Xero software is simple to get to grips with and helps me keep track of the vital cashflow.
-            <div class="who">
-              Mitchell Burton</br> Portrait Kitchens
-            </div>
-            <i class="fa fa-quote-right"></i>
-
-          </div>
-        </div> 
-      </div>
-    </div> 
-
-  	<div id="packages" class="page">
-  		<div class="main row">
         <div class="first package small-12 large-4 columns">
           <div class="content">
             <div class="upperContent">
@@ -209,8 +158,67 @@
           </div>
         </div>
         </div>
+      </div>
+    </div> 
+
+  	<div id="about" class="page">
+  		<div class="main row">
+	  		<div class="heading">
+	  			<p class="title"><span>A BIT</span></br><span>ABOUT US...</span></p>
+	  		</div>
+          <div class="bubbles">
+          <div class="bubble small-12 columns">
+            <i class="fa fa-quote-left"></i>
+              After six year of working in the practice, I decidedd to set up Precision Bookkeeping in 2011. Since then, I have been helping a range of small businesses and companies to spend less time on their accounts and more time doing what they enjoy. My speciality is Computerised Accounting, so the cloud revolution has played to my strengths. When not in the office, I enjoy playing football, running and I'm still finding time to play the drums.
+            <div class="who">
+              Simon Edwards</br>FMAAT AATQB
+            <i class="fa fa-quote-right"></i>
+            </br>
+            </div>
+          </div>
+          <div class="bubble small-12 columns">
+            <i class="fa fa-quote-left"></i>
+              I started my career at 18, working for a Top 20 Accountacy Practice as an Accounts Junior, working up to being head of the Outsourcing Department. Here I gained experience in bookkeeping, accounts and audit for a range of businesses, from sole traders to charities and large corporate clients. I completed my AAT qualification and went on to study CIMA, which enabled me to continue my professional development and build on my skill set. After 10 years in practice, I decided to join PBK to help the company grow and assist businesses on a more face to face level. In my spare time, you can find me on the beach, in the forest, on my bike or in a Harry Potter book! 
+            <div class="who">
+              Lana Brenchley</br>FMAAT, CIMA Adv Dip MA, AATQB
+              <i class="fa fa-quote-right"></i>
+              </br>
+            </div>
+
+          </div>
+        </div> 
   		</div>
   	</div> 
+
+    <div id="testomonials" class="page">
+      <div class="main row">
+        <div class="heading">
+          <p class="title"><span>WHAT OUR</span></br><span>CLIENTS SAY...</span></p>
+        </div>
+          <div class="bubbles">
+          <div id="left" class="bubble small-12 columns">
+            <i class="fa fa-quote-left"></i>
+              Precision Bookkeeping has played an integral part in helping my new business run smoothly on a day to day basis. Via their hands on, no jargon, down to earth approach, they disentangled the first few months of my trading chaos and created simple systems for me that I rely on every day. I couldn't have got through my first year of business without them. Highly recommended!
+            <div class="who">
+              Milly Gregory</br>TM & SON LTD
+            <i class="fa fa-quote-right"></i>
+            </br>
+            </div>
+          </div>
+          <div id="right" class="bubble small-12 columns">
+            <i class="fa fa-quote-left"></i>
+              PBK have helped me through the early stages of my new company, getting me set up with everything I have needed such as VAT and CIS. The Xero software is simple to get to grips with and helps me keep track of the vital cashflow.
+            <div class="who">
+              Mitchell Burton</br> Portrait Kitchens
+            </div>
+            <i class="fa fa-quote-right"></i>
+
+          </div>
+        </div> 
+      </div>
+    </div> 
+
+  	
 
     <div id="map"></div>
 
@@ -221,29 +229,27 @@
 	  		</div>
           <div class="text  hide-for-large">
             <div class="talk">LET'S TALK</div>
-            <div class="textNumber">TXT XYZ TO 33344</div>
+            <div class="textNumber">TXT PBK TO 88802</div>
             <div class="obligation">for a no obligation callback</div>
           </div>
           <div class="addressAndLinks hide-for-large">
             <div class="links">
-              <span><i class="fa fa-envelope"></i> @pbkltd.co.uk</span>
-              <span><i class="fa fa-mobile-phone"></i> 01233 877452</span>
-              <span><a href="https://www.linkedin.com/in/harley-rowland-79936571"><i class="fa fa-linkedin"></i></a></span>
-              <span><a href="https://www.facebook.com/HarleyRowland"><i class="fa fa-facebook"></i></a></span>
+              <span><i class="fa fa-map-marker"></i> Unit 2a, Briar Close, Bramble Lane, Wye, Kent, TN25 5HB</span>
+              <span><i class="fa fa-phone"></i> 01233 812345</span>
+              <span><i class="fa fa-mobile-phone"></i> 07850 630790</span>
             </div>
           </div>
         <div class="social small-6 show-for-large columns">
           <div class="text">
             <div class="talk">LET'S TALK</div>
-            <div class="textNumber">TXT XYZ TO 33344</div>
+            <div class="textNumber">TXT PBK TO 88802</div>
             <div class="obligation">for a no obligation callback</div>
           </div>
           <div class="addressAndLinks">
             <div class="links">
-              <span><i class="fa fa-envelope"></i> @pbkltd.co.uk</span>
-              <span><i class="fa fa-mobile-phone"></i> 01233 877452</span>
-              <span><a href="https://www.linkedin.com/in/harley-rowland-79936571"><i class="fa fa-linkedin"></i></a></span>
-              <span><a href="https://www.facebook.com/HarleyRowland"><i class="fa fa-facebook"></i></a></span>
+              <span><i class="fa fa-map-marker"></i> Unit 2a, Briar Close, Bramble Lane, Wye, Kent, TN25 5HB</span>
+              <span><i class="fa fa-phone"></i> 01233 812345</span>
+              <span><i class="fa fa-mobile-phone"></i> 07850 630790</span>
             </div>
           </div>
         </div>
@@ -265,11 +271,12 @@
   	</div>
     <footer id="footer">
     	<div class="main">
-    		<a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a>
+    		<a href="https://www.facebook.com/Precision-Bookkeeping-Ltd-128679297468242/"><i class="fa fa-facebook"></i></a><a href="https://www.linkedin.com/company/10562212/"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a>
     </footer>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/nav-bar.js" type="text/javascript"></script>
     <script src="js/contact.js" type="text/javascript"></script>
+    <script src="js/landing.js" type="text/javascript"></script>
     <script>
       function initMap() {
         var uluru = {lat: 51.146583, lng: 0.871871};
